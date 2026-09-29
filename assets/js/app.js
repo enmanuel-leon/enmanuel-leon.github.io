@@ -41,6 +41,16 @@ function escapeHtml(text) {
     .replaceAll("'", "&#39;");
 }
 
+function downloadFile(fileUrl, fileName) {
+  const link = document.createElement("a");
+  link.href = fileUrl;
+  link.download = fileName;
+  link.rel = "noopener noreferrer";
+  document.body.appendChild(link);
+  link.click();
+  setTimeout(() => link.remove(), 200);
+}
+
 function renderStatic(data) {
   document.title = `${data.profile.name} — ${data.profile.role}`;
   document.getElementById("navLogo").innerHTML = `<svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>`;
@@ -382,41 +392,7 @@ function renderStatic(data) {
   const downloadIcon = `<svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
   
   if (downloadText) downloadText.innerHTML = `${downloadIcon} ${data.ui.downloadCv}`;
- 
-  async function downloadFile(fileUrl, fileName) {
-    const res = await fetch(fileUrl);
-    if (!res.ok) { alert("File not found: " + res.status); return; }
-    const buf = await res.arrayBuffer();
- 
-    if (window.showSaveFilePicker) {
-      try {
-        const ext = fileName.split(".").pop();
-        const mimeMap = { pdf: "application/pdf", md: "text/markdown" };
-        const handle = await window.showSaveFilePicker({
-          suggestedName: fileName,
-          types: [{
-            description: ext.toUpperCase() + " file",
-            accept: { [mimeMap[ext] || "application/octet-stream"]: ["." + ext] },
-          }],
-        });
-        const writable = await handle.createWritable();
-        await writable.write(buf);
-        await writable.close();
-        return;
-      } catch (err) {
-        if (err.name === "AbortError") return;
-      }
-    }
- 
-    const file = new File([buf], fileName, { type: "application/octet-stream" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(file);
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    setTimeout(() => { link.remove(); URL.revokeObjectURL(link.href); }, 5000);
-  }
- 
+
   // Trigger modal visibility
   if (downloadBtn) downloadBtn.onclick = () => modal.setAttribute("aria-hidden", "false");
   
@@ -433,10 +409,10 @@ function renderStatic(data) {
   const pDes = document.getElementById("modalDownloadPDFes");
   const pDen = document.getElementById("modalDownloadPDFen");
  
-  if (mDes) mDes.onclick = () => { downloadFile("./export/cv.es.md", "Enmanuel_Leon_CV_ES.md"); modal.setAttribute("aria-hidden", "true"); };
-  if (mDen) mDen.onclick = () => { downloadFile("./export/cv.en.md", "Enmanuel_Leon_CV_EN.md"); modal.setAttribute("aria-hidden", "true"); };
+  if (mDes) mDes.onclick = () => { downloadFile("./export/Enmanuel_Leon_CV_ES.md", "Enmanuel_Leon_CV_ES.md"); modal.setAttribute("aria-hidden", "true"); };
+  if (mDen) mDen.onclick = () => { downloadFile("./export/Enmanuel_Leon_Resume_EN.md", "Enmanuel_Leon_Resume_EN.md"); modal.setAttribute("aria-hidden", "true"); };
   if (pDes) pDes.onclick = () => { downloadFile("./export/Enmanuel_Leon_CV_ES.pdf", "Enmanuel_Leon_CV_ES.pdf"); modal.setAttribute("aria-hidden", "true"); };
-  if (pDen) pDen.onclick = () => { downloadFile("./export/Enmanuel_Leon_CV_EN.pdf", "Enmanuel_Leon_CV_EN.pdf"); modal.setAttribute("aria-hidden", "true"); };
+  if (pDen) pDen.onclick = () => { downloadFile("./export/Enmanuel_Leon_Resume_EN.pdf", "Enmanuel_Leon_Resume_EN.pdf"); modal.setAttribute("aria-hidden", "true"); };
 }
 
 function startTyping(data) {
@@ -945,23 +921,17 @@ Thanks for checking out my interactive shell. Let's build something awesome toge
       if (files[filename]) {
         if (filename === "resume.pdf" || filename === "resume.md") {
           print("Initializing virtual download channel...");
-          const lang = state.lang === "es" ? "ES" : "EN";
+          const isEs = state.lang === "es";
           if (filename === "resume.pdf") {
             print("Retrieving PDF file...");
-            const triggerA = document.createElement("a");
-            triggerA.href = `./export/Enmanuel_Leon_CV_${lang}.pdf`;
-            triggerA.download = `Enmanuel_Leon_CV_${lang}.pdf`;
-            document.body.appendChild(triggerA);
-            triggerA.click();
-            setTimeout(() => triggerA.remove(), 100);
+            const targetFile = isEs ? "./export/Enmanuel_Leon_CV_ES.pdf" : "./export/Enmanuel_Leon_Resume_EN.pdf";
+            const dlName = isEs ? "Enmanuel_Leon_CV_ES.pdf" : "Enmanuel_Leon_Resume_EN.pdf";
+            downloadFile(targetFile, dlName);
           } else {
             print("Retrieving Markdown file...");
-            const triggerA = document.createElement("a");
-            triggerA.href = `./export/cv.${state.lang}.md`;
-            triggerA.download = `Enmanuel_Leon_CV_${lang}.md`;
-            document.body.appendChild(triggerA);
-            triggerA.click();
-            setTimeout(() => triggerA.remove(), 100);
+            const targetFile = isEs ? "./export/Enmanuel_Leon_CV_ES.md" : "./export/Enmanuel_Leon_Resume_EN.md";
+            const dlName = isEs ? "Enmanuel_Leon_CV_ES.md" : "Enmanuel_Leon_Resume_EN.md";
+            downloadFile(targetFile, dlName);
           }
         } else {
           const formatted = files[filename].content.replace(/\n/g, "<br/>");

@@ -11,7 +11,7 @@ This repository is a high-performance, dependency-free static web portfolio and 
 ### Directory Layout:
 - `index.html`: Semantic entry point, OpenGraph metadata, JSON-LD Schema (`Person`), PWA links, `<noscript>` crawlable fallback.
 - `data/cv.es.json` & `data/cv.en.json`: **Single Source of Truth (SSOT)**. All copy, work experience, skill taxonomies, and internationalization (i18n) strings live here.
-- `export/`: Exportable formats (`cv.es.md`, `cv.en.md`, `Enmanuel_Leon_CV_ES.pdf`, `Enmanuel_Leon_CV_EN.pdf`).
+- `export/`: Exportable formats (`Enmanuel_Leon_CV_ES.md`, `Enmanuel_Leon_Resume_EN.md`, `Enmanuel_Leon_CV_ES.pdf`, `Enmanuel_Leon_Resume_EN.pdf`).
 - `assets/js/app.js`: Vanilla JavaScript (zero bundlers). Handles data hydration, theme switching, canvas particles, smooth scrolling, terminal emulator, and modal state management.
 - `assets/css/styles.css`: Pure CSS3. Design tokens, glassmorphism, responsive breakpoints, print styles, and terminal theme palettes.
 - `robots.txt`, `sitemap.xml`, `llms.txt`, `site.webmanifest`: Machine discoverability, AI scrapers, and SEO.
@@ -23,7 +23,7 @@ This repository is a high-performance, dependency-free static web portfolio and 
 
 1. **Content Synchronization (SSOT):**
    - Whenever profile data, roles, dates, or skills change, **always update both `data/cv.es.json` and `data/cv.en.json`**.
-   - Ensure corresponding Markdown files (`export/cv.es.md` and `export/cv.en.md`) are updated to maintain exact parity.
+   - Ensure corresponding Markdown files (`export/Enmanuel_Leon_CV_ES.md` and `export/Enmanuel_Leon_Resume_EN.md`) are updated to maintain exact parity.
    - Maintain JSON key parity between language files.
 
 2. **Grammar & Linguistic Precision:**

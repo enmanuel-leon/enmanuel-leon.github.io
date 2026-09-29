@@ -4,7 +4,7 @@
 
 Valencia, Venezuela (Remote · CET / EST Timezones) | Citizenship: Italian (EU), Venezuelan  
 Email: [enma2310@outlook.com](mailto:enma2310@outlook.com) | LinkedIn: [linkedin.com/in/enmanuel-leon-48b11714b](https://www.linkedin.com/in/enmanuel-leon-48b11714b/) | GitHub: [github.com/enmanuel23x](https://github.com/enmanuel23x) | Web: [enmanuel23x.github.io](https://enmanuel23x.github.io)  
-Languages: Spanish (Native), English (Technical & Professional Working / B1)
+Languages: Spanish (Native), English (Professional Technical Working / B1)
 
 ---
 
