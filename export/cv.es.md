@@ -10,16 +10,16 @@ Idiomas: Español (Nativo), Inglés (Nivel Técnico Profesional / B1 Asíncrono)
 
 ## Resumen Profesional
 
-Ingeniero de Computación con más de 6 años de experiencia en desarrollo de software de misión crítica, especializándome en arquitecturas distribuidas, automatización con IA y plataformas transaccionales. Trayectoria sólida diseñando servicios asíncronos de alta disponibilidad con **TypeScript, Node.js (Fastify/Express) y Python**, desplegados sobre infraestructura en la nube (**AWS / GCP**). Experto en la construcción de motores de procesamiento de documentos a gran escala, orquestación de servicios M2M seguros en entornos con VPCs aisladas, y desarrollo e integración de pasarelas de pago y ecosistemas de APIs heterogéneas (REST, GraphQL, SOAP) con bases de datos relacionales (MySQL, PostgreSQL) y colas de alta concurrencia (**Redis, BullMQ, SQS**).
+Ingeniero de Computación con más de 6 años de experiencia en desarrollo de software de misión crítica, especializándome en arquitecturas distribuidas, arquitecturas agénticas y plataformas transaccionales. Trayectoria sólida diseñando servicios asíncronos de alta disponibilidad con **TypeScript, Node.js (Fastify/Express) y Python**, desplegados sobre infraestructura en la nube (**AWS / GCP**). Experto en la construcción de motores de procesamiento de documentos a gran escala, orquestación de servicios M2M seguros en entornos con VPCs aisladas, y desarrollo e integración de pasarelas de pago y ecosistemas de APIs heterogéneas (REST, GraphQL, SOAP) con bases de datos relacionales (MySQL, PostgreSQL) y colas de alta concurrencia (**Redis, BullMQ, SQS**).
 
 ---
 
 ## Habilidades Técnicas
 
-- **Backend & Arquitectura:** Node.js (Fastify, Express), Python (FastAPI), Prisma, Zod & TypeBox, Microservicios, REST, GraphQL, SOAP, Event-Driven Architecture (EDA), Comunicación M2M, Idempotencia & Circuit Breaker
+- **Backend & Arquitectura:** Node.js (Fastify, Express), Python (FastAPI), Prisma, Zod, Microservicios, Arquitectura Agéntica (Multi-Agent), REST, GraphQL, SOAP, Event-Driven Architecture (EDA), Comunicación M2M, Idempotencia & Circuit Breaker
 - **Cloud, Redes & DevOps:** AWS (ECS, Lambda, RDS, S3, SQS, CloudWatch, IAM, CloudFormation), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), NGINX, Linux, Aislamiento VPC
 - **Datos & Mensajería:** MySQL, PostgreSQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), RabbitMQ
-- **IA Aplicada & Automatización:** Integración de LLMs (OpenAI, Anthropic APIs), Generación Asíncrona de Artefactos, Orquestación de Agentes, RAG, Prompt Engineering, Tool Use
+- **IA Aplicada & Automatización:** Arquitectura Agéntica (Multi-Agent), Desarrollo Asistido por Agentes (SDLC), Integración de LLMs (OpenAI, Anthropic APIs), Generación Asíncrona de Artefactos, Orquestación de Agentes, RAG Pipelines & Guardrails, Prompt Engineering, Tool Use & Function Calling
 - **Frontend & Mobile:** React, Next.js, Vite, React Native (Multiplataforma iOS/Android), TypeScript, JavaScript (ES6+), HTML5, Tailwind CSS
 - **Testing, Calidad & Seguridad:** Vitest, Jest, Datadog, Sentry, CloudWatch, OWASP, CORS, TDD
 
@@ -31,17 +31,18 @@ Ingeniero de Computación con más de 6 años de experiencia en desarrollo de so
 *Abril 2024 - Presente*
 
 - **Reduje sustancialmente los tiempos de procesamiento** en la emisión de reportes normativos complejos mediante el diseño e implementación de un servicio distribuido de generación asíncrona de artefactos y documentos en Fastify y Python, orquestado con colas BullMQ y Redis.
-- **Diseñé la arquitectura backend del core de distribución de herramientas de IA** (agentes, flujos y componentes), implementando soporte multi-instancia de alta concurrencia y comunicación Machine-to-Machine (M2M) segura de baja latencia mediante APIs desacopladas y autenticación basada en tokens.
+- **Colaboré en el diseño de la arquitectura agéntica** y lideré la capa backend del core de distribución de herramientas de IA (orquestación multi-agente, tool calling y flujos autónomos), implementando soporte multi-instancia de alta concurrencia y comunicación Machine-to-Machine (M2M) segura de baja latencia mediante APIs desacopladas y autenticación basada en tokens.
 - **Diseñé un motor de sincronización asíncrona periódica** basado en crons distribuidos y tareas programadas en segundo plano que comunica de forma segura instancias de clientes en VPCs aisladas con la plataforma core, garantizando consistencia de datos sin exponer endpoints a la red pública.
+- **Aceleré el ciclo de desarrollo e ingeniería** integrando arquitecturas agénticas y agentes autónomos de código en el flujo de trabajo (SDLC), optimizando la refactorización profunda, el prototipado rápido y la cobertura de pruebas automatizadas sin comprometer los estándares de producción.
 - **Lideré la definición de estándares de ingeniería** y adopción de especificaciones técnicas (RFCs/ADRs), reduciendo la deuda técnica y acelerando la integración de nuevos microservicios entre pares de desarrollo.
 - **Operé microservicios distribuidos en AWS y GCP con alta disponibilidad**, empaquetando componentes en contenedores Docker y configurando pipelines de CI/CD para despliegues continuos con observabilidad vía Sentry y CloudWatch.
 
-### Ingeniero de Software & Mobile (Consultor Externo / Part-time Contractor) | Fintech Scale-up (Billetera B2C · NDA)
+### Ingeniero de Software & Mobile (Consultor Externo / Part-time Contractor) | Fintech Scale-up (Plataforma Crediticia & Financiera · NDA)
 *Julio 2025 - Julio 2026*
 
-- **Diseñé y construí de punta a punta la arquitectura móvil multiplataforma** (iOS y Android) en React Native y TypeScript para una solución fintech B2C orientada a alto volumen de usuarios activos, definiendo requerimientos técnicos e integrando servicios cloud.
-- **Estructuré la infraestructura de datos y políticas de seguridad cloud**, implementando autenticación robusta y control de acceso granular mediante Row-Level Security (RLS) para proteger registros transaccionales sensibles.
-- **Optimicé el rendimiento y la resiliencia de la aplicación móvil**, agilizando los tiempos de carga y garantizando la persistencia de estado para operaciones transaccionales en entornos de baja conectividad.
+- **Diseñé y construí de punta a punta la arquitectura móvil multiplataforma** (iOS y Android) en React Native y TypeScript para una plataforma de servicios financieros y originación crediticia, definiendo requerimientos técnicos e integrando servicios cloud.
+- **Estructuré la infraestructura de datos y políticas de seguridad cloud**, implementando autenticación robusta y control de acceso granular mediante Row-Level Security (RLS) para proteger historiales crediticios y contratos financieros sensibles.
+- **Optimicé el rendimiento y la resiliencia de la aplicación móvil**, agilizando los tiempos de carga y garantizando la persistencia offline de solicitudes de crédito y operaciones en entornos de baja conectividad.
 
 ### Fullstack Developer | Interfell - ePayco | Remoto
 *Junio 2021 - Abril 2024*

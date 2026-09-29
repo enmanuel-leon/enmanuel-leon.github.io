@@ -34,7 +34,7 @@
   },
   "hero": {
     "badge": "Open to high-impact projects",
-    "summary": "Computer Engineer specialized in distributed systems, AI automation, and transactional platforms with TypeScript, Node.js, Python, AWS/GCP, and high-demand integrations.",
+    "summary": "Computer Engineer specializing in distributed systems, agentic architectures, and transactional platforms with TypeScript, Node.js, Python, AWS/GCP, and high-demand integrations.",
     "typingLine": "I engineer distributed architectures, processing engines, and cloud platforms;",
     "actions": [
       { "label": "Contact", "href": "#contact" },
@@ -46,7 +46,7 @@
     "title": "Engineering distributed systems, asynchronous engines, and high-availability cloud platforms",
     "paragraphs": [
       "I have more than six years of experience delivering mission-critical production software for fintech, applied AI, and enterprise platforms.",
-      "My approach balances sound technical architecture and business delivery: I build scalable asynchronous processing engines, core service platforms with M2M communication across isolated VPCs, and cloud-native services on AWS/GCP.",
+      "My approach balances sound technical architecture and business delivery: I build scalable asynchronous processing engines, core service platforms with M2M communication across isolated VPCs, agentic architectures, and cloud-native services on AWS/GCP.",
       "Based in Valencia, Venezuela, I work 100% remotely with full availability for CET (Europe) and EST (Americas) hours. I hold dual citizenship: Italian (EU) and Venezuelan."
     ],
     "stats": [
@@ -69,25 +69,26 @@
         "company": "Entropy Systems",
         "bullets": [
           "Significantly reduced processing time for complex regulatory reports by designing and deploying a distributed asynchronous document and artifact generation engine using Fastify and Python, orchestrated with BullMQ and Redis queues.",
-          "Architected the backend layer of the core AI tooling platform (agents, workflows, and skills), delivering high-concurrency multi-instance scaling and low-latency Machine-to-Machine (M2M) communication via decoupled APIs and token-based authentication.",
+          "Co-designed the agentic system architecture and architected the backend layer of the core AI tooling platform (multi-agent orchestration, tool calling, and autonomous execution workflows), delivering high-concurrency multi-instance scaling and low-latency Machine-to-Machine (M2M) communication via decoupled APIs and token-based authentication.",
           "Designed a periodic asynchronous synchronization engine using distributed crons and background workers that securely interconnects isolated customer VPC environments with the central core platform, ensuring data consistency without exposing public endpoints.",
+          "Accelerated engineering and development cycles by integrating agentic architectures and autonomous coding agents into the workflow (SDLC), optimizing deep refactoring, rapid prototyping, and automated test coverage while upholding strict production quality standards.",
           "Steered engineering standards and architectural decision records (RFCs/ADRs), cutting technical debt and accelerating cross-service integration across engineering peers.",
           "Operated distributed microservices across AWS and GCP with high availability, containerizing services in Docker and implementing CI/CD pipelines for automated continuous deployments backed by real-time observability in Sentry and CloudWatch."
         ],
-        "tags": ["TypeScript", "Fastify", "Python", "AWS / GCP", "Redis / BullMQ", "M2M / VPC", "Docker"]
+        "tags": ["Agentic Architecture", "TypeScript", "Fastify", "Python", "AWS / GCP", "Redis / BullMQ", "M2M / VPC", "Docker"]
       },
       {
         "id": "fintech_mobile",
         "period": "Jul 2025 - Jul 2026",
         "location": "Remote",
         "role": "Software & Mobile Engineer (Independent Consultant / Part-time Contractor)",
-        "company": "Fintech Scale-up (B2C Wallet · NDA)",
+        "company": "Fintech Scale-up (Credit & Financial Platform · NDA)",
         "bullets": [
-          "Engineered the end-to-end cross-platform mobile architecture (iOS and Android) using React Native and TypeScript for a high-growth B2C fintech product, defining technical specifications and cloud integrations.",
-          "Architected scalable cloud data infrastructure and security controls, implementing robust authentication flows and fine-grained Row-Level Security (RLS) policies to protect sensitive transactional records.",
-          "Optimized mobile application performance and network resilience, streamlining startup load times and securing reliable offline state persistence for transactional operations in low-connectivity environments."
+          "Engineered the end-to-end cross-platform mobile architecture (iOS and Android) using React Native and TypeScript for a digital financial and credit origination platform, defining technical specifications and cloud integrations.",
+          "Architected scalable cloud data infrastructure and security controls, implementing robust authentication flows and fine-grained Row-Level Security (RLS) policies to protect sensitive credit records and financial contracts.",
+          "Optimized mobile application performance and network resilience, streamlining startup load times and securing reliable offline persistence for credit applications and operations in low-connectivity environments."
         ],
-        "tags": ["React Native", "TypeScript", "Cloud Infra", "RLS", "Auth", "Fintech"]
+        "tags": ["React Native", "TypeScript", "Cloud Infra", "RLS", "Credit Systems", "Fintech"]
       },
       {
         "id": "epayco",
@@ -129,6 +130,7 @@
         "icon": "architecture",
         "items": [
           "System Design",
+          "Agentic Architecture (Multi-Agent)",
           "Distributed Systems",
           "Microservices",
           "Event-Driven Architecture (EDA)",
@@ -172,7 +174,7 @@
           "Express",
           "Python (FastAPI)",
           "Prisma",
-          "Zod & TypeBox",
+          "Zod",
           "Lumen (PHP)",
           "REST APIs",
           "GraphQL",
@@ -198,15 +200,16 @@
         "title": "Applied AI & Automation",
         "icon": "ai",
         "items": [
+          "Agentic Architecture (Multi-Agent)",
+          "Agent-Assisted Engineering (SDLC)",
+          "Tool Use & Function Calling",
+          "Agent & Workflow Orchestration",
           "LLM Integrations (OpenAI / Anthropic)",
           "Asynchronous Artifact Generation",
-          "Agent Orchestration",
-          "RAG Pipelines",
-          "Prompt Engineering",
-          "Tool Use & Function Calling",
-          "OpenCode",
-          "Cursor",
-          "GitHub Copilot",
+          "RAG Pipelines & Context Management",
+          "Prompt Engineering & Guardrails",
+          "OpenCode & Code Agents",
+          "Cursor & Copilot",
           "n8n"
         ]
       },
@@ -268,9 +271,9 @@
       },
       {
         "title": "Core AI Tooling Platform",
-        "type": "Infrastructure & M2M / TypeScript & Node.js",
-        "description": "Multi-instance tooling and agent distribution platform featuring low-latency (<50ms) M2M communication and periodic asynchronous sync with isolated customer VPCs.",
-        "tech": ["TypeScript", "Node.js", "Fastify", "VPC Networking", "Crons / Workers"],
+        "type": "Agentic Architecture & M2M / TypeScript & Node.js",
+        "description": "Multi-instance platform for agentic architecture and tooling distribution featuring low-latency (<50ms) M2M communication, agent orchestration, and periodic asynchronous sync with isolated customer VPCs.",
+        "tech": ["Agentic Architecture", "TypeScript", "Node.js", "Fastify", "VPC Networking", "Redis / Workers"],
         "icon": "🤖",
         "demo": "#",
         "github": "#"

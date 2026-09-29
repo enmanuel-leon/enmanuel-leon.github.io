@@ -18,17 +18,17 @@
 
 ## Technical Stack
 - **Backend & Core:** Node.js, TypeScript, Python, Fastify, Express, REST APIs, GraphQL, Microservices, Event-Driven Architecture, Distributed Systems.
-- **Data & In-Memory:** PostgreSQL, MySQL, Redis (Caching, Streams, Distributed Locks), Prisma ORM, TypeBox, Zod.
+- **Data & In-Memory:** PostgreSQL, MySQL, Redis (Caching, Streams, Distributed Locks), Prisma ORM, Zod.
 - **Asynchronous & Queues:** BullMQ, AWS SQS, Idempotency patterns, Dead Letter Queues (DLQ), Circuit Breakers.
 - **Cloud & DevOps:** AWS (ECS, Lambda, SQS, S3, CloudFront, CloudFormation), Google Cloud Platform (GCP), Docker Compose, CI/CD (GitHub Actions), Linux.
 - **Frontend & Mobile:** React, React Native, Vite, Tailwind CSS, Next.js basics, State Management, Responsive Web Design.
-- **AI & Integrations:** OpenAI API, Claude API, Anthropic SDK, Automated Prompt Pipelines, Webhook architectures, Payment Gateways (Stripe, Mercado Pago).
+- **AI & Integrations:** Agentic Architecture, Agent-Assisted SDLC, Multi-Agent Orchestration, Tool Calling, OpenAI API, Claude API, Anthropic SDK, Automated Prompt Pipelines, Webhook architectures, Payment Gateways (Stripe, Mercado Pago).
 
 ## Professional Experience Summary
 - **Fullstack Developer (AI & Core Systems)** at Entropy Systems (Apr 2024 - Present):
-  Engineered distributed asynchronous artifact generation pipelines using Fastify, Python, BullMQ, and Redis. Architected core AI tooling distribution layer with secure low-latency M2M communication and periodic sync across isolated customer VPCs.
+  Co-designed agentic system architecture and architected core AI tooling distribution layer with secure low-latency M2M communication and periodic sync across isolated customer VPCs. Engineered distributed asynchronous artifact generation pipelines using Fastify, Python, BullMQ, and Redis. Accelerated engineering cycles (SDLC) by integrating autonomous coding agents and agentic workflows.
 - **Software & Mobile Engineer** at Fintech Scale-up · NDA (Jul 2025 - Jul 2026):
-  Engineered end-to-end cross-platform mobile architecture in React Native and TypeScript for high-volume B2C fintech product with scalable cloud infrastructure and Row-Level Security (RLS).
+  Engineered end-to-end cross-platform mobile architecture in React Native and TypeScript for a digital financial and credit origination platform with scalable cloud infrastructure and Row-Level Security (RLS).
 - **Fullstack Developer** at Interfell - ePayco (Jun 2021 - Apr 2024):
   Engineered and maintained transactional payment gateway microservices in Node.js (Express) and TypeScript on MySQL with Lumen (PHP) support. Implemented resilience and idempotency patterns with Circuit Breakers, SQS queues, and Dockerized environments.
 - **Systems Analyst / Software Developer** at Intelix Synergy, C.A. (Mar 2020 - Jun 2021):

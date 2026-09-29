@@ -10,16 +10,16 @@ Languages: Spanish (Native), English (Technical & Professional Working / B1)
 
 ## Professional Summary
 
-Computer Engineer with 6+ years of experience in mission-critical software engineering, specializing in distributed architectures, AI workflow automation, and transactional platforms. Proven track record designing high-availability asynchronous services with **TypeScript, Node.js (Fastify/Express), and Python** deployed across cloud infrastructure (**AWS / GCP**). Expert in architecting high-throughput document processing engines, secure M2M orchestration for isolated VPC environments, and developing payment gateway integrations across heterogeneous API ecosystems (REST, GraphQL, SOAP) backed by relational databases (MySQL, PostgreSQL) and high-concurrency message queues (**Redis, BullMQ, SQS**).
+Computer Engineer with 6+ years of experience in mission-critical software engineering, specializing in distributed architectures, agentic systems, and transactional platforms. Proven track record designing high-availability asynchronous services with **TypeScript, Node.js (Fastify/Express), and Python** deployed across cloud infrastructure (**AWS / GCP**). Expert in architecting high-throughput document processing engines, secure M2M orchestration for isolated VPC environments, and developing payment gateway integrations across heterogeneous API ecosystems (REST, GraphQL, SOAP) backed by relational databases (MySQL, PostgreSQL) and high-concurrency message queues (**Redis, BullMQ, SQS**).
 
 ---
 
 ## Technical Skills
 
-- **Backend & Architecture:** Node.js (Fastify, Express), Python (FastAPI), Prisma, Zod & TypeBox, Microservices, REST, GraphQL, SOAP, Event-Driven Architecture (EDA), M2M Communication, Idempotency & Circuit Breakers
+- **Backend & Architecture:** Node.js (Fastify, Express), Python (FastAPI), Prisma, Zod, Microservices, Agentic Architecture (Multi-Agent), REST, GraphQL, SOAP, Event-Driven Architecture (EDA), M2M Communication, Idempotency & Circuit Breakers
 - **Cloud, Networking & DevOps:** AWS (ECS, Lambda, RDS, S3, SQS, CloudWatch, IAM, CloudFormation), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), NGINX, Linux, VPC Isolation
 - **Databases & Messaging:** MySQL, PostgreSQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), RabbitMQ
-- **Applied AI & Automation:** LLM Integrations (OpenAI, Anthropic APIs), Asynchronous Artifact Generation, Agent Orchestration, RAG, Prompt Engineering, Tool Use
+- **Applied AI & Automation:** Agentic Architecture (Multi-Agent), Agent-Assisted Engineering (SDLC), LLM Integrations (OpenAI, Anthropic APIs), Asynchronous Artifact Generation, Agent Orchestration, RAG Pipelines & Guardrails, Prompt Engineering, Tool Use & Function Calling
 - **Frontend & Mobile:** React, Next.js, Vite, React Native (Cross-platform iOS/Android), TypeScript, JavaScript (ES6+), HTML5, Tailwind CSS
 - **Testing, Quality & Security:** Vitest, Jest, Datadog, Sentry, CloudWatch, OWASP, CORS, TDD
 
@@ -31,17 +31,18 @@ Computer Engineer with 6+ years of experience in mission-critical software engin
 *April 2024 - Present*
 
 - **Significantly reduced processing time** for complex regulatory reports by designing and deploying a distributed asynchronous document and artifact generation engine using Fastify and Python, orchestrated with BullMQ and Redis queues.
-- **Architected the backend layer of the core AI tooling platform** (agents, workflows, and skills), delivering high-concurrency multi-instance scaling and low-latency Machine-to-Machine (M2M) communication via decoupled APIs and token-based authentication.
+- **Co-designed the agentic system architecture** and architected the backend layer of the core AI tooling platform (multi-agent orchestration, tool calling, and autonomous execution workflows), delivering high-concurrency multi-instance scaling and low-latency Machine-to-Machine (M2M) communication via decoupled APIs and token-based authentication.
 - **Designed a periodic asynchronous synchronization engine** using distributed crons and background workers that securely interconnects isolated customer VPC environments with the central core platform, ensuring data consistency without exposing public endpoints.
+- **Accelerated engineering and development cycles** by integrating agentic architectures and autonomous coding agents into the workflow (SDLC), optimizing deep refactoring, rapid prototyping, and automated test coverage while upholding strict production quality standards.
 - **Steered engineering standards and architectural decision records** (RFCs/ADRs), cutting technical debt and accelerating cross-service integration across engineering peers.
 - **Operated distributed microservices across AWS and GCP with high availability**, containerizing services in Docker and implementing CI/CD pipelines for automated continuous deployments backed by real-time observability in Sentry and CloudWatch.
 
-### Software & Mobile Engineer (Independent Consultant / Part-time Contractor) | Fintech Scale-up (B2C Wallet · NDA)
+### Software & Mobile Engineer (Independent Consultant / Part-time Contractor) | Fintech Scale-up (Credit & Financial Platform · NDA)
 *July 2025 - July 2026*
 
-- **Engineered the end-to-end cross-platform mobile architecture** (iOS and Android) using React Native and TypeScript for a high-growth B2C fintech product, defining technical specifications and cloud integrations.
-- **Architected scalable cloud data infrastructure and security controls**, implementing robust authentication flows and fine-grained Row-Level Security (RLS) policies to protect sensitive transactional records.
-- **Optimized mobile application performance and network resilience**, streamlining startup load times and securing reliable offline state persistence for transactional operations in low-connectivity environments.
+- **Engineered the end-to-end cross-platform mobile architecture** (iOS and Android) using React Native and TypeScript for a digital financial and credit origination platform, defining technical specifications and cloud integrations.
+- **Architected scalable cloud data infrastructure and security controls**, implementing robust authentication flows and fine-grained Row-Level Security (RLS) policies to protect sensitive credit records and financial contracts.
+- **Optimized mobile application performance and network resilience**, streamlining startup load times and securing reliable offline persistence for credit applications and operations in low-connectivity environments.
 
 ### Fullstack Developer | Interfell - ePayco | Remote
 *June 2021 - April 2024*
