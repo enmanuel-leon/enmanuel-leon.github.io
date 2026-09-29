@@ -6,7 +6,7 @@
 
 ## 1. Project Overview & Architecture
 
-This repository is a high-performance, dependency-free static web portfolio and CV platform hosted on GitHub Pages (`https://enmanuel-leon.github.io/`).
+This repository is a high-performance, dependency-free static web portfolio and CV platform hosted on GitHub Pages (`https://enmanuel-leon.com/`).
 
 ### Directory Layout:
 - `index.html`: Semantic entry point, OpenGraph metadata, JSON-LD Schema (`Person`), PWA links, `<noscript>` crawlable fallback.

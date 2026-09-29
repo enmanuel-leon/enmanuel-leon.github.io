@@ -852,7 +852,7 @@ function initTerminal() {
         contactStr += `${item.label}: ${item.value} (${item.href})\n`;
       });
     } else {
-      contactStr += "Email: enma2310@outlook.com\nLinkedIn: linkedin.com/in/enmanuel-leon-48b11714b\nGitHub: github.com/enmanuel-leon\n";
+      contactStr += "Email: contact@enmanuel-leon.com\nLinkedIn: linkedin.com/in/enmanuel-leon-48b11714b\nGitHub: github.com/enmanuel-leon\n";
     }
 
     const secretStr = `🔑 EASTER EGG UNLOCKED!
@@ -959,7 +959,7 @@ Thanks for checking out my interactive shell. Let's build something awesome toge
 <span style="color:#fbbf24">Theme:</span> ${currentThemeName}
 <span style="color:#fbbf24">CPU:</span> M-Series Max (Hyper-optimized)
 <span style="color:#fbbf24">Stack:</span> Node.js, TypeScript, Python, Fastify, AWS, Redis, BullMQ, React
-<span style="color:#fbbf24">Contact:</span> enma2310@outlook.com
+<span style="color:#fbbf24">Contact:</span> contact@enmanuel-leon.com
 `;
       print(`<div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap"><div>${asciiArt}</div><div>${sysInfo}</div></div>`);
     },

@@ -25,4 +25,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://enmanuel-leon.github.io/sitemap.xml
+Sitemap: https://enmanuel-leon.com/sitemap.xml
