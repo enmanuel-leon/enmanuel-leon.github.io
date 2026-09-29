@@ -15,6 +15,7 @@ This repository is a high-performance, dependency-free static web portfolio and 
 - `assets/js/app.js`: Vanilla JavaScript (zero bundlers). Handles data hydration, theme switching, canvas particles, smooth scrolling, terminal emulator, and modal state management.
 - `assets/css/styles.css`: Pure CSS3. Design tokens, glassmorphism, responsive breakpoints, print styles, and terminal theme palettes.
 - `robots.txt`, `sitemap.xml`, `llms.txt`, `site.webmanifest`: Machine discoverability, AI scrapers, and SEO.
+- `scripts/`: Automation and build utilities (`scripts/build-pdf.py` for headless PDF generation).
 - `tmp/`: Private workspace, playbooks, notes, and strategy documents. **Always ignored by git (`.gitignore`). Never stage or commit files from `tmp/`.**
 
 ---
@@ -25,6 +26,16 @@ This repository is a high-performance, dependency-free static web portfolio and 
    - Whenever profile data, roles, dates, or skills change, **always update both `data/cv.es.json` and `data/cv.en.json`**.
    - Ensure corresponding Markdown files (`export/Enmanuel_Leon_CV_ES.md` and `export/Enmanuel_Leon_Resume_EN.md`) are updated to maintain exact parity.
    - Maintain JSON key parity between language files.
+   - **Mandatory PDF Compilation:** Whenever profile data, roles, skills, or links change, **always recompile exportable PDFs** using:
+     ```bash
+     python3 scripts/build-pdf.py
+     ```
+     *Script Behavior & Contract:*
+     - Converts Markdown files to standalone HTML using `pandoc`.
+     - Injects ATS-optimized typography and A4 layout (`Liberation Sans`, 8.8pt body, 1.34 line-height, 12mm/14mm margins).
+     - Injects an automated page break before the second role (*Fintech Scale-up*), guaranteeing that **Page 1** contains the contact header, summary, technical skills, and current role (Entropy Systems), while **Page 2** contains previous roles, education, and additional info.
+     - Compiles to PDF via headless Google Chrome (`google-chrome --headless --no-pdf-header-footer --print-to-pdf`).
+     - Strictly enforces the **2-page budget** (`pages == 2`), exiting with error code 1 if page count deviates.
 
 2. **Grammar & Linguistic Precision:**
    - **Spanish:** Never invent anglicisms (e.g., do NOT use *"Arquitecté"*; use *"Diseñé la arquitectura de..."* or *"Estructuré..."*). Ensure proper conjugation (*"Garanticé"*, not *"Garantizé"*).
@@ -97,6 +108,9 @@ if (unsafe.length) console.error('Unsafe links found:', unsafe);
 else console.log('All external links safe.');
 "
 
-# 4. Check git status to ensure private/tmp files are not tracked
+# 4. Compile and verify exportable PDFs (strict 2-page budget check)
+python3 scripts/build-pdf.py
+
+# 5. Check git status to ensure private/tmp files are not tracked
 git status
 ```
