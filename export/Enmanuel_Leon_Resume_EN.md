@@ -3,7 +3,7 @@
 **Senior Fullstack Engineer | Distributed Systems & Cloud**
 
 Valencia, Venezuela (Remote · CET / EST Timezones) | Citizenship: Italian (EU), Venezuelan  
-Email: [enma2310@outlook.com](mailto:enma2310@outlook.com) | LinkedIn: [linkedin.com/in/enmanuel-leon-48b11714b](https://www.linkedin.com/in/enmanuel-leon-48b11714b/) | GitHub: [github.com/enmanuel23x](https://github.com/enmanuel23x) | Web: [enmanuel23x.github.io](https://enmanuel23x.github.io)  
+Email: [enma2310@outlook.com](mailto:enma2310@outlook.com) | LinkedIn: [linkedin.com/in/enmanuel-leon-48b11714b](https://www.linkedin.com/in/enmanuel-leon-48b11714b/) | GitHub: [github.com/enmanuel-leon](https://github.com/enmanuel-leon) | Web: [enmanuel-leon.github.io](https://enmanuel-leon.github.io)  
 Languages: Spanish (Native), English (Professional Technical Working / B1)
 
 ---
@@ -74,4 +74,4 @@ Computer Engineer with 6+ years of experience in mission-critical software engin
 ## Additional Information
 
 - **Areas of Specialization:** Distributed Systems Architecture, Multi-Cloud (AWS · GCP), Applied AI Automation, Payment Gateways & Fintech Integrations.
-- **Portfolio & Code:** [enmanuel23x.github.io](https://enmanuel23x.github.io) | [github.com/enmanuel23x](https://github.com/enmanuel23x)
+- **Portfolio & Code:** [enmanuel-leon.github.io](https://enmanuel-leon.github.io) | [github.com/enmanuel-leon](https://github.com/enmanuel-leon)

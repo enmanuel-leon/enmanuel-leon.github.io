@@ -852,7 +852,7 @@ function initTerminal() {
         contactStr += `${item.label}: ${item.value} (${item.href})\n`;
       });
     } else {
-      contactStr += "Email: enma2310@outlook.com\nLinkedIn: linkedin.com/in/enmanuel-leon-48b11714b\nGitHub: github.com/enmanuel23x\n";
+      contactStr += "Email: enma2310@outlook.com\nLinkedIn: linkedin.com/in/enmanuel-leon-48b11714b\nGitHub: github.com/enmanuel-leon\n";
     }
 
     const secretStr = `🔑 EASTER EGG UNLOCKED!
