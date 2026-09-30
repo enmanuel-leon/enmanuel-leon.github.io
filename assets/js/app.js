@@ -1,5 +1,5 @@
 const CONFIG = {
-  enableTerminal: true, // Set to true to dynamically load assets/js/terminal.js
+  enableTerminal: false, // Set to true to dynamically load assets/js/terminal.js
 };
 
 const DEFAULT_TYPING = {
@@ -246,20 +246,23 @@ function renderStatic(data) {
       const href = item.href || "#";
       const isEmail = item.label.toLowerCase().includes("email");
       const targetAttr = item.external ? 'target="_blank" rel="noopener noreferrer"' : "";
-      const copyBtn = isEmail
+      const cardClass = isEmail ? "contact-card contact-card-email" : "contact-card";
+      const actionHtml = isEmail
         ? `<button type="button" class="contact-copy-btn" data-email="${escapeHtml(item.value)}" title="${state.lang === "es" ? "Copiar email" : "Copy email"}" aria-label="${state.lang === "es" ? "Copiar email" : "Copy email"}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="copy-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span class="copy-tooltip">${state.lang === "es" ? "¡Copiado!" : "Copied!"}</span>
+            <span class="copy-btn-label">${state.lang === "es" ? "Copiar" : "Copy"}</span>
           </button>`
-        : "";
+        : `<a href="${href}" ${targetAttr} class="contact-arrow" aria-label="${escapeHtml(item.label)}" title="${escapeHtml(item.value)}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-svg"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>`;
       return `
-      <div class="contact-card" style="elevation: 2">
+      <div class="${cardClass}" style="elevation: 2">
         <span class="contact-card-icon">${icon}</span>
         <div class="contact-card-info">
           <span class="contact-card-label">${escapeHtml(item.label)}</span>
           <a href="${href}" ${targetAttr} class="contact-card-value">${escapeHtml(item.value)}</a>
         </div>
-        ${copyBtn}
+        ${actionHtml}
       </div>
     `;
     })
@@ -274,7 +277,13 @@ function renderStatic(data) {
       if (navigator.clipboard && email) {
         navigator.clipboard.writeText(email).then(() => {
           btn.classList.add("copied");
-          setTimeout(() => btn.classList.remove("copied"), 2200);
+          const label = btn.querySelector(".copy-btn-label");
+          const origText = label ? label.textContent : "";
+          if (label) label.textContent = state.lang === "es" ? "¡Copiado!" : "Copied!";
+          setTimeout(() => {
+            btn.classList.remove("copied");
+            if (label) label.textContent = origText;
+          }, 2000);
         });
       }
     });
