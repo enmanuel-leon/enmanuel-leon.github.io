@@ -2067,14 +2067,20 @@ html.theme-classic .terminal-container {
   flex-shrink: 0;
 }
 
-.terminal-input {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
+.terminal-input,
+.terminal-input:focus,
+.terminal-input:focus-visible {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.82rem !important;
   flex: 1;
-  outline: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  caret-color: var(--accent-light);
 }
 
 .terminal-line {
@@ -2175,6 +2181,31 @@ html.theme-classic .terminal-container {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+/* Position tooltips inside terminal header below elements to prevent container clipping */
+.terminal-header [data-tooltip]::after {
+  bottom: auto !important;
+  top: calc(100% + 6px) !important;
+  transform: translateX(-50%) translateY(-4px) !important;
+  z-index: 20050 !important;
+}
+
+.terminal-header [data-tooltip]:hover::after {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+.terminal-header .terminal-sync-btn[data-tooltip]::after {
+  left: auto !important;
+  right: 0 !important;
+  transform: translateY(-4px) !important;
+}
+
+.terminal-header .terminal-sync-btn[data-tooltip]:hover::after {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 
 /* ═══════════════════════════════════════
    ACCESSIBILITY & FOCUS VISIBILITY

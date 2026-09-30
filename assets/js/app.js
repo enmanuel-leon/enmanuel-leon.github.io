@@ -1,5 +1,5 @@
 const CONFIG = {
-  enableTerminal: false, // Set to true to dynamically load assets/js/terminal.js
+  enableTerminal: true, // Set to true to dynamically load assets/js/terminal.js
 };
 
 const DEFAULT_TYPING = {
@@ -331,29 +331,10 @@ function renderStatic(data) {
     backToTop.setAttribute("data-tooltip", data.ui.backToTop);
   }
 
-  const termTrigger = document.getElementById("terminalTrigger");
-  if (termTrigger) {
-    termTrigger.setAttribute("aria-label", data.ui.terminalTrigger);
-    termTrigger.setAttribute("data-tooltip", data.ui.terminalTrigger);
-  }
-
   const downloadBtn = document.getElementById("downloadBtn");
   if (downloadBtn) {
     downloadBtn.setAttribute("data-tooltip", data.ui.downloadCv);
   }
-
-  const syncBtn = document.getElementById("terminalSyncBtn");
-  if (syncBtn) {
-    syncBtn.setAttribute("data-tooltip", state.lang === "es" ? "Sincronizar tema con el sistema" : "Sync theme with system");
-  }
-
-  const closeBtn = document.getElementById("terminalCloseBtn");
-  if (closeBtn) {
-    closeBtn.setAttribute("data-tooltip", state.lang === "es" ? "Cerrar / Minimizar (Esc)" : "Close / Minimize (Esc)");
-  }
-
-  const termInput = document.getElementById("terminalInput");
-  if (termInput) termInput.setAttribute("aria-label", data.ui.terminalInput);
 
   const modalTitle = document.getElementById("modalTitle");
   if (modalTitle) modalTitle.textContent = data.ui.modalTitle;

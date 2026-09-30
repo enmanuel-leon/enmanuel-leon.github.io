@@ -20,19 +20,19 @@ function mountTerminalDOM() {
   const root = document.createElement("div");
   root.id = "terminal-mount-root";
   root.innerHTML = `
-    <button class="terminal-trigger" id="terminalTrigger" aria-label="Abrir terminal de desarrollo">
+    <button class="terminal-trigger" id="terminalTrigger" aria-label="Abrir terminal de desarrollo" title="Abrir terminal (Ctrl + \`)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </button>
     <div class="terminal-overlay" id="terminalOverlay" aria-hidden="true" role="dialog">
       <div class="terminal-container" style="elevation: 2">
         <div class="terminal-header">
           <div class="terminal-buttons">
-            <span class="t-btn t-close" id="terminalCloseBtn" role="button" tabindex="0" aria-label="Cerrar terminal" title="Cerrar terminal">✕</span>
-            <span class="t-btn t-minimize" aria-hidden="true"></span>
-            <span class="t-btn t-maximize" aria-hidden="true"></span>
+            <span class="t-btn t-close" id="terminalCloseBtn" role="button" tabindex="0" aria-label="Cerrar terminal" title="Cerrar (Esc)"></span>
+            <span class="t-btn t-minimize" id="terminalMinBtn" role="button" tabindex="0" aria-label="Minimizar terminal" title="Minimizar"></span>
+            <span class="t-btn t-maximize" id="terminalMaxBtn" role="button" tabindex="0" aria-label="Pantalla completa" title="Pantalla completa"></span>
           </div>
           <div class="terminal-title">enmanuel-leon-shell &middot; zsh</div>
-          <button class="terminal-sync-btn" id="terminalSyncBtn" title="Sync with System Theme" aria-label="Sincronizar con tema del sistema">🌓</button>
+          <button class="terminal-sync-btn" id="terminalSyncBtn" title="Cambiar tema de terminal (Oscuro / Claro)" aria-label="Cambiar tema de terminal">🌓</button>
         </div>
         <div class="terminal-body" id="terminalBody">
           <div class="terminal-output" id="terminalOutput"></div>
@@ -42,10 +42,10 @@ function mountTerminalDOM() {
           </div>
         </div>
         <div class="terminal-footer-guide">
-          <span><b>Ctrl + \`</b> Toggle</span>
-          <span><b>Esc</b> Close</span>
-          <span><b>Ctrl + L</b> Clear</span>
-          <span><b>Ctrl + D</b> Exit</span>
+          <span><b>Ctrl + \`</b> Alternar</span>
+          <span><b>Esc</b> Cerrar</span>
+          <span><b>Ctrl + L</b> Limpiar</span>
+          <span><b>Ctrl + D</b> Salir</span>
         </div>
       </div>
     </div>
@@ -68,12 +68,11 @@ export function initTerminal(state) {
   const trigger = document.getElementById("terminalTrigger");
   const overlay = document.getElementById("terminalOverlay");
   const closeBtn = document.getElementById("terminalCloseBtn");
+  const minBtn = document.getElementById("terminalMinBtn");
+  const maxBtn = document.getElementById("terminalMaxBtn");
   const input = document.getElementById("terminalInput");
   const output = document.getElementById("terminalOutput");
-  const minBtn = document.querySelector(".t-minimize");
-  const maxBtn = document.querySelector(".t-maximize");
   const container = document.querySelector(".terminal-container");
-  const header = document.querySelector(".terminal-header");
   const syncBtn = document.getElementById("terminalSyncBtn");
 
   if (!trigger || !overlay || !input) return;
@@ -97,7 +96,7 @@ export function initTerminal(state) {
   }
 
   const getVirtualFiles = () => {
-    const paragraphs = state.data ? state.data.about.paragraphs.join("\n\n") : "Enmanuel Leon — Senior Fullstack Engineer";
+    const paragraphs = state.data ? state.data.about.paragraphs.join("\n\n") : "Enmanuel Leon — Senior Fullstack & Distributed Systems Engineer";
     
     let skillsStr = "--- TECHNICAL STACK ---\n";
     if (state.data && state.data.skills) {
@@ -111,7 +110,7 @@ export function initTerminal(state) {
     }
 
     let expStr = "--- EXPERIENCE TIMELINE ---\n";
-    if (state.data) {
+    if (state.data && state.data.experience) {
       state.data.experience.items.forEach(job => {
         expStr += `[${job.period}] ${job.role} at ${job.company}\n`;
         job.bullets.forEach(b => {
@@ -120,23 +119,20 @@ export function initTerminal(state) {
         expStr += "\n";
       });
     } else {
-      expStr += "Senior Fullstack Engineer\n";
+      expStr += "Senior Fullstack & Distributed Systems Engineer\n";
     }
 
     let eduStr = "--- EDUCATION ---\n";
     if (state.data && state.data.education) {
       state.data.education.items.forEach(edu => {
-        eduStr += `[${edu.period}] ${edu.degree}\n  ${edu.school}\n  ${edu.description}\n\n`;
+        eduStr += `[${edu.period}] ${edu.degree}\n  ${edu.school}\n\n`;
       });
     } else {
       eduStr += "Ingeniería de Computación - Universidad José Antonio Páez (2017 - 2020)\n";
     }
 
     let contactStr = "--- CONTACT DETAILS ---\n";
-    if (state.data && state.data.contact) {
-      contactStr += `Location: ${state.data.contact.items[0] ? state.data.contact.items[0].value : "Remote"}\n`;
-      contactStr += `Email: contact@enmanuel-leon.com\nLinkedIn: linkedin.com/in/enmanuel-leon\nGitHub: github.com/enmanuel-leon\n`;
-    }
+    contactStr += "Email: contact@enmanuel-leon.com\nLinkedIn: linkedin.com/in/enmanuel-leon\nGitHub: github.com/enmanuel-leon\n";
 
     return {
       "about.txt": paragraphs,
@@ -154,10 +150,11 @@ export function initTerminal(state) {
       print("  <span class='cmd'>ls</span>                  - List files in virtual filesystem");
       print("  <span class='cmd'>whoami</span>              - Show current role and status");
       print("  <span class='cmd'>skills</span>              - Print structured technical skills");
-      print("  <span class='cmd'>experience</span>          - Print concise career overview");
+      print("  <span class='cmd'>experience</span>          - Print career trajectory");
       print("  <span class='cmd'>contact</span>             - Show direct reach out channels");
+      print("  <span class='cmd'>theme &lt;dark|light&gt;</span>  - Toggle terminal visual theme");
       print("  <span class='cmd'>clear</span>               - Clear terminal screen (Ctrl + L)");
-      print("  <span class='cmd'>exit</span>                - Close terminal overlay (Ctrl + D / Esc)");
+      print("  <span class='cmd'>exit</span>                - Close terminal overlay (Esc)");
     },
     ls: () => {
       const files = Object.keys(getVirtualFiles()).join("   ");
@@ -188,6 +185,21 @@ export function initTerminal(state) {
     contact: () => {
       commands.cat(["contact.txt"]);
     },
+    theme: (args) => {
+      const choice = args && args[0] ? args[0].toLowerCase() : "";
+      if (choice === "light") {
+        applyTerminalTheme("light");
+        print("Terminal theme set to: <b>Light Mode ☀️</b>", "info");
+      } else if (choice === "dark") {
+        applyTerminalTheme("dark");
+        print("Terminal theme set to: <b>Dark Mode 🌙</b>", "info");
+      } else {
+        const isCurrentlyLight = container ? container.classList.contains("theme-classic-light") : false;
+        const newTheme = isCurrentlyLight ? "dark" : "light";
+        applyTerminalTheme(newTheme);
+        print(`Terminal theme toggled to: <b>${newTheme === "light" ? "Light Mode ☀️" : "Dark Mode 🌙"}</b>`, "info");
+      }
+    },
     clear: () => {
       if (output) output.innerHTML = "";
     },
@@ -198,13 +210,47 @@ export function initTerminal(state) {
 
   trigger.addEventListener("click", () => {
     overlay.setAttribute("aria-hidden", "false");
+    if (container) {
+      container.classList.remove("minimized");
+      overlay.classList.remove("minimized-mode");
+    }
     printWelcome();
-    input.focus();
+    setTimeout(() => input.focus(), 50);
   });
 
   if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
+    closeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
       overlay.setAttribute("aria-hidden", "true");
+    });
+  }
+
+  if (minBtn) {
+    minBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (container) {
+        container.classList.toggle("minimized");
+        overlay.classList.toggle("minimized-mode");
+      }
+    });
+  }
+
+  if (maxBtn) {
+    maxBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (container) {
+        container.classList.toggle("fullscreen");
+      }
+    });
+  }
+
+  if (syncBtn) {
+    syncBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isCurrentlyLight = container ? container.classList.contains("theme-classic-light") : false;
+      const nextTheme = isCurrentlyLight ? "dark" : "light";
+      applyTerminalTheme(nextTheme);
+      print(`Terminal theme changed to: <b>${nextTheme === "light" ? "Light Mode ☀️" : "Dark Mode 🌙"}</b>`, "info");
     });
   }
 
@@ -230,13 +276,14 @@ export function initTerminal(state) {
     }
   });
 
-  overlay.addEventListener("click", () => {
-    if (container && !container.classList.contains("minimized")) {
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.setAttribute("aria-hidden", "true");
+    } else if (container && !container.classList.contains("minimized")) {
       input.focus();
     }
   });
 
-  // Self-contained keyboard shortcuts for terminal
   document.addEventListener("keydown", (e) => {
     if (e.ctrlKey && e.key === "`") {
       e.preventDefault();
@@ -245,6 +292,19 @@ export function initTerminal(state) {
         trigger.click();
       } else {
         overlay.setAttribute("aria-hidden", "true");
+      }
+    }
+    if (e.key === "Escape" && overlay.getAttribute("aria-hidden") === "false") {
+      overlay.setAttribute("aria-hidden", "true");
+    }
+    if (document.activeElement === input) {
+      if (e.ctrlKey && e.key.toLowerCase() === "l") {
+        e.preventDefault();
+        commands.clear();
+      }
+      if (e.ctrlKey && e.key.toLowerCase() === "d") {
+        e.preventDefault();
+        commands.exit();
       }
     }
   });
