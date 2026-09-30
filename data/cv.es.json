@@ -51,7 +51,7 @@
     "photo": "img/Profile-pic.jpeg"
   },
   "hero": {
-    "badge": "Disponible para proyectos de alto impacto",
+    "badge": "Valencia, VE · Remoto Global (CET / EST)",
     "summary": "Ingeniero de Computación especializado en sistemas distribuidos, arquitecturas agénticas y plataformas transaccionales con TypeScript, Node.js, Python, AWS/GCP e integraciones de alta demanda.",
     "typingLine": "Diseño arquitecturas distribuidas, motores de procesamiento y plataformas cloud;",
     "actions": [
@@ -395,7 +395,7 @@
       },
       {
         "label": "LinkedIn",
-        "value": "/in/enmanuel-leon-48b11714b/",
+        "value": "linkedin.com/in/enmanuel-leon",
         "href": "https://www.linkedin.com/in/enmanuel-leon-48b11714b/",
         "external": true
       },

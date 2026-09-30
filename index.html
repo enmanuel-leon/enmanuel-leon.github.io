@@ -89,13 +89,13 @@
     </script>
     
     <!-- Dynamic Custom Initials Favicon & Apple Touch Icon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%236366f1'/%3E%3Ctext x='50%25' y='66%25' font-family='system-ui, sans-serif' font-weight='800' font-size='46' fill='white' text-anchor='middle'%3EEL%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%232563eb'/%3E%3Ctext x='50%25' y='66%25' font-family='system-ui, sans-serif' font-weight='800' font-size='46' fill='white' text-anchor='middle'%3EEL%3C/text%3E%3C/svg%3E" />
     <link rel="apple-touch-icon" href="img/Profile-pic.jpeg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet" />
 
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -182,7 +182,7 @@
         <div class="hero-text-col">
           <div class="hero-badge" id="heroBadge">
             <span class="hero-badge-dot" aria-hidden="true"></span>
-            <span id="heroBadgeText">Disponible para proyectos de alto impacto</span>
+            <span id="heroBadgeText">Valencia, VE · Remoto Global (CET / EST)</span>
           </div>
           <h1>
             <span id="heroGreeting">Hola, soy</span><br /><span id="heroName">Enmanuel Leon</span>
@@ -196,20 +196,19 @@
           <!-- Dynamic summary populated from JSON data -->
           <p class="hero-summary" id="heroSummary"></p>
           
-          <div class="hero-buttons">
+          <div class="hero-actions" id="heroActions">
             <a href="#contact" class="btn btn-primary" id="heroBtnContact">
               <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               <span>Contáctame</span>
             </a>
-            <a href="#skills" class="btn btn-secondary" id="heroBtnProjects">
+            <button id="downloadBtn" class="btn btn-secondary" type="button">
+              <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span id="downloadText">Descargar CV</span>
+            </button>
+            <a href="#skills" class="btn btn-ghost" id="heroBtnProjects">
               <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
               <span>Ver stack</span>
             </a>
-          </div>
-          <div class="download-links">
-            <button id="downloadBtn" class="download-link" type="button">
-              <span id="downloadText">Descargar CV</span>
-            </button>
           </div>
         </div>
         <div class="hero-avatar-col">
@@ -326,39 +325,6 @@
     <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
       ↑
     </button>
-
-    <!-- TODO (Phase 2): Terminal Emulator v2 - Temporarily hidden
-    <button class="terminal-trigger" id="terminalTrigger" aria-label="Abrir terminal de desarrollo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </button>
-
-    <div class="terminal-overlay" id="terminalOverlay" aria-hidden="true" role="dialog">
-      <div class="terminal-container" style="elevation: 2">
-        <div class="terminal-header">
-          <div class="terminal-buttons">
-            <span class="t-btn t-close" id="terminalCloseBtn" role="button" tabindex="0" aria-label="Cerrar terminal" title="Cerrar terminal">✕</span>
-            <span class="t-btn t-minimize" aria-hidden="true"></span>
-            <span class="t-btn t-maximize" aria-hidden="true"></span>
-          </div>
-          <div class="terminal-title">enmanuel-leon-shell &middot; zsh</div>
-          <button class="terminal-sync-btn" id="terminalSyncBtn" title="Sync with System Theme" aria-label="Sincronizar con tema del sistema">🌓</button>
-        </div>
-        <div class="terminal-body" id="terminalBody">
-          <div class="terminal-output" id="terminalOutput"></div>
-          <div class="terminal-input-line">
-            <span class="terminal-prompt">enmanuel@guest ~ %</span>
-            <input type="text" class="terminal-input" id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Línea de comandos" />
-          </div>
-        </div>
-        <div class="terminal-footer-guide">
-          <span><b>Ctrl + `</b> Toggle</span>
-          <span><b>Esc</b> Close</span>
-          <span><b>Ctrl + L</b> Clear</span>
-          <span><b>Ctrl + D</b> Exit</span>
-        </div>
-      </div>
-    </div>
-    -->
 
     <!-- Download Modal -->
     <div class="modal-overlay" id="downloadModal" aria-hidden="true" role="dialog">

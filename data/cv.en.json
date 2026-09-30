@@ -51,7 +51,7 @@
     "photo": "img/Profile-pic.jpeg"
   },
   "hero": {
-    "badge": "Open to high-impact projects",
+    "badge": "Valencia, VE · Global Remote (CET / EST)",
     "summary": "Computer Engineer specializing in distributed systems, agentic architectures, and transactional platforms with TypeScript, Node.js, Python, AWS/GCP, and high-demand integrations.",
     "typingLine": "I engineer distributed architectures, processing engines, and cloud platforms;",
     "actions": [
@@ -395,7 +395,7 @@
       },
       {
         "label": "LinkedIn",
-        "value": "/in/enmanuel-leon-48b11714b/",
+        "value": "linkedin.com/in/enmanuel-leon",
         "href": "https://www.linkedin.com/in/enmanuel-leon-48b11714b/",
         "external": true
       },

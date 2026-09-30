@@ -1,3 +1,7 @@
+const CONFIG = {
+  enableTerminal: false, // Set to true to dynamically load assets/js/terminal.js
+};
+
 const DEFAULT_TYPING = {
   es: [
     "Diseño arquitecturas distribuidas y resilientes.",
@@ -49,7 +53,7 @@ function downloadFile(fileUrl, fileName) {
 
 function renderStatic(data) {
   document.title = `${data.profile.name} — ${data.profile.role}`;
-  document.getElementById("navLogo").innerHTML = `<svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>`;
+  document.getElementById("navLogo").innerHTML = `<svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="var(--bg-card)" stroke="var(--border)" stroke-width="1.5"/><text x="16" y="21" font-family="var(--font-mono)" font-size="13" font-weight="700" fill="var(--text-primary)" text-anchor="middle" letter-spacing="-0.5">EL</text></svg>`;
 
   data.nav.items.forEach((item) => {
     const el = document.querySelector(`[data-nav="${item.id}"]`);
@@ -63,15 +67,15 @@ function renderStatic(data) {
   document.getElementById("heroSummary").textContent = data.hero.summary;
   document.getElementById("heroGreeting").textContent =
     state.lang === "es" ? "Hola, soy" : "Hi, I am";
-  
+
   const heroBadgeEl = document.getElementById("heroBadgeText");
   if (heroBadgeEl && data.hero && data.hero.badge) {
     heroBadgeEl.textContent = data.hero.badge;
   }
-  
+
   const emailIcon = `<svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>`;
   const codeIcon = `<svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`;
-  
+
   document.getElementById("heroBtnContact").innerHTML = `${emailIcon} ${data.ui.contactMe}`;
   document.getElementById("heroBtnProjects").innerHTML = `${codeIcon} ${data.ui.viewSkills}`;
 
@@ -90,7 +94,7 @@ function renderStatic(data) {
    `,
      )
      .join("");
- 
+
   const highlightMetrics = (text) => {
     return escapeHtml(text).replace(/(\b\d+(?:\.\d+)?%|<50ms|>2\.000|~200|500\.000)/g, '<span class="metric-chip">$1</span>');
   };
@@ -120,7 +124,7 @@ function renderStatic(data) {
   `,
       )
       .join("");
- 
+
   document.getElementById("skillsLabel").textContent = data.skills.label;
   document.getElementById("skillsTitle").textContent = data.skills.title;
   document.getElementById("skillsDesc").textContent = data.skills.desc;
@@ -135,21 +139,10 @@ function renderStatic(data) {
     devops: `<svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
   };
 
-  const categoryColors = [
-    "rgba(99, 102, 241, 0.12)",
-    "rgba(16, 185, 129, 0.12)",
-    "rgba(168, 85, 247, 0.12)",
-    "rgba(249, 115, 22, 0.12)",
-    "rgba(6, 182, 212, 0.12)",
-    "rgba(236, 72, 153, 0.12)",
-    "rgba(139, 92, 246, 0.12)"
-  ];
-
   document.getElementById("skillsGrid").innerHTML = data.skills.categories
     .map(
-      (cat, idx) => {
+      (cat) => {
         const iconSvg = categoryIcons[cat.icon] || categoryIcons.backend;
-        const bgCol = categoryColors[idx % categoryColors.length];
         const tagsHtml = cat.items
           .map((item) => {
             const name = typeof item === "string" ? item : (item.name || "");
@@ -160,7 +153,7 @@ function renderStatic(data) {
         return `
         <div class="skill-category stack-card" style="elevation: 2">
           <div class="skill-category-header">
-            <div class="skill-icon" style="background:${bgCol};">${iconSvg}</div>
+            <div class="skill-icon" style="background: rgba(37, 99, 235, 0.1); color: var(--accent);">${iconSvg}</div>
             <h3 class="skill-category-title">${escapeHtml(cat.title)}</h3>
           </div>
           <div class="stack-tags-container">
@@ -252,10 +245,7 @@ function renderStatic(data) {
       const icon = contactIcons[item.label] || "🔗";
       const href = item.href || "#";
       const isEmail = item.label.toLowerCase().includes("email");
-      const tag = item.href ? "a" : "div";
-      const attrs = item.href
-        ? `href="${href}" ${item.external ? 'target="_blank" rel="noopener noreferrer"' : ""}`
-        : "";
+      const targetAttr = item.external ? 'target="_blank" rel="noopener noreferrer"' : "";
       const copyBtn = isEmail
         ? `<button type="button" class="contact-copy-btn" data-email="${escapeHtml(item.value)}" title="${state.lang === "es" ? "Copiar email" : "Copy email"}" aria-label="${state.lang === "es" ? "Copiar email" : "Copy email"}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="copy-svg"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
@@ -263,14 +253,14 @@ function renderStatic(data) {
           </button>`
         : "";
       return `
-      <${tag} ${attrs} class="contact-card" style="elevation: 2">
-        <span class="icon">${icon}</span>
-        <div class="info">
-          <div class="label">${escapeHtml(item.label)}</div>
-          <div class="value">${escapeHtml(item.value)}</div>
+      <div class="contact-card" style="elevation: 2">
+        <span class="contact-card-icon">${icon}</span>
+        <div class="contact-card-info">
+          <span class="contact-card-label">${escapeHtml(item.label)}</span>
+          <a href="${href}" ${targetAttr} class="contact-card-value">${escapeHtml(item.value)}</a>
         </div>
         ${copyBtn}
-      </${tag}>
+      </div>
     `;
     })
     .join("");
@@ -305,13 +295,13 @@ function renderStatic(data) {
     year,
   );
   document.documentElement.setAttribute("lang", state.lang);
-  
+
   const langSelectEl = document.getElementById("langSelect");
   if (langSelectEl) {
     langSelectEl.querySelectorAll(".lang-switch-btn").forEach(btn => {
       const isCurrent = btn.getAttribute("data-lang") === state.lang;
       btn.classList.toggle("active", isCurrent);
-      
+
       // Highly specific tooltips per button!
       if (btn.getAttribute("data-lang") === "es") {
         btn.setAttribute("data-tooltip", state.lang === "es" ? "Idioma: Español (Activo)" : "Switch to Spanish");
@@ -334,29 +324,29 @@ function renderStatic(data) {
   }
   const hamburger = document.getElementById("hamburger");
   if (hamburger) hamburger.setAttribute("aria-label", data.ui.hamburger);
-  
+
   const backToTop = document.getElementById("backToTop");
   if (backToTop) {
     backToTop.setAttribute("aria-label", data.ui.backToTop);
     backToTop.setAttribute("data-tooltip", data.ui.backToTop);
   }
-  
+
   const termTrigger = document.getElementById("terminalTrigger");
   if (termTrigger) {
     termTrigger.setAttribute("aria-label", data.ui.terminalTrigger);
     termTrigger.setAttribute("data-tooltip", data.ui.terminalTrigger);
   }
-  
+
   const downloadBtn = document.getElementById("downloadBtn");
   if (downloadBtn) {
     downloadBtn.setAttribute("data-tooltip", data.ui.downloadCv);
   }
-  
+
   const syncBtn = document.getElementById("terminalSyncBtn");
   if (syncBtn) {
     syncBtn.setAttribute("data-tooltip", state.lang === "es" ? "Sincronizar tema con el sistema" : "Sync theme with system");
   }
-  
+
   const closeBtn = document.getElementById("terminalCloseBtn");
   if (closeBtn) {
     closeBtn.setAttribute("data-tooltip", state.lang === "es" ? "Cerrar / Minimizar (Esc)" : "Close / Minimize (Esc)");
@@ -384,27 +374,27 @@ function renderStatic(data) {
   const downloadText = document.getElementById("downloadText");
   const modal = document.getElementById("downloadModal");
   const modalClose = document.getElementById("modalClose");
- 
+
   const downloadIcon = `<svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
-  
-  if (downloadText) downloadText.innerHTML = `${downloadIcon} ${data.ui.downloadCv}`;
+
+  if (downloadText) downloadText.textContent = data.ui.downloadCv;
 
   // Trigger modal visibility
   if (downloadBtn) downloadBtn.onclick = () => modal.setAttribute("aria-hidden", "false");
-  
+
   if (modalClose) modalClose.onclick = () => modal.setAttribute("aria-hidden", "true");
   if (modal) {
     modal.onclick = (e) => {
       if (e.target === modal) modal.setAttribute("aria-hidden", "true");
     };
   }
- 
+
   // Bind individual download selections inside modal
   const mDes = document.getElementById("modalDownloadMDes");
   const mDen = document.getElementById("modalDownloadMDen");
   const pDes = document.getElementById("modalDownloadPDFes");
   const pDen = document.getElementById("modalDownloadPDFen");
- 
+
   if (mDes) mDes.onclick = () => { downloadFile("./export/Enmanuel_Leon_CV_ES.md", "Enmanuel_Leon_CV_ES.md"); modal.setAttribute("aria-hidden", "true"); };
   if (mDen) mDen.onclick = () => { downloadFile("./export/Enmanuel_Leon_Resume_EN.md", "Enmanuel_Leon_Resume_EN.md"); modal.setAttribute("aria-hidden", "true"); };
   if (pDes) pDes.onclick = () => { downloadFile("./export/Enmanuel_Leon_CV_ES.pdf", "Enmanuel_Leon_CV_ES.pdf"); modal.setAttribute("aria-hidden", "true"); };
@@ -465,28 +455,7 @@ function observeReveal() {
           entry.target
             .querySelectorAll(".stat-number[data-count]")
             .forEach((counter) => {
-              if (counter.dataset.animated) return;
-              counter.dataset.animated = "true";
-              const raw = counter.dataset.count;
-              const num = parseFloat(raw.replace(/[^0-9.]/g, ""));
-              if (isNaN(num)) {
-                counter.textContent = raw;
-                return;
-              }
-              const prefix = raw.startsWith(">") ? ">" : "";
-              const suffix = raw.includes("%") ? "%" : (raw.includes("K") ? "K" : (raw.includes("+") ? "+" : ""));
-              let current = 0;
-              const step = num / 25;
-              const interval = setInterval(() => {
-                current += step;
-                if (current >= num) {
-                  counter.textContent = `${prefix}${num}${suffix}`;
-                  clearInterval(interval);
-                } else {
-                  const val = Number.isInteger(num) ? Math.floor(current) : current.toFixed(1);
-                  counter.textContent = `${prefix}${val}${suffix}`;
-                }
-              }, 35);
+              counter.textContent = counter.dataset.count;
             });
         }
       });
@@ -568,11 +537,8 @@ function initParticles() {
 }
 
 function applyTerminalTheme(theme) {
-  const container = document.querySelector(".terminal-container");
-  if (!container) return;
-  container.classList.remove("theme-classic-light");
-  if (theme === "light") {
-    container.classList.add("theme-classic-light");
+  if (CONFIG.enableTerminal) {
+    import("./terminal.js").then((mod) => mod.applyTerminalTheme(theme));
   }
 }
 
@@ -589,7 +555,7 @@ function initGlobalInteractions() {
 
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
-    
+
     // Dynamic Scroll Progress Bar calculation
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
@@ -648,7 +614,7 @@ function initGlobalInteractions() {
 
   const savedAccentTheme = localStorage.getItem("accent-theme") || "indigo";
   const accentDots = document.querySelectorAll(".accent-dot");
-  
+
   if (savedAccentTheme && savedAccentTheme !== "indigo") {
     html.classList.add(`theme-${savedAccentTheme}`);
   }
@@ -658,13 +624,13 @@ function initGlobalInteractions() {
       if (dot.getAttribute("data-theme") === savedAccentTheme) {
         dot.classList.add("active");
       }
-      
+
       dot.addEventListener("click", () => {
         const themeChoice = dot.getAttribute("data-theme");
-        
+
         accentDots.forEach(d => d.classList.remove("active"));
         dot.classList.add("active");
-        
+
         html.classList.remove("theme-matrix", "theme-dracula", "theme-cyber", "theme-classic");
         if (themeChoice !== "indigo") {
           html.classList.add(`theme-${themeChoice}`);
@@ -717,7 +683,7 @@ function initGlobalInteractions() {
       btn.addEventListener("click", async () => {
         const nextLang = btn.getAttribute("data-lang");
         if (state.lang === nextLang) return;
-        
+
         state.lang = nextLang;
         localStorage.setItem("cv-lang", state.lang);
         await hydrate();
@@ -768,400 +734,6 @@ function initSpotlightHighlighting() {
     const y = e.clientY - rect.top;
     card.style.setProperty("--mouse-x", `${x}px`);
     card.style.setProperty("--mouse-y", `${y}px`);
-  });
-}
-
-function initTerminal() {
-  const trigger = document.getElementById("terminalTrigger");
-  const overlay = document.getElementById("terminalOverlay");
-  const closeBtn = document.getElementById("terminalCloseBtn");
-  const input = document.getElementById("terminalInput");
-  const output = document.getElementById("terminalOutput");
-
-  const minBtn = document.querySelector(".t-minimize");
-  const maxBtn = document.querySelector(".t-maximize");
-  const container = document.querySelector(".terminal-container");
-  const header = document.querySelector(".terminal-header");
-
-  if (!trigger || !overlay || !input) return;
-
-  const sessionStartTime = Date.now();
-  let currentThemeName = "Indigo (Default)";
-  const cmdHistory = JSON.parse(sessionStorage.getItem("terminal-history")) || [];
-  const syncBtn = document.getElementById("terminalSyncBtn");
-
-  function print(text, type = "normal") {
-    const div = document.createElement("div");
-    div.className = `terminal-line type-${type}`;
-    div.innerHTML = text;
-    output.appendChild(div);
-    const body = document.getElementById("terminalBody");
-    body.scrollTop = body.scrollHeight;
-  }
-
-  function printWelcome() {
-    output.innerHTML = "";
-    print("Welcome to Enmanuel's Interactive Shell (v1.0.0)", "welcome");
-    print("Type <span class='cmd'>help</span> to list all available commands.", "info");
-    print("");
-  }
-
-  const getVirtualFiles = () => {
-    const paragraphs = state.data ? state.data.about.paragraphs.join("\n\n") : "Enmanuel Leon — Senior Fullstack Engineer";
-    
-    let skillsStr = "--- TECHNICAL STACK ---\n";
-    if (state.data && state.data.skills) {
-      state.data.skills.categories.forEach(cat => {
-        skillsStr += `${cat.title}:\n`;
-        const items = cat.items.map(i => typeof i === "string" ? `  • ${i}` : `  • ${i.name || i}`).join("\n");
-        skillsStr += `${items}\n\n`;
-      });
-    } else {
-      skillsStr += "JavaScript, TypeScript, Node.js, Python, Fastify, AWS, GCP, Redis, BullMQ, React\n";
-    }
-
-    let expStr = "--- EXPERIENCE TIMELINE ---\n";
-    if (state.data) {
-      state.data.experience.items.forEach(job => {
-        expStr += `[${job.period}] ${job.role} at ${job.company}\n`;
-        job.bullets.forEach(b => {
-          expStr += `  • ${b}\n`;
-        });
-        expStr += "\n";
-      });
-    } else {
-      expStr += "Senior Fullstack Engineer\n";
-    }
-
-    let eduStr = "--- EDUCATION ---\n";
-    if (state.data && state.data.education) {
-      state.data.education.items.forEach(edu => {
-        eduStr += `[${edu.period}] ${edu.degree}\n  ${edu.school}\n  ${edu.description}\n\n`;
-      });
-    } else {
-      eduStr += "Ingeniería de Computación - Universidad José Antonio Páez (2017 - 2020)\n";
-    }
-
-    let contactStr = "--- CONTACT INFORMATION ---\n";
-    if (state.data && state.data.contact) {
-      state.data.contact.items.forEach(item => {
-        contactStr += `${item.label}: ${item.value} (${item.href})\n`;
-      });
-    } else {
-      contactStr += "Email: contact@enmanuel-leon.com\nLinkedIn: linkedin.com/in/enmanuel-leon-48b11714b\nGitHub: github.com/enmanuel-leon\n";
-    }
-
-    const secretStr = `🔑 EASTER EGG UNLOCKED!
-"Code is like humor. When you have to explain it, it's bad." — Cory House
-Thanks for checking out my interactive shell. Let's build something awesome together!\n`;
-
-    return {
-      "about.txt": { content: paragraphs, size: paragraphs.length },
-      "skills.txt": { content: skillsStr, size: skillsStr.length },
-      "experience.txt": { content: expStr, size: expStr.length },
-      "education.txt": { content: eduStr, size: eduStr.length },
-      "contact.txt": { content: contactStr, size: contactStr.length },
-      "secret.txt": { content: secretStr, size: secretStr.length },
-      "resume.pdf": { content: "[Binary PDF Data]", size: 284201 },
-      "resume.md": { content: "[Markdown Resume Data]", size: 4096 }
-    };
-  };
-
-  const commands = {
-    help: () => {
-      print("Available commands:");
-      print("  <span class='cmd'>ls [-l] [-a]</span>        - List files in current directory");
-      print("  <span class='cmd'>cat &lt;file&gt;</span>         - Display content of a file (e.g. cat about.txt)");
-      print("  <span class='cmd'>neofetch</span>           - Display custom system profile and statistics");
-      print("  <span class='cmd'>theme &lt;name&gt;</span>       - Change CLI colors (dracula, matrix, cyber, classic, indigo)");
-      print("  <span class='cmd'>whoami</span>             - Show active shell profile user name");
-      print("  <span class='cmd'>pwd</span>                - Show current working directory path");
-      print("  <span class='cmd'>date</span>               - Print current calendar timestamp");
-      print("  <span class='cmd'>history</span>            - Show command log history");
-      print("  <span class='cmd'>clear</span>              - Clear shell console");
-      print("  <span class='cmd'>exit</span>               - Close terminal overlay");
-    },
-    ls: (args) => {
-      const files = getVirtualFiles();
-      const showAll = args.includes("-a") || args.includes("-la") || args.includes("-al");
-      const longFormat = args.includes("-l") || args.includes("-la") || args.includes("-al");
-
-      if (longFormat) {
-        print("total 64");
-        if (showAll) {
-          print("drwxr-xr-x   6 guest  staff     192 May 30 03:48 .");
-          print("drwxr-xr-x   4 guest  staff     128 May 30 03:48 ..");
-        }
-        Object.keys(files).forEach(name => {
-          const file = files[name];
-          const isExec = name.endsWith(".pdf") || name.endsWith(".md");
-          const colorClass = isExec ? "style='color:#22c55e'" : "";
-          print(`-rw-r--r--   1 guest  staff  ${String(file.size).padStart(6, " ")} May 30 03:48 <span ${colorClass}>${name}</span>`);
-        });
-      } else {
-        let fileNames = Object.keys(files);
-        if (showAll) {
-          fileNames = [".", "..", ...fileNames];
-        }
-        print(fileNames.join("    "));
-      }
-    },
-    cat: (args) => {
-      if (args.length === 0) {
-        print("cat: missing operand", "error");
-        return;
-      }
-      const files = getVirtualFiles();
-      const filename = args[0].toLowerCase();
-      
-      if (files[filename]) {
-        if (filename === "resume.pdf" || filename === "resume.md") {
-          print("Initializing virtual download channel...");
-          const isEs = state.lang === "es";
-          if (filename === "resume.pdf") {
-            print("Retrieving PDF file...");
-            const targetFile = isEs ? "./export/Enmanuel_Leon_CV_ES.pdf" : "./export/Enmanuel_Leon_Resume_EN.pdf";
-            const dlName = isEs ? "Enmanuel_Leon_CV_ES.pdf" : "Enmanuel_Leon_Resume_EN.pdf";
-            downloadFile(targetFile, dlName);
-          } else {
-            print("Retrieving Markdown file...");
-            const targetFile = isEs ? "./export/Enmanuel_Leon_CV_ES.md" : "./export/Enmanuel_Leon_Resume_EN.md";
-            const dlName = isEs ? "Enmanuel_Leon_CV_ES.md" : "Enmanuel_Leon_Resume_EN.md";
-            downloadFile(targetFile, dlName);
-          }
-        } else {
-          const formatted = files[filename].content.replace(/\n/g, "<br/>");
-          print(formatted);
-        }
-      } else {
-        print(`cat: ${escapeHtml(args[0])}: No such file or directory`, "error");
-      }
-    },
-    neofetch: () => {
-      const asciiArt = `
-<span style="color:#6366f1">   ______   __      </span>
-<span style="color:#6366f1">  / ____/  / /      </span>
-<span style="color:#818cf8"> / __/    / /       </span>
-<span style="color:#818cf8">/ /___   / /___     </span>
-<span style="color:#4f46e5">/_____/ /_____/     </span>
-`;
-      const sysInfo = `
-<span style="color:var(--accent-light);font-weight:bold">enmanuel@portfolio</span>
-------------------
-<span style="color:#fbbf24">OS:</span> PortfolioOS v1.0.0 (zsh shell)
-<span style="color:#fbbf24">Kernel:</span> Darwin 23.0.0
-<span style="color:#fbbf24">Uptime:</span> ${Math.floor((Date.now() - sessionStartTime) / 1000)}s
-<span style="color:#fbbf24">Shell:</span> zsh 5.9
-<span style="color:#fbbf24">Theme:</span> ${currentThemeName}
-<span style="color:#fbbf24">CPU:</span> M-Series Max (Hyper-optimized)
-<span style="color:#fbbf24">Stack:</span> Node.js, TypeScript, Python, Fastify, AWS, Redis, BullMQ, React
-<span style="color:#fbbf24">Contact:</span> contact@enmanuel-leon.com
-`;
-      print(`<div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap"><div>${asciiArt}</div><div>${sysInfo}</div></div>`);
-    },
-    theme: (args) => {
-      if (args.length === 0) {
-        print("Usage: <span class='cmd'>theme &lt;name&gt;</span>");
-        print("Available themes: <span class='cmd'>indigo</span> (default), <span class='cmd'>dracula</span>, <span class='cmd'>matrix</span>, <span class='cmd'>cyber</span>, <span class='cmd'>classic</span>");
-      } else {
-        const themeChoice = args[0].toLowerCase();
-        const html = document.documentElement;
-        const dots = document.querySelectorAll(".accent-dot");
-        
-        const syncDots = (selected) => {
-          dots.forEach(d => {
-            if (d.getAttribute("data-theme") === selected) {
-              d.classList.add("active");
-            } else {
-              d.classList.remove("active");
-            }
-          });
-        };
-
-        html.classList.remove("theme-matrix", "theme-dracula", "theme-cyber", "theme-classic");
-        
-        if (themeChoice === "matrix") {
-          html.classList.add("theme-matrix");
-          localStorage.setItem("accent-theme", "matrix");
-          syncDots("matrix");
-          currentThemeName = "Matrix (Green)";
-          print("Accent theme switched to Matrix 🟩", "welcome");
-        } else if (themeChoice === "dracula") {
-          html.classList.add("theme-dracula");
-          localStorage.setItem("accent-theme", "dracula");
-          syncDots("dracula");
-          currentThemeName = "Dracula (Purple)";
-          print("Accent theme switched to Dracula 🟪", "welcome");
-        } else if (themeChoice === "cyber") {
-          html.classList.add("theme-cyber");
-          localStorage.setItem("accent-theme", "cyber");
-          syncDots("cyber");
-          currentThemeName = "Cyberpunk (Neon)";
-          print("Accent theme switched to Cyberpunk 💖🩵", "welcome");
-        } else if (themeChoice === "classic") {
-          html.classList.add("theme-classic");
-          localStorage.setItem("accent-theme", "classic");
-          syncDots("classic");
-          currentThemeName = "Classic (Slate)";
-          print("Accent theme switched to Classic Gray ⬜", "welcome");
-        } else if (themeChoice === "indigo" || themeChoice === "default") {
-          localStorage.removeItem("accent-theme");
-          syncDots("indigo");
-          currentThemeName = "Indigo (Default)";
-          print("Accent theme restored to Indigo Default 🟦", "welcome");
-        } else {
-          print(`theme: Unknown theme '${escapeHtml(args[0])}'. Type 'theme' to see options.`, "error");
-        }
-      }
-    },
-    whoami: () => {
-      print("guest@enmanuel-leon-portfolio");
-    },
-    pwd: () => {
-      print("/Users/enmanuel/portfolio");
-    },
-    date: () => {
-      print(new Date().toString());
-    },
-    history: () => {
-      cmdHistory.forEach((c, idx) => {
-        print(`  ${String(idx + 1).padStart(3, " ")}  ${escapeHtml(c)}`);
-      });
-    },
-    sudo: () => {
-      print("sudo: guest is not in the sudoers file. This incident will be reported.", "error");
-    },
-    clear: () => {
-      output.innerHTML = "";
-    },
-    exit: () => {
-      overlay.setAttribute("aria-hidden", "true");
-    }
-  };
-
-  const syncTerminalWithSystem = (verbose = true) => {
-    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const systemTheme = isDark ? "dark" : "light";
-    const html = document.documentElement;
-    const themeToggle = document.getElementById("themeToggle");
-
-    html.setAttribute("data-theme", systemTheme);
-    localStorage.setItem("theme", systemTheme);
-    
-    // Clear custom accent themes so it restores indigo default!
-    html.classList.remove("theme-matrix", "theme-dracula", "theme-cyber", "theme-classic");
-    localStorage.removeItem("accent-theme");
-    const dots = document.querySelectorAll(".accent-dot");
-    dots.forEach(d => {
-      if (d.getAttribute("data-theme") === "indigo") {
-        d.classList.add("active");
-      } else {
-        d.classList.remove("active");
-      }
-    });
-
-    applyTerminalTheme(systemTheme);
-
-    if (verbose) {
-      const modeText = isDark ? "Dark Mode 🌙" : "Light Mode ☀️";
-      print(`System and terminal themes synchronized: <b>${modeText}</b>.`, "info");
-    }
-  };
-
-  if (syncBtn) {
-    syncBtn.onclick = (e) => {
-      e.stopPropagation();
-      syncTerminalWithSystem();
-    };
-  }
-
-  trigger.addEventListener("click", () => {
-    overlay.setAttribute("aria-hidden", "false");
-    if (container) {
-      container.classList.remove("minimized");
-      container.classList.remove("fullscreen");
-      overlay.classList.remove("minimized-mode");
-    }
-    printWelcome();
-    const activeTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    applyTerminalTheme(activeTheme);
-    setTimeout(() => input.focus(), 150);
-  });
-
-  if (closeBtn) {
-    closeBtn.onclick = (e) => {
-      e.stopPropagation();
-      overlay.setAttribute("aria-hidden", "true");
-      if (container) {
-        container.classList.remove("minimized");
-        container.classList.remove("fullscreen");
-        overlay.classList.remove("minimized-mode");
-      }
-    };
-  }
-
-  if (minBtn && container) {
-    minBtn.onclick = (e) => {
-      e.stopPropagation();
-      container.classList.remove("fullscreen");
-      container.classList.toggle("minimized");
-      overlay.classList.toggle("minimized-mode");
-      if (!container.classList.contains("minimized")) {
-        setTimeout(() => input.focus(), 100);
-      }
-    };
-  }
-
-  if (maxBtn && container) {
-    maxBtn.onclick = (e) => {
-      e.stopPropagation();
-      container.classList.remove("minimized");
-      overlay.classList.remove("minimized-mode");
-      container.classList.toggle("fullscreen");
-      setTimeout(() => input.focus(), 100);
-    };
-  }
-
-  if (header && container) {
-    header.onclick = (e) => {
-      if (container.classList.contains("minimized")) {
-        container.classList.remove("minimized");
-        overlay.classList.remove("minimized-mode");
-        setTimeout(() => input.focus(), 100);
-      }
-    };
-  }
-
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) overlay.setAttribute("aria-hidden", "true");
-  });
-
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      const line = input.value.trim();
-      input.value = "";
-      if (!line) return;
-
-      print(`<span class='terminal-prompt'>enmanuel@guest ~ %</span> <span class='user-input-line'>${escapeHtml(line)}</span>`);
-      cmdHistory.push(line);
-      sessionStorage.setItem("terminal-history", JSON.stringify(cmdHistory));
-      
-      const tokens = line.split(/\s+/);
-      const cmd = tokens[0].toLowerCase();
-      const args = tokens.slice(1);
-      
-      if (commands[cmd]) {
-        commands[cmd](args);
-      } else {
-        print(`zsh: command not found: ${escapeHtml(tokens[0])}. Type 'help' for options.`, "error");
-      }
-    }
-  });
-
-  overlay.addEventListener("click", (e) => {
-    if (container && !container.classList.contains("minimized")) {
-      input.focus();
-    }
   });
 }
 
@@ -1287,7 +859,14 @@ async function hydrate() {
   initGlobalInteractions();
   initTagHighlighting();
   initSpotlightHighlighting();
-  initTerminal();
+  if (CONFIG.enableTerminal) {
+    try {
+      const mod = await import("./terminal.js");
+      mod.initTerminal(state);
+    } catch (err) {
+      console.error("Error loading terminal module:", err);
+    }
+  }
   initKeyboardShortcuts();
 
   window.addEventListener("hashchange", () => {
