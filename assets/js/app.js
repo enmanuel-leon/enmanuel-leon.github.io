@@ -1,19 +1,15 @@
 const DEFAULT_TYPING = {
   es: [
-    'console.log("Hola Mundo");',
-    "arquitecturas modernas y escalables",
-    'import { impacto } from "producto";',
-    "render(<Experiencia />);",
-    "// calidad, rendimiento y mantenibilidad",
-    'git commit -m "feat: entregar valor"',
+    "Diseño arquitecturas distribuidas y resilientes.",
+    "Optimizo motores asíncronos y procesamiento de colas.",
+    "Construyo plataformas cloud de alta disponibilidad.",
+    "Orquesto sistemas agénticos y flujos autónomos.",
   ],
   en: [
-    'console.log("Hello World");',
-    "building modern and scalable systems",
-    'import { impact } from "product";',
-    "render(<Experience />);",
-    "// quality, performance and maintainability",
-    'git commit -m "feat: ship value"',
+    "Architecting distributed and resilient systems.",
+    "Optimizing asynchronous engines and queue processing.",
+    "Building high-availability cloud platforms.",
+    "Orchestrating agentic systems and autonomous workflows.",
   ],
 };
 
@@ -1182,7 +1178,7 @@ function initKeyboardShortcuts() {
       e.preventDefault();
       if (overlay) {
         const isHidden = overlay.getAttribute("aria-hidden") === "true";
-        if (isHidden) {
+        if (isHidden && trigger) {
           trigger.click();
         } else {
           overlay.setAttribute("aria-hidden", "true");

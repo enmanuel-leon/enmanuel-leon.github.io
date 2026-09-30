@@ -2,12 +2,30 @@
   "nav": {
     "brand": "EL",
     "items": [
-      { "id": "hero", "label": "Home" },
-      { "id": "about", "label": "Profile" },
-      { "id": "experience", "label": "Experience" },
-      { "id": "skills", "label": "Stack" },
-      { "id": "education", "label": "Education" },
-      { "id": "contact", "label": "Contact" }
+      {
+        "id": "hero",
+        "label": "Home"
+      },
+      {
+        "id": "about",
+        "label": "Profile"
+      },
+      {
+        "id": "experience",
+        "label": "Experience"
+      },
+      {
+        "id": "skills",
+        "label": "Stack"
+      },
+      {
+        "id": "education",
+        "label": "Education"
+      },
+      {
+        "id": "contact",
+        "label": "Contact"
+      }
     ]
   },
   "ui": {
@@ -23,7 +41,7 @@
     "modalLightweight": "Lightweight text format",
     "modalPrintReady": "Print-ready format",
     "contactMe": "Contact me",
-    "viewSkills": "View skills",
+    "viewSkills": "View stack",
     "copyEmail": "Copy email",
     "copied": "Copied!"
   },
@@ -37,27 +55,51 @@
     "summary": "Computer Engineer specializing in distributed systems, agentic architectures, and transactional platforms with TypeScript, Node.js, Python, AWS/GCP, and high-demand integrations.",
     "typingLine": "I engineer distributed architectures, processing engines, and cloud platforms;",
     "actions": [
-      { "label": "Contact", "href": "#contact" },
-      { "label": "View experience", "href": "#experience" }
+      {
+        "label": "Contact",
+        "href": "#contact"
+      },
+      {
+        "label": "View stack",
+        "href": "#experience"
+      }
+    ],
+    "typingPhrases": [
+      "Architecting distributed and resilient systems.",
+      "Optimizing asynchronous engines and queue processing.",
+      "Building high-availability cloud platforms.",
+      "Orchestrating agentic systems and autonomous workflows."
     ]
   },
   "about": {
-    "label": "// About",
-    "title": "Engineering distributed systems, asynchronous engines, and high-availability cloud platforms",
+    "label": "About me",
+    "title": "Engineering distributed systems, async processing engines, and resilient cloud backends",
     "paragraphs": [
       "I have more than six years of experience delivering mission-critical production software for fintech, applied AI, and enterprise platforms.",
       "My approach balances sound technical architecture and business delivery: I build scalable asynchronous processing engines, core service platforms with M2M communication across isolated VPCs, agentic architectures, and cloud-native services on AWS/GCP.",
       "Based in Valencia, Venezuela, I work 100% remotely with full availability for CET (Europe) and EST (Americas) hours. I hold dual citizenship: Italian (EU) and Venezuelan."
     ],
     "stats": [
-      { "value": "6+", "label": "Years of experience" },
-      { "value": "High Scale", "label": "Distributed systems" },
-      { "value": "99.9%", "label": "Production uptime" },
-      { "value": "CET/EST", "label": "Working timezones" }
+      {
+        "value": "6+",
+        "label": "Years of experience"
+      },
+      {
+        "value": "High Scale",
+        "label": "Distributed systems"
+      },
+      {
+        "value": "99.9%",
+        "label": "Production uptime"
+      },
+      {
+        "value": "CET/EST",
+        "label": "Working timezones"
+      }
     ]
   },
   "experience": {
-    "label": "// Experience",
+    "label": "Experience",
     "title": "Professional journey",
     "subtitle": "Roles across distributed systems, transactional microservices, cloud infrastructure, and applied AI.",
     "items": [
@@ -75,7 +117,16 @@
           "Steered engineering standards and architectural decision records (RFCs/ADRs), cutting technical debt and accelerating cross-service integration across engineering peers.",
           "Operated distributed microservices across AWS and GCP with high availability, containerizing services in Docker and implementing CI/CD pipelines for automated continuous deployments backed by real-time observability in Sentry and CloudWatch."
         ],
-        "tags": ["Agentic Architecture", "TypeScript", "Fastify", "Python", "AWS / GCP", "Redis / BullMQ", "M2M / VPC", "Docker"]
+        "tags": [
+          "Agentic Architecture",
+          "TypeScript",
+          "Fastify",
+          "Python",
+          "AWS / GCP",
+          "Redis / BullMQ",
+          "M2M / VPC",
+          "Docker"
+        ]
       },
       {
         "id": "fintech_mobile",
@@ -88,7 +139,14 @@
           "Architected scalable cloud data infrastructure and security controls, implementing robust authentication flows and fine-grained Row-Level Security (RLS) policies to protect sensitive credit records and financial contracts.",
           "Optimized mobile application performance and network resilience, streamlining startup load times and securing reliable offline persistence for credit applications and operations in low-connectivity environments."
         ],
-        "tags": ["React Native", "TypeScript", "Cloud Infra", "RLS", "Credit Systems", "Fintech"]
+        "tags": [
+          "React Native",
+          "TypeScript",
+          "Cloud Infra",
+          "RLS",
+          "Credit Systems",
+          "Fintech"
+        ]
       },
       {
         "id": "epayco",
@@ -103,7 +161,15 @@
           "Significantly reduced transaction processing latency by optimizing complex MySQL queries, offloading asynchronous background tasks with AWS SQS queues, and refactoring critical API endpoint handlers.",
           "Accelerated production issue resolution and improved system reliability by establishing reproducible Docker environments, comprehensive automated testing suites in Jest, and proactive anomaly monitoring via Datadog and Sentry."
         ],
-        "tags": ["Node.js", "TypeScript", "React", "MySQL", "GraphQL / REST", "AWS SQS", "Docker"]
+        "tags": [
+          "Node.js",
+          "TypeScript",
+          "React",
+          "MySQL",
+          "GraphQL / REST",
+          "AWS SQS",
+          "Docker"
+        ]
       },
       {
         "id": "intelix",
@@ -116,12 +182,19 @@
           "Ensured continuous high availability (zero unplanned downtime) by administering production Linux servers configured with NGINX reverse proxies, load balancing, and SSL/TLS security policies.",
           "Decreased developer onboarding time by authoring comprehensive OpenAPI/Swagger specifications, interactive endpoint documentation, and modular architecture blueprints."
         ],
-        "tags": ["JavaScript", "Node.js", "Python", "NGINX", "Linux", "OpenAPI"]
+        "tags": [
+          "JavaScript",
+          "Node.js",
+          "Python",
+          "NGINX",
+          "Linux",
+          "OpenAPI"
+        ]
       }
     ]
   },
   "skills": {
-    "label": "// Stack",
+    "label": "Tech Stack",
     "title": "Patterns, technologies, and tools",
     "desc": "Architecture patterns, backend engines, cloud infra, and applied AI tools I leverage in production",
     "categories": [
@@ -244,7 +317,7 @@
     ]
   },
   "education": {
-    "label": "// Education",
+    "label": "Education",
     "title": "Academic background",
     "items": [
       {
@@ -264,7 +337,14 @@
         "title": "Artifact Generation Engine",
         "type": "Distributed Systems / Fastify & Python",
         "description": "Distributed document generation engine that cut generation times by 65%, processing over 2,000 monthly audit reports via BullMQ and Redis.",
-        "tech": ["Fastify", "Python", "Redis", "BullMQ", "Docker", "AWS S3"],
+        "tech": [
+          "Fastify",
+          "Python",
+          "Redis",
+          "BullMQ",
+          "Docker",
+          "AWS S3"
+        ],
         "icon": "📄",
         "demo": "#",
         "github": "#"
@@ -273,7 +353,14 @@
         "title": "Core AI Tooling Platform",
         "type": "Agentic Architecture & M2M / TypeScript & Node.js",
         "description": "Multi-instance platform for agentic architecture and tooling distribution featuring low-latency (<50ms) M2M communication, agent orchestration, and periodic asynchronous sync with isolated customer VPCs.",
-        "tech": ["Agentic Architecture", "TypeScript", "Node.js", "Fastify", "VPC Networking", "Redis / Workers"],
+        "tech": [
+          "Agentic Architecture",
+          "TypeScript",
+          "Node.js",
+          "Fastify",
+          "VPC Networking",
+          "Redis / Workers"
+        ],
         "icon": "🤖",
         "demo": "#",
         "github": "#"
@@ -282,7 +369,13 @@
         "title": "Fintech Cross-Platform Mobile Suite",
         "type": "FinTech Mobile / React Native & Cloud",
         "description": "End-to-end cross-platform mobile financial application built with scalable cloud architecture, offline resilience, and strict Row-Level Security (RLS) policies.",
-        "tech": ["React Native", "TypeScript", "Cloud Infra", "RLS", "Auth"],
+        "tech": [
+          "React Native",
+          "TypeScript",
+          "Cloud Infra",
+          "RLS",
+          "Auth"
+        ],
         "icon": "💳",
         "demo": "#",
         "github": "#"
@@ -290,7 +383,7 @@
     ]
   },
   "contact": {
-    "label": "// Contact",
+    "label": "Contact",
     "title": "Let's connect",
     "subtitle": "Open to opportunities where systems engineering, technical robustness, and business impact advance together.",
     "items": [
@@ -314,5 +407,5 @@
       }
     ]
   },
-  "footer": "Designed and developed with <span class='heart'></span> by Enmanuel Leon — © {year}"
+  "footer": "Enmanuel Leon — Senior Fullstack & Distributed Systems Engineer · {year}"
 }

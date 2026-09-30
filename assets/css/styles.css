@@ -394,9 +394,10 @@ html.theme-classic-light .accent-dot.active {
 
 .hero-avatar-glow {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  opacity: 0.3;
   z-index: -1;
   pointer-events: none;
 }
@@ -2501,4 +2502,14 @@ body:has(#terminalOverlay[aria-hidden="false"]:not(.minimized-mode)) .terminal-t
   .footer {
     display: none !important;
   }
+}
+
+/* ==========================================================================
+   Phase 2 Deferred Features - Clean Minimalist Aesthetic
+   ========================================================================== */
+#particles-canvas,
+.terminal-trigger,
+.terminal-overlay,
+.accent-dots {
+  display: none !important;
 }

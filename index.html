@@ -131,8 +131,9 @@
       </div>
     </noscript>
 
-    <!-- Particle Canvas -->
+    <!-- TODO (Phase 2): Particle Canvas - Temporarily disabled for high-signal clean UI
     <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    -->
 
     <!-- Navigation -->
     <nav class="nav" id="navbar">
@@ -154,6 +155,7 @@
             <button class="lang-switch-btn" data-lang="en" data-tooltip="English">EN</button>
             <span class="lang-switch-slider"></span>
           </div>
+          <!-- TODO (Phase 2): Accent Themes (Matrix/Dracula/Cyber)
           <div class="accent-dots" id="accentSelect" aria-label="Seleccionar tema visual" role="group">
             <button class="accent-dot dot-indigo" data-theme="indigo" data-tooltip="Indigo" title="Tema Índigo" aria-label="Tema visual Índigo"></button>
             <button class="accent-dot dot-matrix" data-theme="matrix" data-tooltip="Matrix 🟩" title="Tema Matrix" aria-label="Tema visual Matrix"></button>
@@ -161,6 +163,7 @@
             <button class="accent-dot dot-cyber" data-theme="cyber" data-tooltip="Cyberpunk 💖🩵" title="Tema Cyberpunk" aria-label="Tema visual Cyberpunk"></button>
             <button class="accent-dot dot-classic" data-theme="classic" data-tooltip="Classic ⬜" title="Tema Clásico Slate" aria-label="Tema visual Clásico Slate"></button>
           </div>
+          -->
           <button class="theme-switch" id="themeToggle" aria-label="Cambiar tema">
             <span class="theme-switch-icon">☀️</span>
             <span class="theme-switch-icon">🌙</span>
@@ -195,10 +198,12 @@
           
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary" id="heroBtnContact">
-              ✉️ Contáctame
+              <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Contáctame</span>
             </a>
             <a href="#skills" class="btn btn-secondary" id="heroBtnProjects">
-              🚀 Ver skills
+              <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <span>Ver stack</span>
             </a>
           </div>
           <div class="download-links">
@@ -230,9 +235,9 @@
     <section id="about">
       <div class="section-container">
         <div class="section-header reveal">
-          <p class="section-label" id="aboutLabel">// Sobre mí</p>
+          <p class="section-label" id="aboutLabel">Sobre mí</p>
           <h2 class="section-title" id="aboutTitle">
-            Pasión por el código y el diseño
+            Arquitectura de Software y Sistemas Distribuidos
           </h2>
         </div>
         <div class="about-grid">
@@ -249,10 +254,10 @@
     <section id="experience" style="background: var(--bg-secondary)">
       <div class="section-container">
         <div class="section-header reveal">
-          <p class="section-label" id="expLabel">// Experiencia</p>
+          <p class="section-label" id="expLabel">Experiencia</p>
           <h2 class="section-title" id="expTitle">Trayectoria profesional</h2>
           <p class="section-desc" id="expDesc">
-            Mi recorrido en la industria del desarrollo web
+            Roles en sistemas distribuidos, microservicios transaccionales y arquitectura cloud
           </p>
         </div>
         <div class="timeline" id="experienceTimeline"></div>
@@ -263,7 +268,7 @@
     <section id="skills">
       <div class="section-container">
         <div class="section-header reveal">
-          <p class="section-label" id="skillsLabel">// Habilidades</p>
+          <p class="section-label" id="skillsLabel">Stack tecnológico</p>
           <h2 class="section-title" id="skillsTitle">Stack tecnológico</h2>
           <p class="section-desc" id="skillsDesc">
             Herramientas y tecnologías con las que trabajo día a día
@@ -291,7 +296,7 @@
     <section id="education">
       <div class="section-container">
         <div class="section-header reveal">
-          <p class="section-label" id="eduLabel">// Educación</p>
+          <p class="section-label" id="eduLabel">Educación</p>
           <h2 class="section-title" id="eduTitle">Formación académica</h2>
         </div>
         <div class="education-grid stagger-children" id="educationGrid"></div>
@@ -302,7 +307,7 @@
     <section id="contact" style="background: var(--bg-secondary)">
       <div class="section-container">
         <div class="section-header reveal">
-          <p class="section-label" id="contactLabel">// Contacto</p>
+          <p class="section-label" id="contactLabel">Contacto</p>
           <h2 class="section-title" id="contactTitle">¿Trabajamos juntos?</h2>
         </div>
         <div class="contact-wrapper reveal">
@@ -322,12 +327,11 @@
       ↑
     </button>
 
-    <!-- Terminal Trigger Button -->
+    <!-- TODO (Phase 2): Terminal Emulator v2 - Temporarily hidden
     <button class="terminal-trigger" id="terminalTrigger" aria-label="Abrir terminal de desarrollo">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </button>
 
-    <!-- Terminal Mode Overlay -->
     <div class="terminal-overlay" id="terminalOverlay" aria-hidden="true" role="dialog">
       <div class="terminal-container" style="elevation: 2">
         <div class="terminal-header">
@@ -354,6 +358,7 @@
         </div>
       </div>
     </div>
+    -->
 
     <!-- Download Modal -->
     <div class="modal-overlay" id="downloadModal" aria-hidden="true" role="dialog">
@@ -406,10 +411,12 @@
     <!-- Mobile Sticky Quick Action Bar -->
     <div class="mobile-cta-bar" id="mobileCtaBar" aria-label="Acciones rápidas móviles">
       <button class="mobile-cta-btn btn-cta-download" id="mobileCtaDownload" type="button">
-        📄 <span id="mobileCtaDownloadText">Descargar CV</span>
+        <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span id="mobileCtaDownloadText">Descargar CV</span>
       </button>
       <a href="#contact" class="mobile-cta-btn btn-cta-contact" id="mobileCtaContact">
-        ✉️ <span id="mobileCtaContactText">Contactar</span>
+        <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <span id="mobileCtaContactText">Contactar</span>
       </a>
     </div>
 
