@@ -97,7 +97,7 @@ function renderStatic(data) {
 
   const highlightMetrics = (text) => {
     return escapeHtml(text).replace(
-      /(?:\b\d+(?:\.\d+)?%|&lt;50ms|<50ms|&gt;2\.000|>2\.000|&gt;500\.000|>500\.000|1\.5 días|1\.5 days|p95|2,000\+|500,000\+|6\+|zero|cero)/gi,
+      /(?:\b\d+(?:\.\d+)?%|&lt;50ms|<50ms|&gt;2\.000|>2\.000|&gt;500\.000|>500\.000|1\.5 días|1\.5 days|p95|10\.000\+|10,000\+|2,000\+|500,000\+|20\+|6\+|zero-downtime|zero|cero)/gi,
       '<span class="metric-chip">$&</span>',
     );
   };

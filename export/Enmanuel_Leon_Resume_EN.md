@@ -2,9 +2,9 @@
 
 **Senior Software Engineer | Distributed Systems & Agentic AI | Cloud Architecture (AWS/GCP)**
 
-Valencia, Venezuela (Remote · CET / EST Timezones) | EU Citizen (Italian) · Authorized to work in the EU  
+EU Citizen (Italian) · Fully authorized to work in the EU (No sponsorship required) | Remote (CET & EST Timezones) | Valencia, Venezuela  
 Email: [contact@enmanuel-leon.com](mailto:contact@enmanuel-leon.com) | LinkedIn: [linkedin.com/in/enmanuel-leon-48b11714b](https://www.linkedin.com/in/enmanuel-leon-48b11714b/) | GitHub: [github.com/enmanuel-leon](https://github.com/enmanuel-leon) | Web: [enmanuel-leon.com](https://enmanuel-leon.com)  
-Languages: Spanish (Native), English (Professional Working Proficiency)
+Languages: Spanish (Native), English (Full Professional Working Proficiency)
 
 ---
 
@@ -21,16 +21,16 @@ Software Engineer with 6+ years of experience engineering and operating mission-
 
 - **Architected and deployed a distributed asynchronous regulatory document and artifact generation engine** using Fastify and Python orchestrated with BullMQ and Redis, reducing processing times by 65% while handling 2,000+ monthly documents.
 - **Co-designed the agentic system architecture and engineered the core AI tooling backend** (multi-agent orchestration, tool calling, and autonomous execution loops), achieving secure M2M communication with <50ms latency via decoupled APIs and token authentication.
-- **Engineered a periodic asynchronous synchronization engine** utilizing distributed crons and background workers to securely connect isolated client VPC environments with the central platform, ensuring strict data consistency with zero public endpoint exposure.
+- **Engineered a periodic asynchronous synchronization engine** utilizing distributed crons and background workers to securely connect isolated client VPC environments with the central platform, synchronizing 10,000+ daily events with zero public endpoint exposure and guaranteed data consistency.
 - **Standardized agent-assisted engineering workflows (SDLC)** using autonomous coding agents, reducing microservice refactoring lead times from 4 days to 1.5 days (-62%) while expanding automated test coverage.
-- **Operated distributed microservices across AWS and GCP with 99.9% availability**, containerizing services in Docker and automating CI/CD deployment pipelines with real-time observability via Sentry and CloudWatch.
+- **Operated distributed microservices across AWS and GCP with 99.9% availability**, containerizing workloads in Docker and automating CI/CD pipelines for zero-downtime deployments backed by distributed observability via Sentry and CloudWatch.
 
 ### Software & Mobile Engineer (Independent Consultant / Part-time Contractor) | Fintech Scale-up (Credit & Financial Platform · NDA)
 *July 2025 - July 2026*
 
-- **Engineered the end-to-end cross-platform mobile architecture** (iOS and Android) using React Native and TypeScript for a credit origination platform, integrating cloud microservices.
-- **Architected cloud data infrastructure and security controls**, implementing granular Row-Level Security (RLS) policies and strict authentication to safeguard sensitive credit records and financial contracts.
-- **Optimized mobile application performance and network resilience**, reducing cold-start load times by 35% and securing reliable offline persistence for credit applications in low-connectivity conditions.
+- **Engineered the end-to-end cross-platform mobile architecture** (iOS and Android) using React Native and TypeScript for a credit origination platform during its scaling phase, delivering 20+ modular views (biometric KYC onboarding, analytics dashboard, transactional flows, detailed history, and real-time chat support).
+- **Architected and maintained the cloud data infrastructure and backend services**, implementing robust authentication and granular Row-Level Security (RLS) policies to safeguard sensitive credit records and financial contracts.
+- **Optimized mobile application performance and network resilience**, reducing cold-start load times by 35% and securing reliable offline persistence for credit applications and transactions in low-connectivity conditions.
 
 ### Fullstack Developer | Interfell - ePayco | Remote
 *June 2021 - April 2024*
@@ -62,10 +62,9 @@ Software Engineer with 6+ years of experience engineering and operating mission-
 
 ## Education
 
-### Bachelor of Science in Computer Engineering
-**Universidad José Antonio Páez** | Valencia, Venezuela  
-*2017 - 2020*  
-*Official degree in computer engineering. Core foundations in distributed systems, relational databases, software engineering, and computer architecture.*
+### Bachelor of Science in Computer Engineering (5-Year Degree Equivalent)
+**Universidad José Antonio Páez** | Valencia, Venezuela — Conferred 2020  
+*Accredited university degree specializing in distributed systems, computer architecture, relational databases, and advanced algorithms.*
 
 ---
 

@@ -2,9 +2,9 @@
 
 **Senior Software Engineer | Sistemas Distribuidos & Agentic AI | Cloud Architecture (AWS/GCP)**
 
-Valencia, Venezuela (Remoto · Horario CET / EST) | Ciudadano UE (Italiano) · Autorizado para trabajar en la UE  
+Ciudadanía UE (Italiana) · Autorizado para trabajar en la UE sin visado | Remoto (Horario CET / EST) | Valencia, Venezuela  
 Email: [contact@enmanuel-leon.com](mailto:contact@enmanuel-leon.com) | LinkedIn: [linkedin.com/in/enmanuel-leon-48b11714b](https://www.linkedin.com/in/enmanuel-leon-48b11714b/) | GitHub: [github.com/enmanuel-leon](https://github.com/enmanuel-leon) | Web: [enmanuel-leon.com](https://enmanuel-leon.com)  
-Idiomas: Español (Nativo), Inglés (Competencia Profesional / Técnico)
+Idiomas: Español (Nativo), Inglés (Competencia Profesional / Full Professional Proficiency)
 
 ---
 
@@ -21,16 +21,16 @@ Ingeniero de Software con más de 6 años de experiencia diseñando y operando s
 
 - **Diseñé e implementé un motor distribuido de generación asíncrona de reportes normativos** en Fastify y Python con colas BullMQ y Redis, reduciendo los tiempos de procesamiento en un 65% y procesando más de 2.000 documentos mensuales.
 - **Co-diseñé la arquitectura agéntica del core de distribución de herramientas de IA** (orquestación multi-agente, tool calling y flujos autónomos), logrando comunicación M2M segura con latencias inferiores a 50ms mediante APIs desacopladas y autenticación basada en tokens.
-- **Diseñé un motor de sincronización asíncrona periódica** mediante crons distribuidos y workers en segundo plano para comunicar de forma segura instancias de clientes en VPCs aisladas con la plataforma central, garantizando consistencia de datos sin exponer endpoints a la red pública.
+- **Diseñé un motor de sincronización asíncrona periódica** mediante crons distribuidos y workers en segundo plano para comunicar instancias de clientes en VPCs aisladas con la plataforma central, sincronizando más de 10.000 eventos diarios con cero exposición de endpoints públicos y consistencia de datos garantizada.
 - **Estandaricé flujos de desarrollo asistido por agentes autónomos de código (SDLC)**, reduciendo el lead time en refactorizaciones de microservicios de 4 días a 1.5 días (-62%) y elevando la cobertura de pruebas automatizadas.
-- **Operé microservicios distribuidos en AWS y GCP con 99.9% de disponibilidad**, containerizando servicios con Docker y configurando pipelines de CI/CD para despliegues continuos con observabilidad en tiempo real en Sentry y CloudWatch.
+- **Operé microservicios distribuidos en AWS y GCP con 99.9% de disponibilidad**, containerizando cargas de trabajo con Docker y configurando pipelines de CI/CD para despliegues zero-downtime con observabilidad distribuida en Sentry y CloudWatch.
 
 ### Ingeniero de Software & Mobile (Consultor Externo / Part-time Contractor) | Fintech Scale-up (Plataforma Crediticia & Financiera · NDA)
 *Julio 2025 - Julio 2026*
 
-- **Diseñé y construí de punta a punta la arquitectura móvil multiplataforma** (iOS y Android) en React Native y TypeScript para una plataforma de servicios financieros y originación crediticia, integrando microservicios cloud.
-- **Estructuré la infraestructura de datos y políticas de seguridad cloud**, implementando autenticación robusta y control de acceso granular mediante Row-Level Security (RLS) para proteger historiales crediticios y contratos financieros sensibles.
-- **Optimicé el rendimiento y la resiliencia de la app móvil**, reduciendo el tiempo de carga inicial en un 35% y garantizando la persistencia offline de solicitudes de crédito en entornos de baja conectividad.
+- **Diseñé y construí de punta a punta la arquitectura móvil multiplataforma** (iOS y Android) en React Native y TypeScript para una plataforma de servicios financieros y originación crediticia en fase de escalamiento, implementando más de 20 vistas modulares (onboarding biométrico con KYC, dashboard analítico, flujos transaccionales, historial detallado y soporte vía chat en tiempo real).
+- **Estructuré y operé la infraestructura cloud y la arquitectura de datos de la plataforma**, implementando autenticación robusta y control de acceso granular mediante políticas de Row-Level Security (RLS) para proteger historiales crediticios y contratos financieros sensibles.
+- **Optimicé el rendimiento y la resiliencia de la app móvil**, reduciendo el tiempo de carga inicial en un 35% y garantizando la persistencia offline de solicitudes de crédito y transacciones en entornos de baja conectividad.
 
 ### Fullstack Developer | Interfell - ePayco | Remoto
 *Junio 2021 - Abril 2024*
@@ -62,10 +62,9 @@ Ingeniero de Software con más de 6 años de experiencia diseñando y operando s
 
 ## Formación Académica
 
-### Ingeniería de Computación
-**Universidad José Antonio Páez** | Valencia, Venezuela  
-*2017 - 2020*  
-*Formación universitaria de grado en computación. Especialización en sistemas distribuidos, bases de datos relacionales, ingeniería de software y arquitectura computacional.*
+### Grado en Ingeniería de Computación (B.S. Equivalent · 10 Períodos Académicos)
+**Universidad José Antonio Páez** | Valencia, Venezuela — Graduado en 2020  
+*Formación universitaria oficial orientada a sistemas distribuidos, arquitectura de computadores, bases de datos relacionales y algoritmos avanzados.*
 
 ---
 
