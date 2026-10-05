@@ -47,12 +47,12 @@
   },
   "profile": {
     "name": "Enmanuel Leon",
-    "role": "Senior Fullstack Engineer",
+    "role": "Senior Software Engineer | Distributed Systems & Agentic AI",
     "photo": "img/Profile-pic.jpeg"
   },
   "hero": {
-    "badge": "Valencia, VE · Global Remote (CET / EST)",
-    "summary": "Computer Engineer specializing in distributed systems, agentic architectures, and transactional platforms with TypeScript, Node.js, Python, AWS/GCP, and high-demand integrations.",
+    "badge": "EU Citizen (Italian) · Remote CET / EST · Valencia, VE",
+    "summary": "Software Engineer with 6+ years of experience engineering distributed systems, asynchronous processing engines, and agentic AI architectures with TypeScript, Python, and AWS/GCP. Specialized in high-availability transactional services, secure M2M communication, and multi-agent orchestration in production.",
     "typingLine": "I engineer distributed architectures, processing engines, and cloud platforms;",
     "actions": [
       {
@@ -65,19 +65,19 @@
       }
     ],
     "typingPhrases": [
-      "Architecting distributed and resilient systems.",
+      "Architecting distributed systems and agentic AI architectures.",
       "Optimizing asynchronous engines and queue processing.",
-      "Building high-availability cloud platforms.",
-      "Orchestrating agentic systems and autonomous workflows."
+      "Building high-availability cloud platforms (AWS/GCP).",
+      "Orchestrating autonomous agents and secure M2M workflows."
     ]
   },
   "about": {
     "label": "About me",
-    "title": "Engineering distributed systems, async processing engines, and resilient cloud backends",
+    "title": "Engineering distributed systems, agentic architectures, and resilient cloud platforms",
     "paragraphs": [
-      "I have more than six years of experience delivering mission-critical production software for fintech, applied AI, and enterprise platforms.",
-      "My approach balances sound technical architecture and business delivery: I build scalable asynchronous processing engines, core service platforms with M2M communication across isolated VPCs, agentic architectures, and cloud-native services on AWS/GCP.",
-      "Based in Valencia, Venezuela, I work 100% remotely with full availability for CET (Europe) and EST (Americas) hours. I hold dual citizenship: Italian (EU) and Venezuelan."
+      "I have 6+ years of experience engineering and operating mission-critical production software across fintech, applied AI, and high-throughput enterprise platforms.",
+      "Specialized in TypeScript (Node.js/Fastify), Python, and event-driven architectures on AWS/GCP. My technical focus connects architectural resilience with business delivery: scalable asynchronous processing engines, core service platforms with M2M communication across isolated customer VPCs, multi-agent orchestration, and high-concurrency cloud services.",
+      "Dual Italian (EU) and Venezuelan citizenship with full authorization to work across the European Union. Operating 100% remotely with full schedule alignment for CET (Europe) and EST (Americas) working hours."
     ],
     "stats": [
       {
@@ -85,8 +85,8 @@
         "label": "Years of experience"
       },
       {
-        "value": "High Scale",
-        "label": "Distributed systems"
+        "value": "<50ms",
+        "label": "M2M Latency"
       },
       {
         "value": "99.9%",
@@ -110,12 +110,11 @@
         "role": "Fullstack Developer (AI & Core Systems)",
         "company": "Entropy Systems",
         "bullets": [
-          "Significantly reduced processing time for complex regulatory reports by designing and deploying a distributed asynchronous document and artifact generation engine using Fastify and Python, orchestrated with BullMQ and Redis queues.",
-          "Co-designed the agentic system architecture and architected the backend layer of the core AI tooling platform (multi-agent orchestration, tool calling, and autonomous execution workflows), delivering high-concurrency multi-instance scaling and low-latency Machine-to-Machine (M2M) communication via decoupled APIs and token-based authentication.",
-          "Designed a periodic asynchronous synchronization engine using distributed crons and background workers that securely interconnects isolated customer VPC environments with the central core platform, ensuring data consistency without exposing public endpoints.",
-          "Accelerated engineering and development cycles by integrating agentic architectures and autonomous coding agents into the workflow (SDLC), optimizing deep refactoring, rapid prototyping, and automated test coverage while upholding strict production quality standards.",
-          "Steered engineering standards and architectural decision records (RFCs/ADRs), cutting technical debt and accelerating cross-service integration across engineering peers.",
-          "Operated distributed microservices across AWS and GCP with high availability, containerizing services in Docker and implementing CI/CD pipelines for automated continuous deployments backed by real-time observability in Sentry and CloudWatch."
+          "Architected and deployed a distributed asynchronous regulatory document and artifact generation engine using Fastify and Python orchestrated with BullMQ and Redis, reducing processing times by 65% while handling 2,000+ monthly documents.",
+          "Co-designed the agentic system architecture and engineered the core AI tooling backend (multi-agent orchestration, tool calling, and autonomous execution loops), achieving secure M2M communication with <50ms latency via decoupled APIs and token authentication.",
+          "Engineered a periodic asynchronous synchronization engine utilizing distributed crons and background workers to securely connect isolated client VPC environments with the central platform, ensuring strict data consistency with zero public endpoint exposure.",
+          "Standardized agent-assisted engineering workflows (SDLC) using autonomous coding agents, reducing microservice refactoring lead times from 4 days to 1.5 days (-62%) while expanding automated test coverage.",
+          "Operated distributed microservices across AWS and GCP with 99.9% availability, containerizing services in Docker and automating CI/CD deployment pipelines with real-time observability via Sentry and CloudWatch."
         ],
         "tags": [
           "Agentic Architecture",
@@ -135,9 +134,9 @@
         "role": "Software & Mobile Engineer (Independent Consultant / Part-time Contractor)",
         "company": "Fintech Scale-up (Credit & Financial Platform · NDA)",
         "bullets": [
-          "Engineered the end-to-end cross-platform mobile architecture (iOS and Android) using React Native and TypeScript for a digital financial and credit origination platform, defining technical specifications and cloud integrations.",
-          "Architected scalable cloud data infrastructure and security controls, implementing robust authentication flows and fine-grained Row-Level Security (RLS) policies to protect sensitive credit records and financial contracts.",
-          "Optimized mobile application performance and network resilience, streamlining startup load times and securing reliable offline persistence for credit applications and operations in low-connectivity environments."
+          "Engineered the end-to-end cross-platform mobile architecture (iOS and Android) using React Native and TypeScript for a credit origination platform, integrating cloud microservices.",
+          "Architected cloud data infrastructure and security controls, implementing granular Row-Level Security (RLS) policies and strict authentication to safeguard sensitive credit records and financial contracts.",
+          "Optimized mobile application performance and network resilience, reducing cold-start load times by 35% and securing reliable offline persistence for credit applications in low-connectivity conditions."
         ],
         "tags": [
           "React Native",
@@ -155,11 +154,10 @@
         "role": "Fullstack Developer",
         "company": "Interfell - ePayco",
         "bullets": [
-          "Maintained high availability across critical payment gateway services for merchants and corporate partners by engineering and maintaining transactional microservices in Node.js (Express) and TypeScript on MySQL, while integrating auxiliary services in PHP (Lumen).",
-          "Engineered resilience and idempotency controls for critical financial transactions, implementing Circuit Breakers, Rate Limiting, and exponential backoff retries to guarantee zero duplicate charges and isolate external banking failures.",
-          "Led technical payment gateway integrations for corporate merchants and partners, orchestrating transaction lifecycles between responsive React web applications and backend services connected across REST, GraphQL, and legacy SOAP APIs.",
-          "Significantly reduced transaction processing latency by optimizing complex MySQL queries, offloading asynchronous background tasks with AWS SQS queues, and refactoring critical API endpoint handlers.",
-          "Accelerated production issue resolution and improved system reliability by establishing reproducible Docker environments, comprehensive automated testing suites in Jest, and proactive anomaly monitoring via Datadog and Sentry."
+          "Maintained 99.9% availability across mission-critical payment gateway services processing 500,000+ monthly transactions, developing and maintaining transactional microservices in Node.js (Express) and TypeScript on MySQL.",
+          "Engineered financial transaction resilience and idempotency using Circuit Breakers, Rate Limiting, and AWS SQS queues with Dead Letter Queues (DLQ), guaranteeing zero duplicate charges during banking gateway outages.",
+          "Reduced p95 transaction latency by 28% by optimizing complex MySQL queries, offloading asynchronous background notifications via AWS SQS, and refactoring critical payment endpoints.",
+          "Led payment gateway integrations for merchants and partners across React web apps, REST, GraphQL, and legacy SOAP services, enforcing automated testing suites with Jest and continuous monitoring in Datadog and Sentry."
         ],
         "tags": [
           "Node.js",
@@ -178,9 +176,9 @@
         "role": "Systems Analyst / Software Developer",
         "company": "Intelix Synergy, C.A.",
         "bullets": [
-          "Boosted business process efficiency by delivering 3 modular internal management systems in JavaScript, Node.js, and Python used daily across business operations.",
-          "Ensured continuous high availability (zero unplanned downtime) by administering production Linux servers configured with NGINX reverse proxies, load balancing, and SSL/TLS security policies.",
-          "Decreased developer onboarding time by authoring comprehensive OpenAPI/Swagger specifications, interactive endpoint documentation, and modular architecture blueprints."
+          "Designed and developed 3 modular internal management applications in JavaScript, Node.js, and Python for commercial operations, used daily in production.",
+          "Ensured continuous high availability (zero unplanned downtime) administering production Linux servers configured with NGINX reverse proxies, load balancing, and SSL/TLS policies.",
+          "Reduced developer onboarding time by standardizing system architecture blueprints and API contracts using OpenAPI/Swagger specifications."
         ],
         "tags": [
           "JavaScript",
@@ -199,64 +197,50 @@
     "desc": "Architecture patterns, backend engines, cloud infra, and applied AI tools I leverage in production",
     "categories": [
       {
-        "title": "Architecture & Patterns",
-        "icon": "architecture",
+        "title": "Backend & Architecture",
+        "icon": "backend",
         "items": [
-          "System Design",
-          "Agentic Architecture (Multi-Agent)",
-          "Distributed Systems",
+          "Node.js",
+          "TypeScript",
+          "Python (FastAPI)",
+          "Fastify",
+          "Express",
           "Microservices",
+          "Distributed Systems",
           "Event-Driven Architecture (EDA)",
-          "M2M Communication",
-          "Multi-instance Scaling",
-          "VPC Isolation & Networking",
-          "Idempotency & Resilience",
-          "Circuit Breaker & Rate Limiting",
-          "Asynchronous Workflows",
-          "Multi-Cloud (AWS · GCP)",
-          "API Design (REST / GraphQL / SOAP)"
+          "REST / GraphQL APIs",
+          "Idempotency & Resilience"
+        ]
+      },
+      {
+        "title": "Applied AI & Agentic Systems",
+        "icon": "ai",
+        "items": [
+          "Agentic Systems",
+          "Multi-Agent Orchestration",
+          "Tool Calling & Function Calling",
+          "OpenAI & Anthropic APIs",
+          "RAG Pipelines",
+          "Agent-Assisted SDLC",
+          "M2M Communication"
         ]
       },
       {
         "title": "Cloud & Infrastructure",
         "icon": "cloud",
         "items": [
-          "AWS ECS",
-          "AWS Lambda",
-          "AWS RDS",
-          "AWS S3",
-          "AWS SQS",
-          "AWS CloudWatch",
-          "AWS IAM",
-          "AWS CloudFormation",
-          "GCP Cloud Run",
+          "AWS (ECS, Lambda, SQS, S3, RDS)",
+          "GCP (Cloud Run)",
           "Docker",
           "Docker Compose",
+          "CI/CD (GitHub Actions)",
           "Linux",
           "NGINX",
-          "DigitalOcean"
+          "VPC Isolation"
         ]
       },
       {
-        "title": "Backend & APIs",
-        "icon": "backend",
-        "items": [
-          "Node.js",
-          "TypeScript",
-          "Fastify",
-          "Express",
-          "Python (FastAPI)",
-          "Prisma",
-          "Zod",
-          "Lumen (PHP)",
-          "REST APIs",
-          "GraphQL",
-          "SOAP",
-          "M2M Auth & Tokens"
-        ]
-      },
-      {
-        "title": "Data & Messaging",
+        "title": "Databases & Messaging",
         "icon": "data",
         "items": [
           "PostgreSQL",
@@ -266,24 +250,7 @@
           "BullMQ",
           "AWS SQS",
           "Row-Level Security (RLS)",
-          "RabbitMQ"
-        ]
-      },
-      {
-        "title": "Applied AI & Automation",
-        "icon": "ai",
-        "items": [
-          "Agentic Architecture (Multi-Agent)",
-          "Agent-Assisted Engineering (SDLC)",
-          "Tool Use & Function Calling",
-          "Agent & Workflow Orchestration",
-          "LLM Integrations (OpenAI / Anthropic)",
-          "Asynchronous Artifact Generation",
-          "RAG Pipelines & Context Management",
-          "Prompt Engineering & Guardrails",
-          "OpenCode & Code Agents",
-          "Cursor & Copilot",
-          "n8n"
+          "Prisma ORM"
         ]
       },
       {
@@ -292,26 +259,24 @@
         "items": [
           "React",
           "Next.js",
+          "React Native (iOS/Android)",
           "Vite",
-          "React Native (iOS / Android)",
-          "JavaScript (ES6+)",
-          "Redux / Zustand",
-          "HTML5 / CSS3",
-          "Tailwind CSS"
+          "Tailwind CSS",
+          "JavaScript (ES6+)"
         ]
       },
       {
-        "title": "DevOps, Testing & Quality",
+        "title": "Observability & Quality",
         "icon": "devops",
         "items": [
-          "CI/CD (GitHub Actions)",
-          "Vitest",
-          "Jest",
           "Datadog",
           "Sentry",
+          "CloudWatch",
+          "Vitest",
+          "Jest",
+          "TDD",
           "Git / GitHub",
-          "OWASP & CORS",
-          "TDD"
+          "Zod"
         ]
       }
     ]
@@ -322,9 +287,9 @@
     "items": [
       {
         "period": "2017 - 2020",
-        "degree": "Bachelor of Science in Computer Engineering (5-year Degree Equivalent / 10 Semesters)",
-        "school": "Universidad José Antonio Páez",
-        "description": "Full 5-year equivalent engineering degree completed via accelerated 10-semester continuous track. Core curriculum in distributed systems, relational databases, software engineering, and computer architecture."
+        "degree": "Bachelor of Science in Computer Engineering",
+        "school": "Universidad José Antonio Páez — Valencia, Venezuela",
+        "description": "Official degree in computer engineering. Core foundations in distributed systems, relational databases, software engineering, and computer architecture."
       }
     ]
   },
@@ -407,5 +372,5 @@
       }
     ]
   },
-  "footer": "Enmanuel Leon — Senior Fullstack & Distributed Systems Engineer · {year}"
+  "footer": "Enmanuel Leon — Senior Software Engineer | Distributed Systems & Agentic AI · {year}"
 }

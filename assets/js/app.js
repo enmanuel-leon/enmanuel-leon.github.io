@@ -96,7 +96,10 @@ function renderStatic(data) {
      .join("");
 
   const highlightMetrics = (text) => {
-    return escapeHtml(text).replace(/(\b\d+(?:\.\d+)?%|<50ms|>2\.000|~200|500\.000)/g, '<span class="metric-chip">$1</span>');
+    return escapeHtml(text).replace(
+      /(?:\b\d+(?:\.\d+)?%|&lt;50ms|<50ms|&gt;2\.000|>2\.000|&gt;500\.000|>500\.000|1\.5 días|1\.5 days|p95|2,000\+|500,000\+|6\+|zero|cero)/gi,
+      '<span class="metric-chip">$&</span>',
+    );
   };
 
   document.getElementById("expLabel").textContent = data.experience.label;

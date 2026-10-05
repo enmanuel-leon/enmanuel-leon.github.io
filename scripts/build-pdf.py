@@ -100,7 +100,7 @@ def build():
 
         html = html.replace("</head>", f"<style>{CSS}</style></head>")
 
-        match = re.search(r"(<h3 id=\"(?:ingeniero-de-software|software-mobile-engineer)[^\"]*\">)", html)
+        match = re.search(r"(<h3 id=\"(?:interfell|fullstack-developer-interfell)[^\"]*\">)", html, re.IGNORECASE)
         if match:
             html = html.replace(match.group(1), f"<div class=\"page-break\"></div>\n{match.group(1)}")
         else:

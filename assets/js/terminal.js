@@ -96,7 +96,7 @@ export function initTerminal(state) {
   }
 
   const getVirtualFiles = () => {
-    const paragraphs = state.data ? state.data.about.paragraphs.join("\n\n") : "Enmanuel Leon — Senior Fullstack & Distributed Systems Engineer";
+    const paragraphs = state.data ? state.data.about.paragraphs.join("\n\n") : "Enmanuel Leon — Senior Software Engineer | Sistemas Distribuidos & Agentic AI";
     
     let skillsStr = "--- TECHNICAL STACK ---\n";
     if (state.data && state.data.skills) {
@@ -119,7 +119,7 @@ export function initTerminal(state) {
         expStr += "\n";
       });
     } else {
-      expStr += "Senior Fullstack & Distributed Systems Engineer\n";
+      expStr += "Senior Software Engineer | Sistemas Distribuidos & Agentic AI\n";
     }
 
     let eduStr = "--- EDUCATION ---\n";
@@ -174,7 +174,7 @@ export function initTerminal(state) {
       }
     },
     whoami: () => {
-      print("Enmanuel Leon — Senior Fullstack & Distributed Systems Engineer", "info");
+      print("Enmanuel Leon — Senior Software Engineer | Sistemas Distribuidos & Agentic AI", "info");
     },
     skills: () => {
       commands.cat(["skills.txt"]);

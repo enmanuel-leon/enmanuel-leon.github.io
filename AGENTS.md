@@ -33,14 +33,14 @@ This repository is a high-performance, dependency-free static web portfolio and 
      *Script Behavior & Contract:*
      - Converts Markdown files to standalone HTML using `pandoc`.
      - Injects ATS-optimized typography and A4 layout (`Liberation Sans`, 8.8pt body, 1.34 line-height, 12mm/14mm margins).
-     - Injects an automated page break before the second role (*Fintech Scale-up*), guaranteeing that **Page 1** contains the contact header, summary, technical skills, and current role (Entropy Systems), while **Page 2** contains previous roles, education, and additional info.
+     - Injects an automated page break before the third role (*Interfell - ePayco*), guaranteeing that **Page 1** contains the contact header, professional summary, and high-impact recent roles (Entropy Systems, Fintech Scale-up), while **Page 2** contains previous roles (ePayco, Intelix), technical skills, education, and additional info.
      - Compiles to PDF via headless Google Chrome (`google-chrome --headless --no-pdf-header-footer --print-to-pdf`).
      - Strictly enforces the **2-page budget** (`pages == 2`), exiting with error code 1 if page count deviates.
 
 2. **Grammar & Linguistic Precision:**
    - **Spanish:** Never invent anglicisms (e.g., do NOT use *"Arquitecté"*; use *"Diseñé la arquitectura de..."* or *"Estructuré..."*). Ensure proper conjugation (*"Garanticé"*, not *"Garantizé"*).
    - **English:** Use established engineering action verbs (*Architected, Engineered, Orchestrated, Streamlined, Spearheaded*).
-   - **Official Role Title:** Always use `Senior Fullstack Engineer | Distributed Systems & Cloud`.
+   - **Official Role Title:** Always use `Senior Software Engineer | Distributed Systems & Agentic AI | Cloud Architecture (AWS/GCP)`.
 
 3. **Experience Bullet Formula (Google XYZ):**
    - Every bullet point must follow: *"Accomplished [X] measured by [Y] by doing [Z]"*.
