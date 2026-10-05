@@ -47,7 +47,7 @@
   },
   "profile": {
     "name": "Enmanuel Leon",
-    "role": "Senior Software Engineer | Distributed Systems & Agentic AI",
+    "role": "Senior Software Engineer | Distributed Systems & Agentic AI | Cloud Architecture (AWS/GCP)",
     "photo": "img/Profile-pic.jpeg"
   },
   "hero": {
@@ -61,7 +61,7 @@
       },
       {
         "label": "View stack",
-        "href": "#experience"
+        "href": "#skills"
       }
     ],
     "typingPhrases": [
@@ -112,7 +112,7 @@
         "bullets": [
           "Architected and deployed a distributed asynchronous regulatory document and artifact generation engine using Fastify and Python orchestrated with BullMQ and Redis, reducing processing times by 65% while handling 2,000+ monthly documents.",
           "Co-designed the agentic system architecture and engineered the core AI tooling backend (multi-agent orchestration, tool calling, and autonomous execution loops), achieving secure M2M communication with <50ms latency via decoupled APIs and token authentication.",
-          "Engineered a periodic asynchronous synchronization engine utilizing distributed crons and background workers to securely connect isolated client VPC environments with the central platform, synchronizing 10,000+ daily events with zero public endpoint exposure and guaranteed data consistency.",
+          "Engineered a secure event pipeline connecting isolated client VPCs to the central platform, orchestrating distributed workers to process 10,000+ daily events with guaranteed data consistency and zero public endpoint exposure.",
           "Standardized agent-assisted engineering workflows (SDLC) using autonomous coding agents, reducing microservice refactoring lead times from 4 days to 1.5 days (-62%) while expanding automated test coverage.",
           "Operated distributed microservices across AWS and GCP with 99.9% availability, containerizing workloads in Docker and automating CI/CD pipelines for zero-downtime deployments backed by distributed observability via Sentry and CloudWatch."
         ],
@@ -131,7 +131,7 @@
         "id": "fintech_mobile",
         "period": "Jul 2025 - Jul 2026",
         "location": "Remote",
-        "role": "Software & Mobile Engineer (Independent Consultant / Part-time Contractor)",
+        "role": "Software & Mobile Engineer (Part-time Consultant · Side Project)",
         "company": "Fintech Scale-up (Credit & Financial Platform · NDA)",
         "bullets": [
           "Engineered the end-to-end cross-platform mobile architecture (iOS and Android) using React Native and TypeScript for a credit origination platform during its scaling phase, delivering 20+ modular views (biometric KYC onboarding, analytics dashboard, transactional flows, detailed history, and real-time chat support).",
@@ -372,5 +372,5 @@
       }
     ]
   },
-  "footer": "Enmanuel Leon — Senior Software Engineer | Distributed Systems & Agentic AI · {year}"
+  "footer": "Enmanuel Leon — Senior Software Engineer | Distributed Systems & Agentic AI | Cloud Architecture (AWS/GCP) · {year}"
 }

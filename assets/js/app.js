@@ -77,7 +77,11 @@ function renderStatic(data) {
   const codeIcon = `<svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`;
 
   document.getElementById("heroBtnContact").innerHTML = `${emailIcon} ${data.ui.contactMe}`;
-  document.getElementById("heroBtnProjects").innerHTML = `${codeIcon} ${data.ui.viewSkills}`;
+  const heroBtnProjects = document.getElementById("heroBtnProjects");
+  if (heroBtnProjects) {
+    heroBtnProjects.innerHTML = `${codeIcon} ${data.ui.viewSkills}`;
+    heroBtnProjects.setAttribute("href", "#skills");
+  }
 
   document.getElementById("aboutLabel").textContent = data.about.label;
   document.getElementById("aboutTitle").textContent = data.about.title;
@@ -88,7 +92,7 @@ function renderStatic(data) {
      .map(
        (s) => `
      <div class="stat-card" style="elevation: 2">
-       <div class="stat-number" data-count="${s.value}">0</div>
+       <div class="stat-number" data-count="${escapeHtml(s.value)}">${escapeHtml(s.value)}</div>
        <div class="stat-label">${escapeHtml(s.label)}</div>
      </div>
    `,

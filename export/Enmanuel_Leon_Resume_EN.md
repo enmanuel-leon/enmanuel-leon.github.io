@@ -21,11 +21,11 @@ Software Engineer with 6+ years of experience engineering and operating mission-
 
 - **Architected and deployed a distributed asynchronous regulatory document and artifact generation engine** using Fastify and Python orchestrated with BullMQ and Redis, reducing processing times by 65% while handling 2,000+ monthly documents.
 - **Co-designed the agentic system architecture and engineered the core AI tooling backend** (multi-agent orchestration, tool calling, and autonomous execution loops), achieving secure M2M communication with <50ms latency via decoupled APIs and token authentication.
-- **Engineered a periodic asynchronous synchronization engine** utilizing distributed crons and background workers to securely connect isolated client VPC environments with the central platform, synchronizing 10,000+ daily events with zero public endpoint exposure and guaranteed data consistency.
+- **Engineered a secure event pipeline connecting isolated client VPCs to the central platform**, orchestrating distributed workers to process 10,000+ daily events with guaranteed data consistency and zero public endpoint exposure.
 - **Standardized agent-assisted engineering workflows (SDLC)** using autonomous coding agents, reducing microservice refactoring lead times from 4 days to 1.5 days (-62%) while expanding automated test coverage.
 - **Operated distributed microservices across AWS and GCP with 99.9% availability**, containerizing workloads in Docker and automating CI/CD pipelines for zero-downtime deployments backed by distributed observability via Sentry and CloudWatch.
 
-### Software & Mobile Engineer (Independent Consultant / Part-time Contractor) | Fintech Scale-up (Credit & Financial Platform · NDA)
+### Software & Mobile Engineer (Part-time Consultant · Side Project) | Fintech Scale-up (Credit & Financial Platform · NDA)
 *July 2025 - July 2026*
 
 - **Engineered the end-to-end cross-platform mobile architecture** (iOS and Android) using React Native and TypeScript for a credit origination platform during its scaling phase, delivering 20+ modular views (biometric KYC onboarding, analytics dashboard, transactional flows, detailed history, and real-time chat support).

@@ -21,14 +21,14 @@ Ingeniero de Software con más de 6 años de experiencia diseñando y operando s
 
 - **Diseñé e implementé un motor distribuido de generación asíncrona de reportes normativos** en Fastify y Python con colas BullMQ y Redis, reduciendo los tiempos de procesamiento en un 65% y procesando más de 2.000 documentos mensuales.
 - **Co-diseñé la arquitectura agéntica del core de distribución de herramientas de IA** (orquestación multi-agente, tool calling y flujos autónomos), logrando comunicación M2M segura con latencias inferiores a 50ms mediante APIs desacopladas y autenticación basada en tokens.
-- **Diseñé un motor de sincronización asíncrona periódica** mediante crons distribuidos y workers en segundo plano para comunicar instancias de clientes en VPCs aisladas con la plataforma central, sincronizando más de 10.000 eventos diarios con cero exposición de endpoints públicos y consistencia de datos garantizada.
+- **Implementé un pipeline de interconexión segura entre VPCs aisladas y la plataforma central**, orquestando workers distribuidos para procesar más de 10.000 eventos diarios con consistencia de datos garantizada y cero exposición de endpoints públicos.
 - **Estandaricé flujos de desarrollo asistido por agentes autónomos de código (SDLC)**, reduciendo el lead time en refactorizaciones de microservicios de 4 días a 1.5 días (-62%) y elevando la cobertura de pruebas automatizadas.
 - **Operé microservicios distribuidos en AWS y GCP con 99.9% de disponibilidad**, containerizando cargas de trabajo con Docker y configurando pipelines de CI/CD para despliegues zero-downtime con observabilidad distribuida en Sentry y CloudWatch.
 
-### Ingeniero de Software & Mobile (Consultor Externo / Part-time Contractor) | Fintech Scale-up (Plataforma Crediticia & Financiera · NDA)
+### Ingeniero de Software & Mobile (Consultor Externo Part-time · Side Project) | Fintech Scale-up (Plataforma Crediticia & Financiera · NDA)
 *Julio 2025 - Julio 2026*
 
-- **Diseñé y construí de punta a punta la arquitectura móvil multiplataforma** (iOS y Android) en React Native y TypeScript para una plataforma de servicios financieros y originación crediticia en fase de escalamiento, implementando más de 20 vistas modulares (onboarding biométrico con KYC, dashboard analítico, flujos transaccionales, historial detallado y soporte vía chat en tiempo real).
+- **Diseñé y construí de punta a punta la arquitectura móvil multiplataforma** (iOS y Android) en React Native y TypeScript para una plataforma de servicios financieros y originación crediticia en fase de escalamiento, implementando 20+ vistas modulares (onboarding biométrico con KYC, dashboard analítico, flujos transaccionales, historial detallado y soporte vía chat en tiempo real).
 - **Estructuré y operé la infraestructura cloud y la arquitectura de datos de la plataforma**, implementando autenticación robusta y control de acceso granular mediante políticas de Row-Level Security (RLS) para proteger historiales crediticios y contratos financieros sensibles.
 - **Optimicé el rendimiento y la resiliencia de la app móvil**, reduciendo el tiempo de carga inicial en un 35% y garantizando la persistencia offline de solicitudes de crédito y transacciones en entornos de baja conectividad.
 
