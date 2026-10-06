@@ -3,7 +3,7 @@
 **Senior Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP**
 
 EU Citizen (Italian) · Fully authorized to work in the EU (No sponsorship required) | Remote (CET & EST Timezones) | Valencia, Venezuela  
-Email: [contact@enmanuel-leon.com](mailto:contact@enmanuel-leon.com) | LinkedIn: [linkedin.com/in/enmanuel-leon-48b11714b](https://www.linkedin.com/in/enmanuel-leon-48b11714b/) | GitHub: [github.com/enmanuel-leon](https://github.com/enmanuel-leon) | Web: [enmanuel-leon.com](https://enmanuel-leon.com)  
+Email: [contact@enmanuel-leon.com](mailto:contact@enmanuel-leon.com) | LinkedIn: [linkedin.com/in/enmanuel-leon](https://www.linkedin.com/in/enmanuel-leon/) | GitHub: [github.com/enmanuel-leon](https://github.com/enmanuel-leon) | Web: [enmanuel-leon.com](https://enmanuel-leon.com)  
 Languages: Spanish (Native), English (Professional Working Proficiency)
 
 ---
