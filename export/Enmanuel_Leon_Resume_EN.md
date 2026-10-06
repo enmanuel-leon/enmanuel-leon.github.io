@@ -1,16 +1,16 @@
 # Enmanuel Leon
 
-**Senior Software Engineer | Distributed Systems & Agentic AI | Cloud Architecture (AWS/GCP)**
+**Senior Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP**
 
 EU Citizen (Italian) · Fully authorized to work in the EU (No sponsorship required) | Remote (CET & EST Timezones) | Valencia, Venezuela  
 Email: [contact@enmanuel-leon.com](mailto:contact@enmanuel-leon.com) | LinkedIn: [linkedin.com/in/enmanuel-leon-48b11714b](https://www.linkedin.com/in/enmanuel-leon-48b11714b/) | GitHub: [github.com/enmanuel-leon](https://github.com/enmanuel-leon) | Web: [enmanuel-leon.com](https://enmanuel-leon.com)  
-Languages: Spanish (Native), English (Full Professional Working Proficiency)
+Languages: Spanish (Native), English (Professional Working Proficiency)
 
 ---
 
 ## Professional Summary
 
-Software Engineer with 6+ years of experience engineering and operating mission-critical distributed systems, asynchronous processing engines, and agentic AI architectures in production with TypeScript, Python, and AWS/GCP. Specialized in high-availability transactional services, secure M2M communication across isolated customer VPCs, and multi-agent orchestration across fintech, applied AI, and enterprise platforms.
+Software Engineer with 6+ years of experience building distributed systems, AI-powered platforms, and mission-critical fintech services. Specialized in TypeScript/Node.js, Python, event-driven architectures, and AWS/GCP, with hands-on experience in multi-agent orchestration, tool calling, asynchronous processing, secure M2M communication, and high-availability transactional systems.
 
 ---
 
@@ -51,18 +51,19 @@ Software Engineer with 6+ years of experience engineering and operating mission-
 
 ## Technical Skills
 
-- **Backend & Architecture:** Node.js, TypeScript, Python (FastAPI), Fastify, Express, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience
+- **Languages:** TypeScript, JavaScript, Python
+- **Backend & Architecture:** Node.js, Fastify, Express, FastAPI, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience
 - **Applied AI & Agentic Systems:** Agentic Systems, Multi-Agent Orchestration, Tool Calling & Function Calling, OpenAI & Anthropic APIs, RAG Pipelines, Agent-Assisted SDLC, M2M Communication
 - **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation
 - **Databases & Messaging:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM
-- **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS, JavaScript (ES6+)
+- **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS
 - **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod
 
 ---
 
 ## Education
 
-### Bachelor of Science in Computer Engineering (5-Year Degree Equivalent)
+### Bachelor of Science in Computer Engineering
 **Universidad José Antonio Páez** | Valencia, Venezuela — Conferred 2020  
 *Accredited university degree specializing in distributed systems, computer architecture, relational databases, and advanced algorithms.*
 

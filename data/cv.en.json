@@ -47,12 +47,12 @@
   },
   "profile": {
     "name": "Enmanuel Leon",
-    "role": "Senior Software Engineer | Distributed Systems & Agentic AI | Cloud Architecture (AWS/GCP)",
+    "role": "Senior Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP",
     "photo": "img/Profile-pic.jpeg"
   },
   "hero": {
     "badge": "EU Citizen (Italian) · Remote CET / EST · Valencia, VE",
-    "summary": "Software Engineer with 6+ years of experience engineering distributed systems, asynchronous processing engines, and agentic AI architectures with TypeScript, Python, and AWS/GCP. Specialized in high-availability transactional services, secure M2M communication, and multi-agent orchestration in production.",
+    "summary": "Software Engineer with 6+ years of experience building distributed systems, AI-powered platforms, and mission-critical fintech services. Specialized in TypeScript/Node.js, Python, event-driven architectures, and AWS/GCP, with hands-on experience in multi-agent orchestration, tool calling, asynchronous processing, secure M2M communication, and high-availability transactional systems.",
     "typingLine": "I engineer distributed architectures, processing engines, and cloud platforms;",
     "actions": [
       {
@@ -197,18 +197,26 @@
     "desc": "Architecture patterns, backend engines, cloud infra, and applied AI tools I leverage in production",
     "categories": [
       {
+        "title": "Languages",
+        "icon": "languages",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "Python"
+        ]
+      },
+      {
         "title": "Backend & Architecture",
         "icon": "backend",
         "items": [
           "Node.js",
-          "TypeScript",
-          "Python (FastAPI)",
           "Fastify",
           "Express",
+          "FastAPI",
           "Microservices",
           "Distributed Systems",
           "Event-Driven Architecture (EDA)",
-          "REST / GraphQL APIs",
+          "APIs REST / GraphQL",
           "Idempotency & Resilience"
         ]
       },
@@ -261,8 +269,7 @@
           "Next.js",
           "React Native (iOS/Android)",
           "Vite",
-          "Tailwind CSS",
-          "JavaScript (ES6+)"
+          "Tailwind CSS"
         ]
       },
       {
@@ -287,7 +294,7 @@
     "items": [
       {
         "period": "2020",
-        "degree": "Bachelor of Science in Computer Engineering (5-Year Degree Equivalent)",
+        "degree": "Bachelor of Science in Computer Engineering",
         "school": "Universidad José Antonio Páez — Valencia, Venezuela",
         "description": "Accredited university degree specializing in distributed systems, computer architecture, relational databases, software engineering, and advanced algorithms."
       }
@@ -372,5 +379,5 @@
       }
     ]
   },
-  "footer": "Enmanuel Leon — Senior Software Engineer | Distributed Systems & Agentic AI | Cloud Architecture (AWS/GCP) · {year}"
+  "footer": "Enmanuel Leon — Senior Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP · {year}"
 }

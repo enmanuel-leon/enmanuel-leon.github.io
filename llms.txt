@@ -1,4 +1,4 @@
-# Enmanuel Leon — Senior Software Engineer | Sistemas Distribuidos & Agentic AI | Cloud Architecture (AWS/GCP)
+# Enmanuel Leon — Senior Software Engineer | Sistemas Distribuidos & Agénticos | TypeScript · Python · AWS/GCP
 
 > Software Engineer with 6+ years of experience engineering high-throughput distributed systems, asynchronous processing engines, agentic AI architectures, and cloud platforms (AWS/GCP). Dual Italian (EU) & Venezuelan citizenship (Authorized to work across the EU without sponsorship).
 
@@ -17,11 +17,12 @@
 - [CV Spanish (Markdown)](https://enmanuel-leon.com/export/Enmanuel_Leon_CV_ES.md): Raw markdown curriculum vitae in Spanish.
 
 ## Technical Stack
-- **Backend & Architecture:** Node.js, TypeScript, Python (FastAPI), Fastify, Express, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience.
+- **Languages:** TypeScript, JavaScript, Python.
+- **Backend & Architecture:** Node.js, Fastify, Express, FastAPI, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience.
 - **Applied AI & Agentic Systems:** Agentic Systems, Multi-Agent Orchestration, Tool Calling & Function Calling, OpenAI & Anthropic APIs, RAG Pipelines, Agent-Assisted SDLC, M2M Communication.
 - **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation.
 - **Databases & Messaging:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM.
-- **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS, JavaScript (ES6+).
+- **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS.
 - **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod.
 
 ## Professional Experience Summary
@@ -35,6 +36,6 @@
   Engineered 3 modular internal management applications in JavaScript, Node.js, and Python. Maintained high availability on production Linux servers with NGINX. Standardized API contracts with OpenAPI/Swagger.
 
 ## Education
-- **Bachelor of Science in Computer Engineering (5-Year Degree Equivalent · 10 Períodos Académicos)**
-  Universidad José Antonio Páez — Valencia, Venezuela (Graduated 2020).
-  Specialized in distributed systems, computer architecture, relational databases, and advanced algorithms.
+- **Bachelor of Science in Computer Engineering**
+  Universidad José Antonio Páez — Valencia, Venezuela (Conferred 2020).
+  Accredited university degree specializing in distributed systems, computer architecture, relational databases, and advanced algorithms.

@@ -40,7 +40,7 @@ This repository is a high-performance, dependency-free static web portfolio and 
 2. **Grammar & Linguistic Precision:**
    - **Spanish:** Never invent anglicisms (e.g., do NOT use *"Arquitecté"*; use *"Diseñé la arquitectura de..."* or *"Estructuré..."*). Ensure proper conjugation (*"Garanticé"*, not *"Garantizé"*).
    - **English:** Use established engineering action verbs (*Architected, Engineered, Orchestrated, Streamlined, Spearheaded*).
-   - **Official Role Title:** Always use `Senior Software Engineer | Distributed Systems & Agentic AI | Cloud Architecture (AWS/GCP)`.
+   - **Official Role Title:** Always use `Senior Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP` (EN) / `Senior Software Engineer | Sistemas Distribuidos & Agénticos | TypeScript · Python · AWS/GCP` (ES).
 
 3. **Experience Bullet Formula (Google XYZ):**
    - Every bullet point must follow: *"Accomplished [X] measured by [Y] by doing [Z]"*.

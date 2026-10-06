@@ -47,12 +47,12 @@
   },
   "profile": {
     "name": "Enmanuel Leon",
-    "role": "Senior Software Engineer | Sistemas Distribuidos & Agentic AI | Cloud Architecture (AWS/GCP)",
+    "role": "Senior Software Engineer | Sistemas Distribuidos & Agénticos | TypeScript · Python · AWS/GCP",
     "photo": "img/Profile-pic.jpeg"
   },
   "hero": {
     "badge": "Ciudadanía UE (Italiana) · Remoto CET / EST · Valencia, VE",
-    "summary": "Ingeniero de Software con +6 años de experiencia construyendo sistemas distribuidos, motores asíncronos y arquitecturas agénticas con TypeScript, Python y AWS/GCP. Especializado en servicios transaccionales de alta disponibilidad, comunicación M2M segura y orquestación multi-agente en producción.",
+    "summary": "Ingeniero de Software con +6 años de experiencia construyendo sistemas distribuidos, plataformas transaccionales y productos basados en IA. Especializado en TypeScript/Node.js, Python y arquitecturas event-driven sobre AWS/GCP. Experiencia diseñando servicios de alta disponibilidad, sistemas multi-agente, procesamiento asíncrono a escala e integraciones fintech críticas.",
     "typingLine": "Diseño sistemas distribuidos, arquitecturas agénticas y plataformas cloud;",
     "actions": [
       {
@@ -197,14 +197,22 @@
     "desc": "Herramientas de arquitectura, backend, cloud e IA que utilizo en producción",
     "categories": [
       {
+        "title": "Lenguajes",
+        "icon": "languages",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "Python"
+        ]
+      },
+      {
         "title": "Backend & Arquitectura",
         "icon": "backend",
         "items": [
           "Node.js",
-          "TypeScript",
-          "Python (FastAPI)",
           "Fastify",
           "Express",
+          "FastAPI",
           "Microservicios",
           "Sistemas Distribuidos",
           "Event-Driven Architecture (EDA)",
@@ -261,8 +269,7 @@
           "Next.js",
           "React Native (iOS/Android)",
           "Vite",
-          "Tailwind CSS",
-          "JavaScript (ES6+)"
+          "Tailwind CSS"
         ]
       },
       {
@@ -287,7 +294,7 @@
     "items": [
       {
         "period": "2020",
-        "degree": "Grado en Ingeniería de Computación (B.S. Equivalent · 10 Períodos Académicos)",
+        "degree": "Grado en Ingeniería de Computación",
         "school": "Universidad José Antonio Páez — Valencia, Venezuela",
         "description": "Formación universitaria oficial orientada a sistemas distribuidos, arquitectura de computadores, bases de datos relacionales, ingeniería de software y algoritmos avanzados."
       }
@@ -372,5 +379,5 @@
       }
     ]
   },
-  "footer": "Enmanuel Leon — Senior Software Engineer | Sistemas Distribuidos & Agentic AI | Cloud Architecture (AWS/GCP) · {year}"
+  "footer": "Enmanuel Leon — Senior Software Engineer | Sistemas Distribuidos & Agénticos | TypeScript · Python · AWS/GCP · {year}"
 }
