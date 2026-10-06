@@ -178,7 +178,7 @@
         "bullets": [
           "Designed and developed 3 modular internal management applications in JavaScript, Node.js, and Python for commercial operations, used daily in production.",
           "Ensured continuous high availability (zero unplanned downtime) administering production Linux servers configured with NGINX reverse proxies, load balancing, and SSL/TLS policies.",
-          "Reduced developer onboarding time by standardizing system architecture blueprints and API contracts using OpenAPI/Swagger specifications."
+          "Reduced developer onboarding lead time by ~40% by standardizing 15+ API contracts and system blueprints using OpenAPI/Swagger specifications."
         ],
         "tags": [
           "JavaScript",

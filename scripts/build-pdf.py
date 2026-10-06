@@ -76,6 +76,9 @@ strong {
   page-break-before: always;
   break-before: page;
 }
+#title-block-header {
+  display: none;
+}
 """
 
 TARGETS = [

@@ -45,7 +45,7 @@ Ingeniero de Software con +6 años de experiencia construyendo sistemas distribu
 
 - **Diseñé y desarrollé 3 aplicaciones modulares internas** en JavaScript, Node.js y Python para la gestión de procesos comerciales, utilizadas diariamente en producción.
 - **Aseguré alta disponibilidad continua (cero caídas no planificadas)** administrando servidores Linux de producción con NGINX como reverse proxy, balanceo de carga y políticas SSL/TLS.
-- **Reduje el tiempo de onboarding de nuevos desarrolladores** estandarizando la arquitectura de sistemas y contratos de APIs bajo especificaciones OpenAPI/Swagger.
+- **Reduje el lead time de onboarding en un ~40%** estandarizando 15+ contratos de APIs y especificaciones de arquitectura bajo OpenAPI/Swagger.
 
 ---
 
