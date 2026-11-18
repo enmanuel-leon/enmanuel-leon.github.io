@@ -1,6 +1,6 @@
 # Enmanuel Leon — Software Engineer
 
-> Software Engineer building distributed systems, async engines, agentic AI platforms with TypeScript, Python, and AWS/GCP. EU citizen · Remote CET/EST.
+> Software Engineer building distributed systems, async engines, and agentic AI with TypeScript, Python, and AWS/GCP. Italian citizen (EU) · Remote CET/EST.
 
 ## Canonical
 - Portfolio (EN): https://enmanuel-leon.com/
@@ -12,7 +12,7 @@
 
 ## Profile
 - Location: Valencia, Venezuela
-- Citizenship: EU citizen (Italian)
+- Citizenship: Italian (EU)
 - Work mode: Remote CET/EST
 - Languages: Spanish (native) · English (professional)
 - Email: contact@enmanuel-leon.com
@@ -32,7 +32,7 @@
 ## Preferred citation
 - Enmanuel Leon — Software Engineer · Distributed & Agentic Systems
 - Canonical: https://enmanuel-leon.com/
-- Summary: Software Engineer building distributed systems, async engines, agentic AI platforms with TypeScript, Python, and AWS/GCP. EU citizen · Remote CET/EST.
+- Summary: Software Engineer building distributed systems, async engines, and agentic AI with TypeScript, Python, and AWS/GCP. Italian citizen (EU) · Remote CET/EST.
 
 ## Full text
 - https://enmanuel-leon.com/llms-full.txt
@@ -44,7 +44,7 @@
 - **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation, Zero-Downtime Deployment, Kubernetes
 - **Data & Messaging:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM, Dead-Letter Queues (DLQ)
 - **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS
-- **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod, Observability
+- **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod
 
 ## Experience
 ### Full Stack Developer (AI & Core Systems) — Entropy Systems
@@ -52,7 +52,7 @@
 - Designed and shipped a distributed asynchronous engine for regulatory reports in Fastify and Python, moving generation off the request path with BullMQ and Redis, idempotent workers, and observable job processing.
 - Co-designed the agentic core for AI tool distribution — multi-agent orchestration, tool calling, and autonomous execution loops — with token-authenticated M2M APIs between isolated VPCs.
 - Built a secure event pipeline between isolated customer VPCs and the central platform, with distributed workers, consistency guarantees, and no public endpoints.
-- Standardized agent-assisted SDLC workflows, shortening microservice refactoring cycles and expanding automated test coverage.
+- Standardized AI-assisted development workflows, shortening microservice refactoring cycles and expanding automated test coverage.
 - Operated distributed services across AWS and GCP, containerized with Docker, orchestrated with Kubernetes, and delivered through zero-downtime CI/CD with Sentry and CloudWatch observability.
 
 ### Software & Mobile Engineer (Part-time Consultant) — Confidential Fintech Scale-up · Credit Platform (NDA)
@@ -66,7 +66,7 @@
 - Maintained high availability across mission-critical payment gateway services handling high-volume transactions in Node.js (Express), TypeScript, and MySQL.
 - Engineered financial resilience and idempotency with circuit breakers, rate limiting, and AWS SQS queues with dead-letter queues (DLQ), preventing duplicate charges during banking gateway outages.
 - Reduced p95 transaction latency by optimizing complex MySQL queries, offloading notifications to asynchronous SQS workers, and refactoring critical endpoints.
-- Led payment gateway integrations for merchants and partners across React web apps and REST, GraphQL, and SOAP APIs, backed by Jest test suites and Datadog/Sentry monitoring.
+- Led payment gateway integrations for merchants and partners across React web apps and REST, GraphQL, and SOAP APIs, with Jest tests and Datadog/Sentry monitoring.
 
 ### Systems Analyst / Software Developer — Intelix Synergy, C.A.
 *Mar 2020 – Jun 2021 · Valencia, Venezuela*

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Enmanuel Leon — Software Engineer · Distributed & Agentic Systems",
-    "description": "Software Engineer building distributed systems, async engines, agentic AI platforms with TypeScript, Python, and AWS/GCP. EU citizen · Remote CET/EST.",
+    "description": "Software Engineer building distributed systems, async engines, and agentic AI with TypeScript, Python, and AWS/GCP. Italian citizen (EU) · Remote CET/EST.",
     "lastUpdated": "2026-11-17"
   },
   "nav": {
@@ -9,7 +9,7 @@
     "items": [
       {
         "id": "impact",
-        "label": "Impact"
+        "label": "Focus"
       },
       {
         "id": "experience",
@@ -38,7 +38,7 @@
     "backToTop": "Back to top",
     "downloadCv": "Download CV",
     "downloadTitle": "Download CV",
-    "downloadDesc": "Two pages, ATS-friendly, updated November 2026.",
+    "downloadDesc": "Two-page PDF, updated November 2026.",
     "downloadClose": "Close",
     "contactMe": "Contact me",
     "copyEmail": "Copy email",
@@ -48,12 +48,13 @@
     "location": "Location",
     "citizenship": "Citizenship",
     "languagesLabel": "Languages",
-    "downloadPdfMeta": "2 pages · ATS-friendly",
+    "downloadPdfMeta": "2 pages",
     "downloadMdMeta": "Plain text · Markdown",
-    "downloadNote": "Both PDFs are ATS-friendly, text-selectable, and open in a new tab.",
+    "downloadNote": "Choose the language and format you need.",
     "noscriptTitle": "JavaScript is disabled",
-    "noscriptText": "The full CV is rendered below. You can also open the PDF or download the Markdown directly.",
-    "availability": "Availability"
+    "noscriptText": "The full CV is below. You can also open the PDF or download the Markdown version.",
+    "availability": "Availability",
+    "workMode": "Work mode"
   },
   "profile": {
     "name": "Enmanuel Leon",
@@ -61,16 +62,16 @@
     "specialty": "Distributed & Agentic Systems",
     "stackLine": "TypeScript · Python · AWS/GCP",
     "location": "Valencia, Venezuela",
-    "availability": "EU citizen (Italian) · Remote CET/EST",
+    "availability": "Italian citizen (EU) · Remote CET/EST",
     "languages": "Spanish (native) · English (professional)",
-    "citizenship": "EU citizen (Italian)",
+    "citizenship": "Italian (EU)",
     "workMode": "Remote CET/EST"
   },
   "hero": {
     "statement": "I build the distributed systems and async engines behind money movement, AI tooling, and high-availability platforms.",
     "paragraphs": [
       "I'm a software engineer with 6+ years designing and operating production systems for fintech, applied AI, and enterprise platforms. I specialize in TypeScript/Node.js, Python, and event-driven architecture on AWS/GCP — from high-volume payment gateways to multi-agent orchestration across isolated VPCs.",
-      "I care about clean boundaries, observable systems, and shipping outcomes. Italian (EU) citizen, authorized to work in the EU without sponsorship; remote across CET and EST."
+      "I care about clear boundaries, observable systems, and shipping reliable software. Italian citizen (EU), authorized to work in the EU without sponsorship; remote across CET and EST."
     ],
     "competenciesLabel": "Core competencies",
     "competencies": "Distributed systems · Event-driven architecture · Asynchronous processing · Idempotency & resilience · Agentic AI orchestration · Cloud-native operations"
@@ -115,7 +116,7 @@
           "Designed and shipped a distributed asynchronous engine for regulatory reports in Fastify and Python, moving generation off the request path with BullMQ and Redis, idempotent workers, and observable job processing.",
           "Co-designed the agentic core for AI tool distribution — multi-agent orchestration, tool calling, and autonomous execution loops — with token-authenticated M2M APIs between isolated VPCs.",
           "Built a secure event pipeline between isolated customer VPCs and the central platform, with distributed workers, consistency guarantees, and no public endpoints.",
-          "Standardized agent-assisted SDLC workflows, shortening microservice refactoring cycles and expanding automated test coverage.",
+          "Standardized AI-assisted development workflows, shortening microservice refactoring cycles and expanding automated test coverage.",
           "Operated distributed services across AWS and GCP, containerized with Docker, orchestrated with Kubernetes, and delivered through zero-downtime CI/CD with Sentry and CloudWatch observability."
         ],
         "tags": [
@@ -160,7 +161,7 @@
           "Maintained high availability across mission-critical payment gateway services handling high-volume transactions in Node.js (Express), TypeScript, and MySQL.",
           "Engineered financial resilience and idempotency with circuit breakers, rate limiting, and AWS SQS queues with dead-letter queues (DLQ), preventing duplicate charges during banking gateway outages.",
           "Reduced p95 transaction latency by optimizing complex MySQL queries, offloading notifications to asynchronous SQS workers, and refactoring critical endpoints.",
-          "Led payment gateway integrations for merchants and partners across React web apps and REST, GraphQL, and SOAP APIs, backed by Jest test suites and Datadog/Sentry monitoring."
+          "Led payment gateway integrations for merchants and partners across React web apps and REST, GraphQL, and SOAP APIs, with Jest tests and Datadog/Sentry monitoring."
         ],
         "tags": [
           "Node.js",
@@ -286,8 +287,7 @@
           "Jest",
           "TDD",
           "Git / GitHub",
-          "Zod",
-          "Observability"
+          "Zod"
         ]
       }
     ]
@@ -305,7 +305,7 @@
   },
   "contact": {
     "title": "Let's talk",
-    "subtitle": "For consulting, technical conversations, or a quick hello, email is the fastest path.",
+    "subtitle": "For consulting, technical conversations, or a quick hello, email is the fastest way.",
     "items": [
       {
         "label": "Email",

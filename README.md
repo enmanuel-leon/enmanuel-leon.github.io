@@ -11,7 +11,7 @@ The site has **no runtime dependencies**: no framework, no bundler, no analytics
 - **Static build:** `scripts/build-site.mjs` → `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, `site.webmanifest`
 - **Runtime:** vanilla JavaScript (`assets/js/app.js`) + layered CSS (`assets/css/styles.css`)
 - **Fonts:** self-hosted Geist Latin subsets (`assets/fonts/`)
-- **Exports:** Markdown → ATS PDFs via `scripts/build-pdf.py`
+- **Exports:** Markdown → PDFs via `scripts/build-pdf.py`
 - **Validation:** `scripts/validate.mjs`
 - **CI:** `.github/workflows/verify.yml`
 
@@ -19,7 +19,7 @@ The site has **no runtime dependencies**: no framework, no bundler, no analytics
 
 ```bash
 node scripts/build-site.mjs          # regenerate the static pages and machine-readable files
-python3 scripts/build-pdf.py         # rebuild the two ATS PDFs (strict 2-page budget)
+python3 scripts/build-pdf.py         # rebuild the two PDFs (strict 2-page budget)
 node scripts/validate.mjs            # full repository gate
 node scripts/build-site.mjs --check  # verify generated files are committed and current
 ```
@@ -56,7 +56,7 @@ assets/css/           design tokens + layered CSS
 assets/js/            progressive enhancement
 assets/fonts/         self-hosted Geist + OFL license
 img/                  portrait variants, icons, OG banner
-export/               Markdown + ATS PDFs
+export/               Markdown + PDFs
 es/                   generated Spanish page
 404.html              static not-found page
 llms.txt              LLM-oriented summary + keywords + citation

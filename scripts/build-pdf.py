@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the ATS-friendly CV/Resume PDFs from the Markdown exports.
+"""Build the CV/Resume PDFs from the Markdown exports.
 
 Contract:
 - Both Markdown files must contain the ``<!-- pdf:pagebreak -->`` marker.

@@ -289,7 +289,8 @@ function rail(data) {
       </div>
       <dl class="rail-meta">
         <div><dt>${esc(ui.location)}</dt><dd>${esc(profile.location)}</dd></div>
-        <div><dt>${esc(ui.availability)}</dt><dd>${esc(profile.availability)}</dd></div>
+        <div><dt>${esc(ui.citizenship)}</dt><dd>${esc(profile.citizenship)}</dd></div>
+        <div><dt>${esc(ui.workMode)}</dt><dd>${esc(profile.workMode)}</dd></div>
         <div><dt>${esc(ui.languagesLabel)}</dt><dd>${esc(profile.languages)}</dd></div>
       </dl>
       <div class="rail-actions" id="railActions">
