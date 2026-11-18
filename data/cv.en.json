@@ -50,9 +50,9 @@
     "languagesLabel": "Languages",
     "downloadPdfMeta": "2 pages · ATS-friendly",
     "downloadMdMeta": "Plain text · Markdown",
-    "downloadNote": "Both PDFs are ATS-friendly and text-selectable.",
+    "downloadNote": "Both PDFs are ATS-friendly, text-selectable, and open in a new tab.",
     "noscriptTitle": "JavaScript is disabled",
-    "noscriptText": "The full CV is rendered below. You can also download the PDF or Markdown directly.",
+    "noscriptText": "The full CV is rendered below. You can also open the PDF or download the Markdown directly.",
     "availability": "Availability"
   },
   "profile": {
@@ -116,7 +116,7 @@
           "Co-designed the agentic core for AI tool distribution — multi-agent orchestration, tool calling, and autonomous execution loops — with token-authenticated M2M APIs between isolated VPCs.",
           "Built a secure event pipeline between isolated customer VPCs and the central platform, with distributed workers, consistency guarantees, and no public endpoints.",
           "Standardized agent-assisted SDLC workflows, shortening microservice refactoring cycles and expanding automated test coverage.",
-          "Operated distributed services across AWS and GCP, containerized with Docker and delivered through zero-downtime CI/CD with Sentry and CloudWatch observability."
+          "Operated distributed services across AWS and GCP, containerized with Docker, orchestrated with Kubernetes, and delivered through zero-downtime CI/CD with Sentry and CloudWatch observability."
         ],
         "tags": [
           "Agentic AI",
@@ -126,7 +126,8 @@
           "AWS / GCP",
           "Redis / BullMQ",
           "M2M / VPC",
-          "Docker"
+          "Docker",
+          "Kubernetes"
         ]
       },
       {
@@ -247,7 +248,8 @@
           "Linux",
           "NGINX",
           "VPC Isolation",
-          "Zero-Downtime Deployment"
+          "Zero-Downtime Deployment",
+          "Kubernetes"
         ]
       },
       {
@@ -357,7 +359,8 @@
       "AWS",
       "GCP",
       "TypeScript",
-      "Python"
+      "Python",
+      "Kubernetes"
     ]
   }
 }

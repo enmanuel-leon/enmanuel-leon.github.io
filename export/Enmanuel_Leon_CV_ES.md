@@ -25,7 +25,7 @@ Más de 6 años diseñando y operando sistemas en producción para fintech, IA a
 - **Core agéntico y APIs M2M:** Codiseñé la orquestación multiagente, el tool calling y los bucles de ejecución autónomos, con APIs desacopladas y autenticación por tokens entre VPCs aisladas.
 - **Pipeline seguro entre VPCs aisladas:** Construí la interconexión entre VPCs de clientes y la plataforma central con workers distribuidos, consistencia garantizada y cero endpoints públicos.
 - **SDLC asistido por agentes:** Estandaricé flujos de desarrollo con agentes autónomos, acortando los ciclos de refactorización de microservicios y ampliando la cobertura de pruebas.
-- **Operación cloud-native:** Operé servicios distribuidos en contenedores Docker sobre AWS y GCP con CI/CD sin downtime y observabilidad en Sentry y CloudWatch.
+- **Operación cloud-native:** Operé servicios distribuidos en contenedores Docker y Kubernetes sobre AWS y GCP con CI/CD sin downtime y observabilidad en Sentry y CloudWatch.
 
 ### Ingeniero de Software & Mobile (Consultor Part-time) | Fintech Scale-up confidencial · Plataforma de Crédito (NDA)
 *Jul 2025 – Jul 2026*
@@ -58,7 +58,7 @@ Más de 6 años diseñando y operando sistemas en producción para fintech, IA a
 - **Lenguajes:** TypeScript, JavaScript, Python
 - **Backend & Arquitectura:** Node.js, Fastify, Express, FastAPI, Microservicios, Sistemas Distribuidos, Arquitectura Orientada a Eventos (EDA), APIs REST / GraphQL, Idempotencia & Resiliencia, Ingeniería de Plataforma, Ingeniería Backend, Infraestructura de IA, Circuit Breakers, Rate Limiting
 - **IA Agéntica:** Sistemas Agénticos, Orquestación Multiagente, Tool Calling & Function Calling, APIs de OpenAI & Anthropic, Pipelines RAG, SDLC Asistido por Agentes, Comunicación M2M
-- **Cloud & Infraestructura:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, Aislamiento de VPC, Despliegue Sin Downtime
+- **Cloud & Infraestructura:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, Kubernetes, CI/CD (GitHub Actions), Linux, NGINX, Aislamiento de VPC, Despliegue Sin Downtime
 - **Datos & Mensajería:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM, Dead-Letter Queues (DLQ)
 - **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS
 - **Observabilidad & Calidad:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod, Observabilidad

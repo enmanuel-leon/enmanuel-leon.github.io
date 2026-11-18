@@ -265,7 +265,7 @@ function header(data, lang) {
       <ul>${navList(data)}</ul>
       <div class="mobile-nav-meta">
         <a href="${esc(email.href)}">${esc(email.value)}</a>
-        <a href="${pdf}" download>${esc(data.ui.downloadCv)}</a>
+        <a href="${pdf}" target="_blank" rel="noopener noreferrer">${esc(data.ui.downloadCv)}</a>
       </div>
     </nav>
   </header>`;
@@ -439,9 +439,9 @@ function noScript(data) {
         <p class="noscript-title"><strong>${esc(data.ui.noscriptTitle)}</strong></p>
         <p>${esc(data.ui.noscriptText)}</p>
         <p>
-          <a href="/export/Enmanuel_Leon_CV_ES.pdf" download>CV · Español (PDF)</a>
+          <a href="/export/Enmanuel_Leon_CV_ES.pdf" target="_blank" rel="noopener noreferrer">CV · Español (PDF)</a>
           <span aria-hidden="true">·</span>
-          <a href="/export/Enmanuel_Leon_Resume_EN.pdf" download>Resume · English (PDF)</a>
+          <a href="/export/Enmanuel_Leon_Resume_EN.pdf" target="_blank" rel="noopener noreferrer">Resume · English (PDF)</a>
           <span aria-hidden="true">·</span>
           <a href="/export/Enmanuel_Leon_CV_ES.md">CV · Markdown</a>
           <span aria-hidden="true">·</span>
@@ -519,7 +519,7 @@ function dialog(data, lang) {
     <ul class="download-list">
       ${links
         .map(
-          (link) => `<li><a href="${esc(link.href)}" download="${esc(link.download)}" hreflang="${link.lang}">
+          (link) => `<li><a href="${esc(link.href)}"${link.format === "PDF" ? ' target="_blank" rel="noopener noreferrer"' : ` download="${esc(link.download)}"`} hreflang="${link.lang}">
         <span class="download-format">${link.format}</span>
         <span class="download-title">${esc(link.title)}</span>
         <span class="download-meta">${esc(link.meta)}</span>
@@ -546,7 +546,7 @@ function floating(data, lang) {
       ? "/export/Enmanuel_Leon_CV_ES.pdf"
       : "/export/Enmanuel_Leon_Resume_EN.pdf";
   return `<div class="mobile-cta" id="mobileCta">
-    <a class="btn btn-primary" href="${pdf}" download>${esc(data.ui.downloadCv)}</a>
+    <a class="btn btn-primary" href="${pdf}" target="_blank" rel="noopener noreferrer">${esc(data.ui.downloadCv)}</a>
     <a class="btn btn-secondary" href="#contact">${esc(data.ui.contactMe)}</a>
   </div>
   <p class="visually-hidden" id="liveStatus" role="status" aria-live="polite"></p>

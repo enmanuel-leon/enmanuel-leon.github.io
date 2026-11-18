@@ -50,9 +50,9 @@
     "languagesLabel": "Idiomas",
     "downloadPdfMeta": "2 páginas · compatible con ATS",
     "downloadMdMeta": "Texto plano · Markdown",
-    "downloadNote": "Ambos PDF son compatibles con ATS y tienen texto seleccionable.",
+    "downloadNote": "Ambos PDF son compatibles con ATS, tienen texto seleccionable y se abren en una pestaña nueva.",
     "noscriptTitle": "JavaScript está desactivado",
-    "noscriptText": "El CV completo está disponible abajo. También puedes descargar el PDF o el Markdown directamente.",
+    "noscriptText": "El CV completo está disponible abajo. También puedes abrir el PDF o descargar el Markdown directamente.",
     "availability": "Disponibilidad"
   },
   "profile": {
@@ -116,7 +116,7 @@
           "Codiseñé el core agéntico de distribución de herramientas de IA —orquestación multiagente, tool calling y bucles de ejecución autónomos— con APIs M2M autenticadas por tokens entre VPCs aisladas.",
           "Construí un pipeline seguro de eventos entre VPCs aisladas de clientes y la plataforma central, con workers distribuidos, garantías de consistencia y sin endpoints públicos.",
           "Estandaricé flujos de SDLC asistidos por agentes, acortando los ciclos de refactorización de microservicios y ampliando la cobertura de pruebas automatizadas.",
-          "Operé servicios distribuidos en AWS y GCP, empaquetados en contenedores Docker y desplegados con CI/CD sin downtime, con observabilidad en Sentry y CloudWatch."
+          "Operé servicios distribuidos en AWS y GCP, empaquetados en contenedores Docker, orquestados con Kubernetes y desplegados con CI/CD sin downtime, con observabilidad en Sentry y CloudWatch."
         ],
         "tags": [
           "IA Agéntica",
@@ -126,7 +126,8 @@
           "AWS / GCP",
           "Redis / BullMQ",
           "M2M / VPC",
-          "Docker"
+          "Docker",
+          "Kubernetes"
         ]
       },
       {
@@ -247,7 +248,8 @@
           "Linux",
           "NGINX",
           "Aislamiento de VPC",
-          "Despliegue Sin Downtime"
+          "Despliegue Sin Downtime",
+          "Kubernetes"
         ]
       },
       {
@@ -357,7 +359,8 @@
       "AWS",
       "GCP",
       "TypeScript",
-      "Python"
+      "Python",
+      "Kubernetes"
     ]
   }
 }

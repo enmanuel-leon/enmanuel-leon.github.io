@@ -25,7 +25,7 @@ Software Engineer with 6+ years of experience building distributed systems, AI-p
 - **Agentic core and M2M APIs:** Co-designed multi-agent orchestration, tool calling, and autonomous execution loops with decoupled, token-authenticated APIs between isolated VPCs.
 - **Secure pipeline across isolated VPCs:** Built the interconnection between customer VPCs and the central platform with distributed workers, consistency guarantees, and zero public endpoints.
 - **Agent-assisted SDLC:** Standardized autonomous agent workflows, shortening microservice refactoring cycles and expanding automated test coverage.
-- **Cloud-native operations:** Operated distributed services in Docker across AWS and GCP with zero-downtime CI/CD and Sentry/CloudWatch observability.
+- **Cloud-native operations:** Operated distributed services in Docker and Kubernetes across AWS and GCP with zero-downtime CI/CD and Sentry/CloudWatch observability.
 
 ### Software & Mobile Engineer (Part-time Consultant) | Confidential Fintech Scale-up · Credit Platform (NDA)
 *Jul 2025 – Jul 2026*
@@ -58,7 +58,7 @@ Software Engineer with 6+ years of experience building distributed systems, AI-p
 - **Languages:** TypeScript, JavaScript, Python
 - **Backend & Architecture:** Node.js, Fastify, Express, FastAPI, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience, Platform Engineering, Backend Engineering, AI Infrastructure, Circuit Breakers, Rate Limiting
 - **Agentic AI:** Agentic Systems, Multi-Agent Orchestration, Tool Calling & Function Calling, OpenAI & Anthropic APIs, RAG Pipelines, Agent-Assisted SDLC, M2M Communication
-- **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation, Zero-Downtime Deployment
+- **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, Kubernetes, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation, Zero-Downtime Deployment
 - **Data & Messaging:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM, Dead-Letter Queues (DLQ)
 - **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS
 - **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod, Observability

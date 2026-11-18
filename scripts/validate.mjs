@@ -303,6 +303,28 @@ async function checkGeneratedPage(relative, lang) {
   );
   unsafe.slice(0, 5).forEach((tag) => console.error(`    ${tag}`));
 
+  const pdfAnchors = [
+    ...html.matchAll(/<a\b[^>]*href="[^"]+\.pdf"[^>]*>/g),
+  ].map((match) => match[0]);
+  const pdfLinksSafe =
+    pdfAnchors.length > 0 &&
+    pdfAnchors.every(
+      (tag) => /target="_blank"/.test(tag) && /rel="[^"]*noopener/.test(tag),
+    );
+  check(
+    pdfLinksSafe,
+    `${relative}: all ${pdfAnchors.length} PDF links open in a new tab`,
+  );
+  if (!pdfLinksSafe) {
+    pdfAnchors
+      .filter(
+        (tag) =>
+          !/target="_blank"/.test(tag) || !/rel="[^"]*noopener/.test(tag),
+      )
+      .slice(0, 5)
+      .forEach((tag) => console.error(`    ${tag}`));
+  }
+
   const tags = [
     ...html.matchAll(/<(a|link|img|source|script)\b[^>]*>/gi),
   ].map((match) => match[0]);
