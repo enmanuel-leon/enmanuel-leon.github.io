@@ -74,7 +74,7 @@
       "Me importan los límites claros, la observabilidad y llevar el software a producción. Ciudadano italiano (UE), autorizado para trabajar en la Unión Europea sin necesidad de patrocinio; trabajo en remoto en horario CET y EST."
     ],
     "competenciesLabel": "Competencias clave",
-    "competencies": "Sistemas distribuidos · Arquitectura orientada a eventos · Procesamiento asíncrono · Idempotencia y resiliencia · Orquestación de IA agéntica · Operación de servicios nativos en la nube"
+    "competencies": "Sistemas distribuidos · Arquitectura orientada a eventos · Procesamiento asíncrono · Idempotencia y resiliencia · IA agéntica · Operación en la nube"
   },
   "impact": {
     "title": "Enfoque de ingeniería",
@@ -113,11 +113,11 @@
         "role": "Full Stack Developer (AI & Core Systems)",
         "company": "Entropy Systems",
         "bullets": [
-          "Diseñé y puse en producción un motor distribuido de generación asíncrona de informes normativos en Fastify y Python, desacoplando la generación de la petición con BullMQ y Redis, procesos idempotentes y procesamiento observable.",
-          "Codiseñé el núcleo agéntico de distribución de herramientas de IA —orquestación multiagente, tool calling y bucles de ejecución autónomos— con APIs M2M con autenticación por tokens entre VPCs aisladas.",
-          "Construí un canal seguro de eventos entre VPCs aisladas de clientes y la plataforma central, con procesos distribuidos, garantías de consistencia y sin exponer endpoints públicos.",
-          "Estandaricé procesos de desarrollo asistidos por agentes, acortando los ciclos de refactorización de microservicios y ampliando la cobertura de pruebas automatizadas.",
-          "Operé servicios distribuidos en AWS y GCP, empaquetados en contenedores Docker, orquestados con Kubernetes y desplegados con CI/CD sin interrupciones, con observabilidad en Sentry y CloudWatch."
+          "Diseñé y puse en producción un motor asíncrono de informes normativos en Fastify y Python con BullMQ y Redis, desacoplando la generación de la petición con procesos idempotentes y procesamiento observable.",
+          "Codiseñé la orquestación multiagente, el tool calling y los bucles de ejecución autónomos, con APIs desacopladas y autenticación por tokens entre VPCs aisladas.",
+          "Construí la interconexión entre VPCs de clientes y la plataforma central con procesos distribuidos, consistencia garantizada y sin exponer endpoints públicos.",
+          "Estandaricé procesos de desarrollo con agentes autónomos, acortando los ciclos de refactorización de microservicios y ampliando la cobertura de pruebas.",
+          "Operé servicios en Docker y Kubernetes sobre AWS y GCP con CI/CD sin interrupciones y observabilidad en Sentry y CloudWatch."
         ],
         "tags": [
           "IA Agéntica",
@@ -138,9 +138,9 @@
         "role": "Ingeniero de software y mobile (consultor a tiempo parcial)",
         "company": "Fintech en crecimiento confidencial · Plataforma de crédito (NDA)",
         "bullets": [
-          "Construí la arquitectura móvil multiplataforma (iOS y Android) en React Native y TypeScript para una plataforma de originación crediticia, entregando más de 20 vistas modulares: alta con KYC biométrico, panel analítico, transacciones, historial y chat en tiempo real.",
-          "Diseñé y operé la capa de datos en la nube, implementando autenticación y políticas granulares de Row-Level Security (RLS) para proteger historiales crediticios y contratos financieros sensibles.",
-          "Mejoré el tiempo de carga inicial y añadí persistencia sin conexión para solicitudes de crédito y transacciones en entornos de baja conectividad."
+          "Construí en React Native y TypeScript más de 20 vistas para una plataforma de originación crediticia: alta con KYC biométrico, analítica, transacciones, historial y chat en tiempo real.",
+          "Diseñé y operé la autenticación y las políticas granulares para proteger historiales crediticios y contratos financieros sensibles.",
+          "Mejoré el rendimiento y la resiliencia de la app para solicitudes de crédito y transacciones en entornos de baja conectividad."
         ],
         "tags": [
           "React Native",

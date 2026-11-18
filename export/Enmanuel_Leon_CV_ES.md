@@ -10,9 +10,9 @@ Idiomas: Español (nativo), Inglés (profesional)
 
 ## Resumen profesional
 
-Más de 6 años de experiencia diseñando y operando sistemas en producción para fintech, IA aplicada y plataformas empresariales. Especializado en ingeniería backend y de plataforma con TypeScript/Node.js, Python, arquitecturas orientadas a eventos y AWS/GCP, con experiencia en orquestación multiagente, tool calling, procesamiento asíncrono, comunicación M2M segura y sistemas transaccionales de alta disponibilidad.
+Más de 6 años de experiencia diseñando y operando sistemas en producción para fintech, IA aplicada y plataformas empresariales. Especializado en ingeniería backend y de plataforma con TypeScript/Node.js, Python, arquitecturas orientadas a eventos y AWS/GCP. Experiencia en orquestación multiagente, procesamiento asíncrono, M2M seguro y sistemas transaccionales de alta disponibilidad.
 
-**Competencias clave:** sistemas distribuidos, arquitectura orientada a eventos, procesamiento asíncrono, idempotencia y resiliencia, orquestación de IA agéntica y operación de servicios nativos en la nube.
+**Competencias clave:** sistemas distribuidos, arquitectura orientada a eventos, procesamiento asíncrono, idempotencia y resiliencia, IA agéntica y operación en la nube.
 
 ---
 
@@ -21,16 +21,16 @@ Más de 6 años de experiencia diseñando y operando sistemas en producción par
 ### Full Stack Developer (AI & Core Systems) | Entropy Systems | Barcelona, España (Remoto)
 *Abr 2024 – Presente*
 
-- **Motor distribuido de informes normativos:** Diseñé y puse en producción un motor de generación asíncrona en Fastify y Python con colas BullMQ y Redis, desacoplando la generación de la petición con procesos idempotentes y procesamiento observable.
+- **Motor de informes normativos:** Diseñé y puse en producción un motor asíncrono en Fastify y Python con BullMQ y Redis, desacoplando la generación de la petición con procesos idempotentes y procesamiento observable.
 - **Núcleo agéntico y APIs M2M:** Codiseñé la orquestación multiagente, el tool calling y los bucles de ejecución autónomos, con APIs desacopladas y autenticación por tokens entre VPCs aisladas.
 - **Canal seguro entre VPCs aisladas:** Construí la interconexión entre VPCs de clientes y la plataforma central con procesos distribuidos, consistencia garantizada y sin exponer endpoints públicos.
 - **SDLC asistido por agentes:** Estandaricé procesos de desarrollo con agentes autónomos, acortando los ciclos de refactorización de microservicios y ampliando la cobertura de pruebas.
-- **Operación nativa en la nube:** Operé servicios distribuidos en contenedores Docker y Kubernetes sobre AWS y GCP con CI/CD sin interrupciones y observabilidad en Sentry y CloudWatch.
+- **Operación nativa en la nube:** Operé servicios en Docker y Kubernetes sobre AWS y GCP con CI/CD sin interrupciones y observabilidad en Sentry y CloudWatch.
 
 ### Ingeniero de software y mobile (consultor a tiempo parcial) | Fintech en crecimiento confidencial · Plataforma de crédito (NDA)
 *Jul 2025 – Jul 2026*
 
-- **Arquitectura móvil multiplataforma (iOS y Android):** Construí en React Native y TypeScript más de 20 vistas modulares para una plataforma de originación crediticia: alta con KYC biométrico, panel analítico, transacciones, historial y chat en tiempo real.
+- **Arquitectura móvil multiplataforma (iOS y Android):** Construí en React Native y TypeScript más de 20 vistas para una plataforma de originación crediticia: alta con KYC biométrico, analítica, transacciones, historial y chat en tiempo real.
 - **Capa de datos en la nube con Row-Level Security (RLS):** Diseñé y operé la autenticación y las políticas granulares para proteger historiales crediticios y contratos financieros sensibles.
 - **Carga inicial más rápida y persistencia sin conexión:** Mejoré el rendimiento y la resiliencia de la app para solicitudes de crédito y transacciones en entornos de baja conectividad.
 

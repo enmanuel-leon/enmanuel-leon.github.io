@@ -8,6 +8,7 @@ Contract:
 - When ``pdftotext`` is available, it also asserts the expected roles per page.
 """
 
+import base64
 import os
 import re
 import shutil
@@ -17,6 +18,12 @@ import tempfile
 from pathlib import Path
 
 CSS = """
+@font-face {
+  font-family: 'Geist';
+  src: url(data:font/woff2;base64,__GEIST_FONT__) format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
 @page {
   size: A4;
   margin: 12mm 14mm 12mm 14mm;
@@ -25,7 +32,7 @@ CSS = """
   box-sizing: border-box;
 }
 body {
-  font-family: 'Liberation Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Geist', 'Liberation Sans', Arial, Helvetica, sans-serif;
   font-size: 8.8pt;
   line-height: 1.34;
   color: #111827;
@@ -92,6 +99,10 @@ strong {
   display: none;
 }
 """
+
+FONT_PATH = Path(__file__).resolve().parent.parent / "assets/fonts/geist-latin.woff2"
+GEIST_FONT = base64.b64encode(FONT_PATH.read_bytes()).decode("ascii")
+CSS = CSS.replace("__GEIST_FONT__", GEIST_FONT)
 
 TARGETS = [
     {
