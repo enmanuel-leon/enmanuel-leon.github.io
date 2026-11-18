@@ -1,41 +1,69 @@
-# Enmanuel Leon — Senior Software Engineer | Sistemas Distribuidos & Agénticos | TypeScript · Python · AWS/GCP
+# Enmanuel Leon — Software Engineer
 
-> Software Engineer with 6+ years of experience engineering high-throughput distributed systems, asynchronous processing engines, agentic AI architectures, and cloud platforms (AWS/GCP). Dual Italian (EU) & Venezuelan citizenship (Authorized to work across the EU without sponsorship).
+> Software Engineer building distributed systems, async engines, agentic AI platforms with TypeScript, Python, and AWS/GCP. EU citizen · Remote CET/EST.
 
-## Contact & Profiles
-- Location: Valencia, Venezuela (Remote · Horario CET / EST)
-- Citizenship: Italian (EU) & Venezuelan (No visa required for EU)
+## Canonical
+- Portfolio (EN): https://enmanuel-leon.com/
+- Portfolio (ES): https://enmanuel-leon.com/es/
+- CV (ES, PDF): https://enmanuel-leon.com/export/Enmanuel_Leon_CV_ES.pdf
+- Resume (EN, PDF): https://enmanuel-leon.com/export/Enmanuel_Leon_Resume_EN.pdf
+- CV (ES, Markdown): https://enmanuel-leon.com/export/Enmanuel_Leon_CV_ES.md
+- Resume (EN, Markdown): https://enmanuel-leon.com/export/Enmanuel_Leon_Resume_EN.md
+
+## Profile
+- Location: Valencia, Venezuela
+- Citizenship: EU citizen (Italian)
+- Work mode: Remote CET/EST
+- Languages: Spanish (native) · English (professional)
 - Email: contact@enmanuel-leon.com
-- GitHub: https://github.com/enmanuel-leon
-- LinkedIn: https://www.linkedin.com/in/enmanuel-leon/
-- Portfolio: https://enmanuel-leon.com/
+- LinkedIn: linkedin.com/in/enmanuel-leon
+- GitHub: github.com/enmanuel-leon
 
-## Available CV Formats
-- [Resume English (PDF)](https://enmanuel-leon.com/export/Enmanuel_Leon_Resume_EN.pdf): ATS-optimized 2-page resume in English.
-- [CV Spanish (PDF)](https://enmanuel-leon.com/export/Enmanuel_Leon_CV_ES.pdf): ATS-optimized 2-page curriculum vitae in Spanish.
-- [Resume English (Markdown)](https://enmanuel-leon.com/export/Enmanuel_Leon_Resume_EN.md): Raw markdown resume in English.
-- [CV Spanish (Markdown)](https://enmanuel-leon.com/export/Enmanuel_Leon_CV_ES.md): Raw markdown curriculum vitae in Spanish.
+## Selected impact
+- 65% faster report generation — 2,000+ regulatory documents per month
+- <50ms M2M latency — Token-authenticated calls between isolated VPCs
+- 500k+ monthly transactions — 99.9% uptime on a payment gateway
+- 10k+ daily events processed — 10,000+ events/day across isolated VPCs
 
-## Technical Stack
-- **Languages:** TypeScript, JavaScript, Python.
-- **Backend & Architecture:** Node.js, Fastify, Express, FastAPI, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience.
-- **Applied AI & Agentic Systems:** Agentic Systems, Multi-Agent Orchestration, Tool Calling & Function Calling, OpenAI & Anthropic APIs, RAG Pipelines, Agent-Assisted SDLC, M2M Communication.
-- **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation.
-- **Databases & Messaging:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM.
-- **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS.
-- **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod.
+## Stack
+- **Languages:** TypeScript, JavaScript, Python
+- **Backend & Architecture:** Node.js, Fastify, Express, FastAPI, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience
+- **Agentic AI:** Agentic Systems, Multi-Agent Orchestration, Tool Calling & Function Calling, OpenAI & Anthropic APIs, RAG Pipelines, Agent-Assisted SDLC, M2M Communication
+- **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation
+- **Data & Messaging:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM
+- **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS
+- **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod
 
-## Professional Experience Summary
-- **Fullstack Developer (AI & Core Systems)** at Entropy Systems (Apr 2024 - Present):
-  Co-designed agentic system architecture and engineered core AI tooling backend (multi-agent orchestration, tool calling, autonomous execution loops) with <50ms M2M latency. Engineered distributed asynchronous report generation engine (Fastify, Python, BullMQ, Redis) reducing processing time by 65% (2,000+ monthly docs). Engineered secure event pipeline connecting isolated client VPCs with core (10,000+ daily events, zero public endpoint exposure). Standardized agent-assisted SDLC workflows (-62% refactoring lead time). 99.9% uptime on AWS/GCP with zero-downtime CI/CD.
-- **Software & Mobile Engineer (Consultant · Side Project)** at Fintech Scale-up · NDA (Jul 2025 - Jul 2026):
-  Delivered end-to-end cross-platform mobile architecture (iOS/Android) in React Native and TypeScript (20+ modular views, biometric KYC onboarding). Engineered cloud data infrastructure with Row-Level Security (RLS). Optimized cold-start times by 35% with offline persistence.
-- **Fullstack Developer** at Interfell - ePayco (Jun 2021 - Apr 2024):
-  Maintained 99.9% availability across mission-critical payment gateway microservices processing 500,000+ monthly transactions in Node.js (Express), TypeScript, and MySQL. Implemented financial idempotency and resilience via Circuit Breakers, Rate Limiting, and AWS SQS queues with DLQs. Reduced p95 transaction latency by 28%.
-- **Systems Analyst / Software Developer** at Intelix Synergy, C.A. (Mar 2020 - Jun 2021):
-  Engineered 3 modular internal management applications in JavaScript, Node.js, and Python. Maintained high availability on production Linux servers with NGINX. Standardized API contracts with OpenAPI/Swagger.
+## Experience
+### Full Stack Developer (AI & Core Systems) — Entropy Systems
+*Apr 2024 – Present · Barcelona, Spain · Remote*
+- Designed and shipped a distributed asynchronous engine for regulatory reports in Fastify and Python, using BullMQ and Redis to cut processing time by 65% while handling 2,000+ documents per month.
+- Co-designed the agentic core for AI tool distribution — multi-agent orchestration, tool calling, and autonomous execution loops — with token-authenticated M2M APIs at sub-50ms latency.
+- Built a secure event pipeline between isolated customer VPCs and the central platform, processing 10,000+ daily events with guaranteed consistency and zero public endpoints.
+- Standardized agent-assisted SDLC workflows, cutting microservice refactoring from multi-day cycles to under two days and expanding automated test coverage.
+- Operated distributed services across AWS and GCP at 99.9% availability, containerized with Docker and delivered through zero-downtime CI/CD with Sentry and CloudWatch observability.
+
+### Software & Mobile Engineer (Part-time Consultant) — Confidential Fintech Scale-up · Credit Platform (NDA)
+*Jul 2025 – Jul 2026 · Remote*
+- Built the end-to-end cross-platform mobile architecture (iOS and Android) in React Native and TypeScript for a credit origination platform, delivering 20+ modular views: biometric KYC onboarding, analytics, transactions, history, and real-time chat.
+- Designed and operated the cloud data layer, implementing authentication and granular Row-Level Security (RLS) policies to protect sensitive credit histories and financial contracts.
+- Improved cold-start load time and added offline persistence for loan applications and transactions in low-connectivity environments.
+
+### Full Stack Developer — Interfell · ePayco
+*Jun 2021 – Apr 2024 · Remote*
+- Maintained 99.9% availability across mission-critical payment gateway services processing 500,000+ monthly transactions in Node.js (Express), TypeScript, and MySQL.
+- Engineered financial resilience and idempotency with Circuit Breakers, rate limiting, and AWS SQS queues with Dead Letter Queues (DLQ), guaranteeing zero duplicate charges during banking gateway outages.
+- Reduced p95 transaction latency by optimizing complex MySQL queries, offloading notifications to asynchronous SQS workers, and refactoring critical endpoints.
+- Led payment gateway integrations for merchants and partners across React web apps and REST, GraphQL, and SOAP APIs, backed by Jest test suites and Datadog/Sentry monitoring.
+
+### Systems Analyst / Software Developer — Intelix Synergy, C.A.
+*Mar 2020 – Jun 2021 · Valencia, Venezuela*
+- Designed and developed 3 modular internal applications in JavaScript, Node.js, and Python for commercial operations, used daily in production.
+- Maintained continuous availability with zero unplanned downtime on production Linux servers using NGINX reverse proxies, load balancing, and SSL/TLS policies.
+- Reduced developer onboarding time by standardizing 15+ API contracts and system blueprints with OpenAPI/Swagger.
 
 ## Education
-- **Bachelor of Science in Computer Engineering**
-  Universidad José Antonio Páez — Valencia, Venezuela (Conferred 2020).
-  Accredited university degree specializing in distributed systems, computer architecture, relational databases, and advanced algorithms.
+- **Computer Engineering (Ingeniero en Computación)** — Universidad José Antonio Páez — Valencia, Venezuela (2020)
+  Five-year professional degree (10 semesters) leading to the title Ingeniero en Computación: distributed systems, computer architecture, relational databases, and algorithms.
+
+Last updated: 2026-11-17

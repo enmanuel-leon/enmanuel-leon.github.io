@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enmanuel Leon — Software Engineer · Sistemas Distribuidos y Agénticos</title>
+    <meta name="description" content="Software Engineer: sistemas distribuidos, motores asíncronos e IA agéntica con TypeScript, Python y AWS/GCP. Ciudadano UE · Remoto CET/EST.">
+    <meta name="author" content="Enmanuel Leon">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0b1018" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f4f6f9" media="(prefers-color-scheme: light)">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="canonical" href="https://enmanuel-leon.com/es/">
+    <link rel="alternate" hreflang="es" href="https://enmanuel-leon.com/es/">
+    <link rel="alternate" hreflang="en" href="https://enmanuel-leon.com/">
+    <link rel="alternate" hreflang="x-default" href="https://enmanuel-leon.com/">
+    <link rel="me" href="https://www.linkedin.com/in/enmanuel-leon/">
+    <link rel="me" href="https://github.com/enmanuel-leon">
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script>
+      (() => {
+        const root = document.documentElement;
+        let stored = null;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch {
+          stored = null;
+        }
+        const system = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        const theme = stored === "light" || stored === "dark" ? stored : system;
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+        document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+          meta.content = theme === "dark" ? "#0b1018" : "#f4f6f9";
+        });
+      })();
+    </script>
+    <link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="/img/profile-400.webp" imagesrcset="/img/profile-400.webp 400w, /img/profile-800.webp 800w" imagesizes="(max-width: 900px) 144px, 220px" fetchpriority="high">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="expect" href="#main" blocking="render">
+    <noscript><style>.theme-toggle,[data-open-download],.copy-btn{display:none}</style></noscript>
+    <script type="application/json" id="ui-data">{"skipToContent":"Saltar al contenido","menuOpen":"Abrir menú","menuClose":"Cerrar menú","themeLight":"Cambiar a tema claro","themeDark":"Cambiar a tema oscuro","language":"Idioma","primaryNav":"Principal","mobileNav":"Móvil","profileAndContact":"Perfil y contacto","backToTop":"Volver arriba","downloadCv":"Descargar CV","downloadTitle":"Descargar CV","downloadDesc":"Dos páginas, compatible con ATS, actualizado en noviembre de 2026.","downloadClose":"Cerrar","contactMe":"Contactar","copyEmail":"Copiar email","copied":"Copiado","copyFailed":"No se pudo copiar","themeToggle":"Cambiar tema","location":"Ubicación","citizenship":"Ciudadanía","languagesLabel":"Idiomas","downloadPdfMeta":"2 páginas · compatible con ATS","downloadMdMeta":"Texto plano · Markdown","downloadNote":"Ambos PDF son compatibles con ATS y tienen texto seleccionable.","noscriptTitle":"JavaScript está desactivado","noscriptText":"El CV completo está disponible abajo. También puedes descargar el PDF o el Markdown directamente.","availability":"Disponibilidad"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://enmanuel-leon.com/#website","url":"https://enmanuel-leon.com","name":"Enmanuel Leon","inLanguage":["es","en"]},{"@type":"ProfilePage","@id":"https://enmanuel-leon.com/es/#profilepage","url":"https://enmanuel-leon.com/es/","name":"Enmanuel Leon — Software Engineer · Sistemas Distribuidos y Agénticos","description":"Software Engineer: sistemas distribuidos, motores asíncronos e IA agéntica con TypeScript, Python y AWS/GCP. Ciudadano UE · Remoto CET/EST.","inLanguage":"es","isPartOf":{"@id":"https://enmanuel-leon.com/#website"},"mainEntity":{"@id":"https://enmanuel-leon.com/#person"}},{"@type":"Person","@id":"https://enmanuel-leon.com/#person","name":"Enmanuel Leon","jobTitle":"Software Engineer","description":"Software Engineer: sistemas distribuidos, motores asíncronos e IA agéntica con TypeScript, Python y AWS/GCP. Ciudadano UE · Remoto CET/EST.","url":"https://enmanuel-leon.com","image":"https://enmanuel-leon.com/img/profile-800.jpg","email":"mailto:contact@enmanuel-leon.com","nationality":[{"@type":"Country","name":"Italy"},{"@type":"Country","name":"Venezuela"}],"address":{"@type":"PostalAddress","addressLocality":"Valencia","addressCountry":"VE"},"sameAs":["https://www.linkedin.com/in/enmanuel-leon/","https://github.com/enmanuel-leon"],"knowsLanguage":[{"@type":"Language","name":"Spanish"},{"@type":"Language","name":"English"}],"knowsAbout":["TypeScript","JavaScript","Python","Node.js","Fastify","Express","FastAPI","Microservicios","Sistemas Distribuidos","Arquitectura Orientada a Eventos (EDA)","APIs REST / GraphQL","Idempotencia & Resiliencia","Sistemas Agénticos","Orquestación Multiagente","Tool Calling & Function Calling","APIs de OpenAI & Anthropic","Pipelines RAG","SDLC Asistido por Agentes","Comunicación M2M","AWS (ECS, Lambda, SQS, S3, RDS)","GCP (Cloud Run)","Docker","Docker Compose","CI/CD (GitHub Actions)","Linux","NGINX","Aislamiento de VPC","PostgreSQL","MySQL","MongoDB","Redis","BullMQ","AWS SQS","Row-Level Security (RLS)","Prisma ORM","React","Next.js","React Native (iOS/Android)","Vite","Tailwind CSS","Datadog","Sentry","CloudWatch","Vitest","Jest","TDD","Git / GitHub","Zod"],"worksFor":{"@type":"Organization","name":"Entropy Systems"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universidad José Antonio Páez"}}]}</script>
+    <link rel="alternate" type="application/pdf" href="/export/Enmanuel_Leon_CV_ES.pdf" title="CV Enmanuel Leon (PDF, español)">
+    <link rel="alternate" type="application/pdf" href="/export/Enmanuel_Leon_Resume_EN.pdf" title="Resume Enmanuel Leon (PDF, English)">
+    <link rel="alternate" type="text/markdown" href="/export/Enmanuel_Leon_CV_ES.md" title="CV Enmanuel Leon (Markdown, español)">
+    <link rel="alternate" type="text/markdown" href="/export/Enmanuel_Leon_Resume_EN.md" title="Resume Enmanuel Leon (Markdown, English)">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Enmanuel Leon">
+    <meta property="og:title" content="Enmanuel Leon — Software Engineer · Sistemas Distribuidos y Agénticos">
+    <meta property="og:description" content="Software Engineer: sistemas distribuidos, motores asíncronos e IA agéntica con TypeScript, Python y AWS/GCP. Ciudadano UE · Remoto CET/EST.">
+    <meta property="og:url" content="https://enmanuel-leon.com/es/">
+    <meta property="og:image" content="https://enmanuel-leon.com/img/og-banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Enmanuel Leon — Software Engineer">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:profile:first_name" content="Enmanuel">
+    <meta property="og:profile:last_name" content="Leon">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enmanuel Leon — Software Engineer · Sistemas Distribuidos y Agénticos">
+    <meta name="twitter:description" content="Software Engineer: sistemas distribuidos, motores asíncronos e IA agéntica con TypeScript, Python y AWS/GCP. Ciudadano UE · Remoto CET/EST.">
+    <meta name="twitter:image" content="https://enmanuel-leon.com/img/og-banner.png">
+    <meta name="twitter:image:alt" content="Enmanuel Leon — Software Engineer">
+</head>
+<body id="top" data-lang="es">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="top-sentinel" id="topSentinel" aria-hidden="true"></div>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Enmanuel Leon">
+        <span class="brand-mark" aria-hidden="true">EL</span>
+        <span class="brand-name">Enmanuel Leon</span>
+      </a>
+      <nav class="site-nav" id="siteNav" aria-label="Principal">
+        <ul><li><a href="#impact" data-nav="impact">Impacto</a></li><li><a href="#experience" data-nav="experience">Experiencia</a></li><li><a href="#stack" data-nav="stack">Stack</a></li><li><a href="#contact" data-nav="contact">Contacto</a></li></ul>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma" data-active="es">
+          <a class="lang-link is-current" href="/es/" hreflang="es" lang="es" aria-current="page">ES</a><a class="lang-link" href="/" hreflang="en" lang="en">EN</a>
+        </div>
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" popovertarget="mobileNav" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" popover aria-label="Móvil">
+      <ul><li><a href="#impact" data-nav="impact">Impacto</a></li><li><a href="#experience" data-nav="experience">Experiencia</a></li><li><a href="#stack" data-nav="stack">Stack</a></li><li><a href="#contact" data-nav="contact">Contacto</a></li></ul>
+      <div class="mobile-nav-meta">
+        <a href="mailto:contact@enmanuel-leon.com">contact@enmanuel-leon.com</a>
+        <a href="/export/Enmanuel_Leon_CV_ES.pdf" download>Descargar CV</a>
+      </div>
+    </nav>
+  </header>
+<main id="main" tabindex="-1">
+    <noscript>
+      <div class="noscript">
+        <p class="noscript-title"><strong>JavaScript está desactivado</strong></p>
+        <p>El CV completo está disponible abajo. También puedes descargar el PDF o el Markdown directamente.</p>
+        <p>
+          <a href="/export/Enmanuel_Leon_CV_ES.pdf" download>CV · Español (PDF)</a>
+          <span aria-hidden="true">·</span>
+          <a href="/export/Enmanuel_Leon_Resume_EN.pdf" download>Resume · English (PDF)</a>
+          <span aria-hidden="true">·</span>
+          <a href="/export/Enmanuel_Leon_CV_ES.md">CV · Markdown</a>
+          <span aria-hidden="true">·</span>
+          <a href="/export/Enmanuel_Leon_Resume_EN.md">Resume · Markdown</a>
+        </p>
+      </div>
+    </noscript>
+    <div class="page">
+      <aside class="profile-rail" aria-label="Perfil y contacto">
+      <div class="portrait">
+        <picture>
+          <source type="image/webp" srcset="/img/profile-400.webp 400w, /img/profile-800.webp 800w" sizes="(max-width: 900px) 144px, 220px">
+          <img src="/img/profile-400.jpg" srcset="/img/profile-400.jpg 400w, /img/profile-800.jpg 800w" sizes="(max-width: 900px) 144px, 220px" width="800" height="800" alt="Enmanuel Leon" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+      <div class="rail-intro">
+        <h1>Enmanuel Leon</h1>
+        <p class="rail-role">Software Engineer</p>
+        <p class="rail-specialty">Sistemas Distribuidos y Agénticos</p>
+        <p class="rail-stack">TypeScript · Python · AWS/GCP</p>
+      </div>
+      <dl class="rail-meta">
+        <div><dt>Ubicación</dt><dd>Valencia, Venezuela</dd></div>
+        <div><dt>Disponibilidad</dt><dd>Ciudadanía UE (Italiana) · Remoto CET/EST</dd></div>
+        <div><dt>Idiomas</dt><dd>Español (nativo) · Inglés (profesional)</dd></div>
+      </dl>
+      <div class="rail-actions" id="railActions">
+        <button class="btn btn-primary" id="downloadBtn" type="button" data-open-download>Descargar CV</button>
+        <a class="btn btn-secondary" href="#contact">Contactar</a>
+      </div>
+      <ul class="rail-links">
+        <li><a href="mailto:contact@enmanuel-leon.com">Email</a></li><li><a href="https://www.linkedin.com/in/enmanuel-leon/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://github.com/enmanuel-leon" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </aside>
+      <div class="content">
+        <div class="intro">
+        <p class="statement">Construyo los sistemas distribuidos y los motores asíncronos detrás del movimiento de dinero, las herramientas de IA y las plataformas de alta disponibilidad.</p>
+        <p class="summary">Soy ingeniero de software con más de 6 años diseñando y operando sistemas en producción para fintech, IA aplicada y plataformas empresariales. Especializado en TypeScript/Node.js, Python y arquitecturas orientadas a eventos sobre AWS/GCP: desde pasarelas de pago con más de 500.000 transacciones mensuales hasta orquestación multiagente con latencia M2M inferior a 50 ms.</p><p class="summary">Me importan los límites claros, la observabilidad y los resultados que llegan a producción. Ciudadano italiano (UE), autorizado para trabajar en la Unión Europea sin patrocinio; remoto en horarios CET y EST.</p>
+      </div>
+        <div class="section-sentinel" id="sectionSentinel" aria-hidden="true"></div>
+        <section class="section" id="impact" aria-labelledby="impactTitle">
+        <div class="section-head">
+          <h2 id="impactTitle">Resultados, no adjetivos</h2>
+          <p>Algunos resultados de los últimos seis años.</p>
+        </div>
+        <ul class="impact-grid">
+          <li class="impact-item">
+            <span class="impact-value">65%</span>
+            <span class="impact-label">menos tiempo de generación</span>
+            <span class="impact-detail">Más de 2.000 documentos normativos al mes</span>
+          </li><li class="impact-item">
+            <span class="impact-value">&lt;50ms</span>
+            <span class="impact-label">latencia M2M</span>
+            <span class="impact-detail">Llamadas autenticadas por tokens entre VPCs aisladas</span>
+          </li><li class="impact-item">
+            <span class="impact-value">500k+</span>
+            <span class="impact-label">transacciones mensuales</span>
+            <span class="impact-detail">99,9% de uptime en una pasarela de pago</span>
+          </li><li class="impact-item">
+            <span class="impact-value">10k+</span>
+            <span class="impact-label">eventos diarios procesados</span>
+            <span class="impact-detail">Más de 10.000 eventos diarios entre VPCs aisladas</span>
+          </li>
+        </ul>
+      </section>
+        <section class="section" id="experience" aria-labelledby="experienceTitle">
+        <div class="section-head">
+          <h2 id="experienceTitle">Sistemas en producción</h2>
+          <p>Plataformas fintech, IA aplicada e infraestructura cloud.</p>
+        </div>
+        <div class="experience-list">
+          <article class="job" id="entropy">
+            <p class="job-period">Abr 2024 – Presente</p>
+            <div class="job-body">
+              <h3 class="job-role">Full Stack Developer (AI &amp; Core Systems)</h3>
+              <p class="job-company">Entropy Systems <span class="sep" aria-hidden="true">·</span> Barcelona, España · Remoto</p>
+              <ul class="job-list"><li>Diseñé y puse en producción un motor distribuido de generación asíncrona de reportes normativos en Fastify y Python, con colas BullMQ y Redis, reduciendo el tiempo de procesamiento un 65% y gestionando más de 2.000 documentos al mes.</li><li>Codiseñé el core agéntico de distribución de herramientas de IA —orquestación multiagente, tool calling y bucles de ejecución autónomos— con APIs M2M desacopladas y autenticación por tokens, por debajo de 50 ms de latencia.</li><li>Construí un pipeline seguro de eventos entre VPCs aisladas de clientes y la plataforma central, procesando más de 10.000 eventos diarios con consistencia garantizada y cero endpoints públicos.</li><li>Estandaricé flujos de SDLC asistidos por agentes, reduciendo la refactorización de microservicios de ciclos de varios días a menos de dos días y ampliando la cobertura de pruebas automatizadas.</li><li>Operé servicios distribuidos en AWS y GCP con un 99,9% de disponibilidad, empaquetados en contenedores Docker y desplegados con CI/CD sin downtime, con observabilidad en Sentry y CloudWatch.</li></ul>
+              <ul class="tag-list"><li class="tag">IA Agéntica</li><li class="tag">TypeScript</li><li class="tag">Fastify</li><li class="tag">Python</li><li class="tag">AWS / GCP</li><li class="tag">Redis / BullMQ</li><li class="tag">M2M / VPC</li><li class="tag">Docker</li></ul>
+            </div>
+          </article><article class="job" id="fintech_mobile">
+            <p class="job-period">Jul 2025 – Jul 2026</p>
+            <div class="job-body">
+              <h3 class="job-role">Ingeniero de Software &amp; Mobile (Consultor Part-time)</h3>
+              <p class="job-company">Fintech Scale-up confidencial · Plataforma de Crédito (NDA) <span class="sep" aria-hidden="true">·</span> Remoto</p>
+              <ul class="job-list"><li>Construí la arquitectura móvil multiplataforma (iOS y Android) en React Native y TypeScript para una plataforma de originación crediticia, entregando más de 20 vistas modulares: alta con KYC biométrico, panel analítico, transacciones, historial y chat en tiempo real.</li><li>Diseñé y operé la capa de datos cloud, implementando autenticación y políticas granulares de Row-Level Security (RLS) para proteger historiales crediticios y contratos financieros sensibles.</li><li>Mejoré el tiempo de carga inicial y añadí persistencia offline para solicitudes de crédito y transacciones en entornos de baja conectividad.</li></ul>
+              <ul class="tag-list"><li class="tag">React Native</li><li class="tag">TypeScript</li><li class="tag">Cloud Infra</li><li class="tag">RLS</li><li class="tag">Sistemas de Crédito</li><li class="tag">Fintech</li></ul>
+            </div>
+          </article><article class="job" id="epayco">
+            <p class="job-period">Jun 2021 – Abr 2024</p>
+            <div class="job-body">
+              <h3 class="job-role">Full Stack Developer</h3>
+              <p class="job-company">Interfell · ePayco <span class="sep" aria-hidden="true">·</span> Remoto</p>
+              <ul class="job-list"><li>Mantuve un 99,9% de disponibilidad en servicios críticos de pasarela de pago procesando más de 500.000 transacciones mensuales en Node.js (Express), TypeScript y MySQL.</li><li>Diseñé mecanismos de resiliencia e idempotencia con Circuit Breakers, rate limiting y colas AWS SQS con Dead Letter Queues (DLQ), garantizando cero duplicidad de cobros ante caídas de pasarelas bancarias.</li><li>Reduje la latencia p95 optimizando consultas complejas en MySQL, desacoplando notificaciones hacia workers asíncronos en SQS y refactorizando endpoints críticos.</li><li>Lideré integraciones de la pasarela para comercios y aliados sobre interfaces React y APIs REST, GraphQL y SOAP, con pruebas automatizadas en Jest y monitorización en Datadog y Sentry.</li></ul>
+              <ul class="tag-list"><li class="tag">Node.js</li><li class="tag">TypeScript</li><li class="tag">React</li><li class="tag">MySQL</li><li class="tag">GraphQL / REST</li><li class="tag">AWS SQS</li><li class="tag">Docker</li></ul>
+            </div>
+          </article><article class="job" id="intelix">
+            <p class="job-period">Mar 2020 – Jun 2021</p>
+            <div class="job-body">
+              <h3 class="job-role">Analista de Sistemas / Desarrollador de Software</h3>
+              <p class="job-company">Intelix Synergy, C.A. <span class="sep" aria-hidden="true">·</span> Valencia, Venezuela</p>
+              <ul class="job-list"><li>Diseñé y desarrollé 3 aplicaciones modulares internas en JavaScript, Node.js y Python para la gestión de procesos comerciales, utilizadas a diario en producción.</li><li>Mantuve disponibilidad continua sin caídas no planificadas en servidores Linux de producción con NGINX como reverse proxy, balanceo de carga y políticas SSL/TLS.</li><li>Reduje el tiempo de incorporación de desarrolladores estandarizando más de 15 contratos de API y arquitecturas con OpenAPI/Swagger.</li></ul>
+              <ul class="tag-list"><li class="tag">JavaScript</li><li class="tag">Node.js</li><li class="tag">Python</li><li class="tag">NGINX</li><li class="tag">Linux</li><li class="tag">OpenAPI</li></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+        <section class="section" id="stack" aria-labelledby="skillsTitle">
+        <div class="section-head">
+          <h2 id="skillsTitle">Herramientas que uso</h2>
+          <p>El stack con el que diseño, despliego y opero sistemas en producción.</p>
+        </div>
+        <dl class="stack-grid">
+          <div class="stack-row">
+            <dt>Lenguajes</dt>
+            <dd><ul class="chip-list"><li class="chip">TypeScript</li><li class="chip">JavaScript</li><li class="chip">Python</li></ul></dd>
+          </div><div class="stack-row">
+            <dt>Backend &amp; Arquitectura</dt>
+            <dd><ul class="chip-list"><li class="chip">Node.js</li><li class="chip">Fastify</li><li class="chip">Express</li><li class="chip">FastAPI</li><li class="chip">Microservicios</li><li class="chip">Sistemas Distribuidos</li><li class="chip">Arquitectura Orientada a Eventos (EDA)</li><li class="chip">APIs REST / GraphQL</li><li class="chip">Idempotencia &amp; Resiliencia</li></ul></dd>
+          </div><div class="stack-row">
+            <dt>IA Agéntica</dt>
+            <dd><ul class="chip-list"><li class="chip">Sistemas Agénticos</li><li class="chip">Orquestación Multiagente</li><li class="chip">Tool Calling &amp; Function Calling</li><li class="chip">APIs de OpenAI &amp; Anthropic</li><li class="chip">Pipelines RAG</li><li class="chip">SDLC Asistido por Agentes</li><li class="chip">Comunicación M2M</li></ul></dd>
+          </div><div class="stack-row">
+            <dt>Cloud &amp; Infraestructura</dt>
+            <dd><ul class="chip-list"><li class="chip">AWS (ECS, Lambda, SQS, S3, RDS)</li><li class="chip">GCP (Cloud Run)</li><li class="chip">Docker</li><li class="chip">Docker Compose</li><li class="chip">CI/CD (GitHub Actions)</li><li class="chip">Linux</li><li class="chip">NGINX</li><li class="chip">Aislamiento de VPC</li></ul></dd>
+          </div><div class="stack-row">
+            <dt>Datos &amp; Mensajería</dt>
+            <dd><ul class="chip-list"><li class="chip">PostgreSQL</li><li class="chip">MySQL</li><li class="chip">MongoDB</li><li class="chip">Redis</li><li class="chip">BullMQ</li><li class="chip">AWS SQS</li><li class="chip">Row-Level Security (RLS)</li><li class="chip">Prisma ORM</li></ul></dd>
+          </div><div class="stack-row">
+            <dt>Frontend &amp; Mobile</dt>
+            <dd><ul class="chip-list"><li class="chip">React</li><li class="chip">Next.js</li><li class="chip">React Native (iOS/Android)</li><li class="chip">Vite</li><li class="chip">Tailwind CSS</li></ul></dd>
+          </div><div class="stack-row">
+            <dt>Observabilidad &amp; Calidad</dt>
+            <dd><ul class="chip-list"><li class="chip">Datadog</li><li class="chip">Sentry</li><li class="chip">CloudWatch</li><li class="chip">Vitest</li><li class="chip">Jest</li><li class="chip">TDD</li><li class="chip">Git / GitHub</li><li class="chip">Zod</li></ul></dd>
+          </div>
+        </dl>
+      </section>
+        <section class="section" id="education" aria-labelledby="educationTitle">
+        <div class="section-head">
+          <h2 id="educationTitle">Formación</h2>
+        </div>
+        <div class="education-list">
+          <article class="edu">
+            <p class="edu-period">2020</p>
+            <div class="edu-body">
+              <h3 class="edu-degree">Ingeniero en Computación</h3>
+              <p class="edu-school">Universidad José Antonio Páez — Valencia, Venezuela</p>
+              <p class="edu-desc">Título profesional de cinco años (10 semestres) en Ingeniería en Computación: sistemas distribuidos, arquitectura de computadores, bases de datos relacionales y algoritmos.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+        <section class="section contact" id="contact" aria-labelledby="contactTitle">
+        <div class="section-head">
+          <h2 id="contactTitle">Hablemos</h2>
+          <p>Para consultoría, conversaciones técnicas o un saludo rápido, el email es el camino más directo.</p>
+        </div>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <a class="contact-link" href="mailto:contact@enmanuel-leon.com">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">contact@enmanuel-leon.com</span>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+            <button class="copy-btn" type="button" data-copy-email="contact@enmanuel-leon.com" aria-label="Copiar email: contact@enmanuel-leon.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-label">Copiar email</span></button>
+          </li><li class="contact-item">
+            <a class="contact-link" href="https://www.linkedin.com/in/enmanuel-leon/" target="_blank" rel="noopener noreferrer">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/enmanuel-leon</span>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+
+          </li><li class="contact-item">
+            <a class="contact-link" href="https://github.com/enmanuel-leon" target="_blank" rel="noopener noreferrer">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/enmanuel-leon</span>
+              <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+
+          </li>
+        </ul>
+        <div class="contact-actions">
+          <button class="btn btn-primary" type="button" data-open-download>Descargar CV</button>
+        </div>
+      </section>
+      </div>
+    </div>
+  </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Enmanuel Leon · enmanuel-leon.com</p>
+      <a href="#top">Volver arriba</a>
+    </div>
+  </footer>
+<dialog class="download-dialog" id="downloadDialog" aria-labelledby="downloadTitle" closedby="any">
+    <div class="dialog-head">
+      <h2 id="downloadTitle">Descargar CV</h2>
+      <form method="dialog">
+        <button class="icon-btn dialog-close" type="submit" aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </form>
+    </div>
+    <p class="dialog-desc">Dos páginas, compatible con ATS, actualizado en noviembre de 2026.</p>
+    <ul class="download-list">
+      <li><a href="/export/Enmanuel_Leon_CV_ES.pdf" download="Enmanuel_Leon_CV_ES.pdf" hreflang="es">
+        <span class="download-format">PDF</span>
+        <span class="download-title">CV · Español</span>
+        <span class="download-meta">2 páginas · compatible con ATS</span>
+      </a></li><li><a href="/export/Enmanuel_Leon_CV_ES.md" download="Enmanuel_Leon_CV_ES.md" hreflang="es">
+        <span class="download-format">MD</span>
+        <span class="download-title">CV · Español</span>
+        <span class="download-meta">Texto plano · Markdown</span>
+      </a></li><li><a href="/export/Enmanuel_Leon_Resume_EN.pdf" download="Enmanuel_Leon_Resume_EN.pdf" hreflang="en">
+        <span class="download-format">PDF</span>
+        <span class="download-title">Resume · English</span>
+        <span class="download-meta">2 páginas · compatible con ATS</span>
+      </a></li><li><a href="/export/Enmanuel_Leon_Resume_EN.md" download="Enmanuel_Leon_Resume_EN.md" hreflang="en">
+        <span class="download-format">MD</span>
+        <span class="download-title">Resume · English</span>
+        <span class="download-meta">Texto plano · Markdown</span>
+      </a></li>
+    </ul>
+    <p class="dialog-note">Ambos PDF son compatibles con ATS y tienen texto seleccionable.</p>
+  </dialog>
+<div class="mobile-cta" id="mobileCta">
+    <a class="btn btn-primary" href="/export/Enmanuel_Leon_CV_ES.pdf" download>Descargar CV</a>
+    <a class="btn btn-secondary" href="#contact">Contactar</a>
+  </div>
+  <p class="visually-hidden" id="liveStatus" role="status" aria-live="polite"></p>
+  <a class="back-to-top" id="backToTop" href="#top" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+  </a>
+<script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>

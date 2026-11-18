@@ -1,116 +1,139 @@
 # AGENTS.md — Internal Engineering Standards for AI Agents
 
-> This document defines the engineering conventions, data-flow patterns, styling rules, and quality verification standards for all AI coding agents working on this repository.
+> This document defines the content model, build pipeline, design-system rules, and verification gates for every AI agent working on this repository.
 
 ---
 
 ## 1. Project Overview & Architecture
 
-This repository is a high-performance, dependency-free static web portfolio and CV platform hosted on GitHub Pages (`https://enmanuel-leon.com/`).
+This repository is a dependency-free static CV/portfolio hosted on GitHub Pages at `https://enmanuel-leon.com/`. It is pre-rendered at build time; JavaScript only enhances the page.
 
-### Directory Layout:
-- `index.html`: Semantic entry point, OpenGraph metadata, JSON-LD Schema (`Person`), PWA links, `<noscript>` crawlable fallback.
-- `data/cv.es.json` & `data/cv.en.json`: **Single Source of Truth (SSOT)**. All copy, work experience, skill taxonomies, and internationalization (i18n) strings live here.
-- `export/`: Exportable formats (`Enmanuel_Leon_CV_ES.md`, `Enmanuel_Leon_Resume_EN.md`, `Enmanuel_Leon_CV_ES.pdf`, `Enmanuel_Leon_Resume_EN.pdf`).
-- `assets/js/app.js`: Vanilla JavaScript (zero bundlers). Handles data hydration, theme switching, canvas particles, smooth scrolling, terminal emulator, and modal state management.
-- `assets/css/styles.css`: Pure CSS3. Design tokens, glassmorphism, responsive breakpoints, print styles, and terminal theme palettes.
-- `robots.txt`, `sitemap.xml`, `llms.txt`, `site.webmanifest`: Machine discoverability, AI scrapers, and SEO.
-- `scripts/`: Automation and build utilities (`scripts/build-pdf.py` for headless PDF generation).
-- `tmp/`: Private workspace, playbooks, notes, and strategy documents. **Always ignored by git (`.gitignore`). Never stage or commit files from `tmp/`.**
+### Source of truth
+- `data/cv.es.json` and `data/cv.en.json`: the content model. Every user-visible fact, label, date, link, and metric lives here. The two files must stay in deep key/array parity.
+- `src/template.html`: the HTML shell with `{{placeholders}}`.
+- `src/og-template.html`: source for `img/og-banner.png` (rendered separately at 1200×630).
+- `scripts/build-site.mjs`: generates the public pages and machine-readable artifacts.
+- `assets/js/app.js`: progressive enhancement only (theme, mobile menu, native dialog, copy email, scroll affordances). It must not fetch CV data or render content.
+- `assets/css/styles.css`: layered, token-based CSS. No terminal, particles, accent themes, or retired card system.
+- `assets/fonts/`: self-hosted Geist Latin subsets plus `OFL.txt`. Do not reintroduce Google Fonts.
+- `scripts/build-pdf.py`: converts the Markdown exports to ATS PDFs with headless Chrome and fails if either PDF is not 2 pages.
+- `scripts/validate.mjs`: the repository gate (content parity, generated HTML, links, assets, Markdown/PDF parity, PDF budget).
+- `package.json`: build/validation entry points. No runtime dependencies.
+- `.github/workflows/verify.yml`: CI for the HTML/data gate and the PDF gate.
+- `tmp/`: private workspace. It is gitignored; never stage or commit files from it.
+
+### Generated artifacts (do not edit by hand)
+- `index.html` (English, `/`)
+- `es/index.html` (Spanish, `/es/`)
+- `sitemap.xml`, `llms.txt`, `site.webmanifest`
+
+Regenerate them with:
+```bash
+node scripts/build-site.mjs
+```
+
+### Hand-maintained exports
+- `export/Enmanuel_Leon_CV_ES.md`
+- `export/Enmanuel_Leon_Resume_EN.md`
+- `export/Enmanuel_Leon_CV_ES.pdf`
+- `export/Enmanuel_Leon_Resume_EN.pdf`
+
+The Markdown files are the PDF sources. They must contain the `<!-- pdf:pagebreak -->` marker before the Interfell/ePayco role. The PDF build consumes that marker; the 2-page budget is non-negotiable.
 
 ---
 
-## 2. Core Mandates for AI Agents
+## 2. Core Mandates
 
-1. **Content Synchronization (SSOT):**
-   - Whenever profile data, roles, dates, or skills change, **always update both `data/cv.es.json` and `data/cv.en.json`**.
-   - Ensure corresponding Markdown files (`export/Enmanuel_Leon_CV_ES.md` and `export/Enmanuel_Leon_Resume_EN.md`) are updated to maintain exact parity.
-   - Maintain JSON key parity between language files.
-   - **Mandatory PDF Compilation:** Whenever profile data, roles, skills, or links change, **always recompile exportable PDFs** using:
-     ```bash
-     python3 scripts/build-pdf.py
-     ```
-     *Script Behavior & Contract:*
-     - Converts Markdown files to standalone HTML using `pandoc`.
-     - Injects ATS-optimized typography and A4 layout (`Liberation Sans`, 8.8pt body, 1.34 line-height, 12mm/14mm margins).
-     - Injects an automated page break before the third role (*Interfell - ePayco*), guaranteeing that **Page 1** contains the contact header, professional summary, and high-impact recent roles (Entropy Systems, Fintech Scale-up), while **Page 2** contains previous roles (ePayco, Intelix), technical skills, education, and additional info.
-     - Compiles to PDF via headless Google Chrome (`google-chrome --headless --no-pdf-header-footer --print-to-pdf`).
-     - Strictly enforces the **2-page budget** (`pages == 2`), exiting with error code 1 if page count deviates.
+1. **Content changes follow one path:**
+   - Update both `data/cv.es.json` and `data/cv.en.json`.
+   - Update `meta.lastUpdated` (YYYY-MM-DD) in both files; this drives the sitemap and `llms.txt` date.
+   - Run `node scripts/build-site.mjs`.
+   - Update both Markdown exports to match the new facts, keeping the bold lead-ins and the page-break marker.
+   - Run `python3 scripts/build-pdf.py`.
+   - Run `node scripts/validate.mjs`.
+   - Commit the generated HTML/XML/llms/manifest, the Markdown, and the PDFs together.
 
-2. **Grammar & Linguistic Precision:**
-   - **Spanish:** Never invent anglicisms (e.g., do NOT use *"Arquitecté"*; use *"Diseñé la arquitectura de..."* or *"Estructuré..."*). Ensure proper conjugation (*"Garanticé"*, not *"Garantizé"*).
-   - **English:** Use established engineering action verbs (*Architected, Engineered, Orchestrated, Streamlined, Spearheaded*).
-   - **Official Role Title:** Always use `Senior Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP` (EN) / `Senior Software Engineer | Sistemas Distribuidos & Agénticos | TypeScript · Python · AWS/GCP` (ES).
+2. **Never edit generated files directly.** If `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, or `site.webmanifest` need a change, change the JSON or `src/template.html` and rebuild.
 
-3. **Experience Bullet Formula (Google XYZ):**
-   - Every bullet point must follow: *"Accomplished [X] measured by [Y] by doing [Z]"*.
-   - Never use passive phrasing (*"responsible for"*, *"worked on"*, *"helped"*).
-   - Metrics must be concrete (e.g., `p95 latency -38%`, `15,000+ ops/min`, `99.9% uptime`, `500,000+ monthly transactions`).
+3. **Official role title:** `Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP` (EN) / `Software Engineer | Sistemas Distribuidos y Agénticos | TypeScript · Python · AWS/GCP` (ES). The employer title in the experience entry stays factual; do not silently promote it.
 
-4. **Skill Categorization (No Percentage Bars):**
-   - Skills must be categorized into functional chips (Backend, Databases, Queues/Async, Cloud, Frontend).
-   - Never reintroduce arbitrary percentage progress bars.
+4. **Experience bullets follow the Google XYZ formula:** accomplished [X] measured by [Y] by doing [Z]. Never use passive phrasing (`responsible for`, `worked on`, `helped`). Keep metrics concrete.
 
-5. **No Placeholders or Ghost Sections:**
-   - Never display placeholder text ("Lorem ipsum", empty project cards).
-   - If a section lacks verified public assets (e.g., open-source showcase projects), keep it commented out with an explicit `TODO` comment.
+5. **Skills are categorized chips, not percentage bars.** Do not reintroduce progress bars or arbitrary proficiency scores.
+
+6. **No placeholders or ghost sections.** If a section has no verified public asset, do not render it. Do not invent projects, employers, dates, metrics, or testimonials.
+
+7. **Language routes:** English lives at `/`, Spanish at `/es/`. Both pages need reciprocal `hreflang` (`es`, `en`, `x-default`), a self-referencing canonical, and a link-based language switch. Do not reintroduce client-side language state or a JSON fetch.
+
+8. **Claims need a basis.** Before changing a metric, confirm its scope (median vs. peak, p50 vs. p95, measured vs. estimated). If a claim cannot be defended, qualify it or drop it.
 
 ---
 
 ## 3. Frontend & Styling Rules
 
-1. **Z-Index Hierarchy:**
-   - Main navbar / sticky elements: `z-index: 100` to `1000`.
-   - Mobile quick action bar (`.mobile-cta-bar`): `z-index: 10000`.
-   - Floating utility buttons (`.back-to-top`, `.terminal-trigger`): `z-index: 9999`.
-   - Modals and full-screen overlays (`.modal-overlay`, `.terminal-overlay`): `z-index: 20000+`.
-
-2. **Mobile Layout & Safe Areas:**
-   - Always position floating buttons safely above the mobile sticky action bar:
-     ```css
-     bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px)) !important;
-     ```
-   - On screens `<= 768px`, reduce floating button sizes to `38px × 38px` to preserve screen real estate.
-
-3. **Reactive Modal Behavior:**
-   - When any modal or terminal overlay is active (`aria-hidden="false"`), floating buttons and mobile action bars must automatically hide (`opacity: 0; pointer-events: none;`) to prevent stacking clashes.
-   - Both CSS `:has()` rules and JavaScript `MutationObserver` on `body.modal-open` are required for universal browser compatibility.
-
-4. **Security & Link Hygiene:**
-   - Every external link (`target="_blank"`) MUST include `rel="noopener noreferrer"`.
-   - All interactive buttons must have accessible names (`aria-label` or visible text).
+1. **Design tokens and cascade layers:** colors, spacing, radii, shadows, and type live in `@layer tokens`. Use semantic tokens, not raw hex values, in components. Do not add `transition: all`.
+2. **Native dialog:** the download picker is a native `<dialog>` opened with `showModal()`. Do not add a custom focus trap, `aria-hidden` overlay, `role="dialog"`, or body scroll lock. Style `::backdrop` and use `closedby="any"` as progressive enhancement.
+3. **Z-index tiers:** sticky header `50`; mobile CTA `40`; back-to-top `30`; skip link `100`; dialogs use the native top layer. Do not add new arbitrary values.
+4. **Mobile layout:** reserve space for the fixed CTA bar with `padding-block-end` on `body`; use `env(safe-area-inset-bottom, 0px)`; keep floating buttons above the bar. Use `100svh`/`100dvh`, not `100vh`.
+5. **Accessibility:** one `<h1>` per page, `<header>`/`<nav>`/`<main>`/`<footer>` landmarks, skip link, named sections with `aria-labelledby`, `aria-current` on the active nav link, `aria-expanded` on the menu button, visible `:focus-visible` rings, 24×24 px minimum targets, 4.5:1 text contrast, and `prefers-reduced-motion` support.
+6. **Security and link hygiene:** every external link opened in a new tab needs `rel="noopener noreferrer"`. No inline event handlers or inline style attributes. Escape text and attributes in the build script. Keep the theme bootstrap as the only inline script; it must remain small and `localStorage` access must be guarded.
+7. **Performance:** self-hosted fonts only; responsive `profile-400/800` WebP/JPEG images; explicit image dimensions; no third-party runtime requests; no unthrottled scroll or pointer listeners. Use `requestAnimationFrame` and passive listeners when a scroll listener is unavoidable.
+8. **Browser baseline:** evergreen 2024+ (Chrome/Edge 120+, Safari 17+, Firefox 120+). Use progressive enhancement for newer platform features; older engines must still receive readable, navigable content.
 
 ---
 
-## 4. Verification Workflow for Agents
+## 4. Verification Workflow
 
-Before completing any task, run the following verification checks:
+Run this before declaring a task complete:
 
 ```bash
-# 1. Validate JavaScript syntax
-node --check assets/js/app.js
+# 1. Regenerate the static pages and machine-readable files
+node scripts/build-site.mjs
 
-# 2. Validate JSON structure & parity
-node -e "
-const fs = require('fs');
-const es = JSON.parse(fs.readFileSync('data/cv.es.json'));
-const en = JSON.parse(fs.readFileSync('data/cv.en.json'));
-console.log('Parity check:', Object.keys(es).sort().join(',') === Object.keys(en).sort().join(','));
-"
+# 2. Full repository gate (parity, links, assets, Markdown/PDF parity, PDF budget)
+node scripts/validate.mjs
 
-# 3. Check for unescaped or unsafe external links
-node -e "
-const fs = require('fs');
-const html = fs.readFileSync('index.html', 'utf8');
-const unsafe = [...html.matchAll(/<a [^>]*href=[\"'](https?:\/\/[^\"']+)[\"'][^>]*>/g)]
-  .filter(m => !m[0].includes('rel=') || !m[0].includes('noopener'));
-if (unsafe.length) console.error('Unsafe links found:', unsafe);
-else console.log('All external links safe.');
-"
-
-# 4. Compile and verify exportable PDFs (strict 2-page budget check)
+# 3. Compile the ATS PDFs (strict 2-page budget + per-page content assertions)
 python3 scripts/build-pdf.py
 
-# 5. Check git status to ensure private/tmp files are not tracked
+# 4. JavaScript syntax
+node --check assets/js/app.js
+
+# 5. HTML validity
+npx --yes html-validate@11.21.1 index.html es/index.html 404.html
+
+# 6. Confirm private/tmp files are not tracked
 git status
 ```
+
+`npm run check` runs the repository gate. `npm run build` regenerates the site. `npm run build:pdf` rebuilds the PDFs.
+
+The validator checks, among other things:
+- deep ES/EN key and array parity;
+- title/description lengths;
+- one `<h1>`, skip link, `<main>`, canonical, reciprocal `hreflang`, Person JSON-LD;
+- no inline styles, obsolete head hints, third-party fonts, or retired UI;
+- every local `href`/`src`/`srcset` target and in-page fragment;
+- duplicate IDs and external-link `rel` hygiene;
+- manifest icon files and their real dimensions; OG banner 1200×630;
+- sitemap URLs/hreflang, `llms.txt` links, robots sitemap;
+- Markdown parity for companies, roles, dates, and degree;
+- PDF page count == 2 and human PDF titles;
+- generated files are current (`build-site.mjs --check`).
+
+---
+
+## 5. Open Owner Decisions
+
+Do not silently resolve these; flag them in the PR/plan:
+- The basis for each quantified claim that remains (65%, <50 ms, 10k+, 99.9%, 500k+). The 28% p95 and 35% cold-start figures were removed because they were not measured reliably; the public copy now says "reduced p95 latency" and "improved cold-start". The precise −62% and ~40% estimates were also removed.
+- Whether a formal credential evaluation (CIMEA/ENIC-NARIC) exists for the UJAP degree. The public wording uses the official title, **Ingeniero en Computación** (program: Ingeniería en Computación), and does not claim automatic B.Sc. equivalence.
+- The NDA client cannot be named; the role stays anonymized as a confidential fintech scale-up. Do not add identifying details.
+
+---
+
+## 6. Grammar & Language
+
+- **Spanish:** avoid invented anglicisms (`Arquitecté` → `Diseñé la arquitectura`; `containerizando` → `empaquetando en contenedores`). Use `codiseñé` (no hyphen), `1,5 días`, `99,9%`, `2.000 documentos`.
+- **English:** use established engineering action verbs (`Architected`, `Engineered`, `Orchestrated`, `Streamlined`, `Spearheaded`).
+- Keep both language files in the same tone and tense.

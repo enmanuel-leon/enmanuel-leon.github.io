@@ -1,61 +1,63 @@
 # Enmanuel Leon
 
-**Senior Software Engineer | Sistemas Distribuidos & Agénticos | TypeScript · Python · AWS/GCP**
+**Software Engineer | Sistemas Distribuidos y Agénticos | TypeScript · Python · AWS/GCP**
 
-Ciudadanía UE (Italiana) · Autorizado para trabajar en la UE sin visado | Remoto (Horario CET / EST) | Valencia, Venezuela  
+Ciudadanía UE (Italiana) · Autorizado para trabajar en la UE sin patrocinio | Remoto (CET / EST) | Valencia, Venezuela  
 Email: [contact@enmanuel-leon.com](mailto:contact@enmanuel-leon.com) | LinkedIn: [linkedin.com/in/enmanuel-leon](https://www.linkedin.com/in/enmanuel-leon/) | GitHub: [github.com/enmanuel-leon](https://github.com/enmanuel-leon) | Web: [enmanuel-leon.com](https://enmanuel-leon.com)  
-Idiomas: Español (Nativo), Inglés (Competencia Profesional)
+Idiomas: Español (nativo), Inglés (profesional)
 
 ---
 
 ## Resumen Profesional
 
-Ingeniero de Software con +6 años de experiencia construyendo sistemas distribuidos, plataformas transaccionales y productos basados en IA. Especializado en TypeScript/Node.js, Python y arquitecturas event-driven sobre AWS/GCP. Experiencia diseñando servicios de alta disponibilidad, sistemas multi-agente, procesamiento asíncrono a escala e integraciones fintech críticas.
+Más de 6 años diseñando y operando sistemas en producción para fintech, IA aplicada y plataformas empresariales. Especializado en TypeScript/Node.js, Python y arquitecturas orientadas a eventos sobre AWS/GCP: desde pasarelas de pago con más de 500.000 transacciones mensuales hasta orquestación multiagente con latencia M2M inferior a 50 ms.
 
 ---
 
 ## Experiencia Profesional
 
-### Fullstack Developer (AI & Core Systems) | Entropy Systems | Barcelona, España (Remoto)
-*Abril 2024 - Presente*
+### Full Stack Developer (AI & Core Systems) | Entropy Systems | Barcelona, España (Remoto)
+*Abr 2024 – Presente*
 
-- **Diseñé e implementé un motor distribuido de generación asíncrona de reportes normativos** en Fastify y Python con colas BullMQ y Redis, reduciendo los tiempos de procesamiento en un 65% y procesando más de 2.000 documentos mensuales.
-- **Co-diseñé la arquitectura agéntica del core de distribución de herramientas de IA** (orquestación multi-agente, tool calling y flujos autónomos), logrando comunicación M2M segura con latencias inferiores a 50ms mediante APIs desacopladas y autenticación basada en tokens.
-- **Implementé un pipeline de interconexión segura entre VPCs aisladas y la plataforma central**, orquestando workers distribuidos para procesar más de 10.000 eventos diarios con consistencia de datos garantizada y cero exposición de endpoints públicos.
-- **Estandaricé flujos de desarrollo asistido por agentes autónomos de código (SDLC)**, reduciendo el lead time en refactorizaciones de microservicios de 4 días a 1.5 días (-62%) y elevando la cobertura de pruebas automatizadas.
-- **Operé microservicios distribuidos en AWS y GCP con 99.9% de disponibilidad**, containerizando cargas de trabajo con Docker y configurando pipelines de CI/CD para despliegues zero-downtime con observabilidad distribuida en Sentry y CloudWatch.
+- **Motor distribuido de reportes normativos (-65% tiempo de procesamiento):** Diseñé y puse en producción un motor de generación asíncrona en Fastify y Python con colas BullMQ y Redis, gestionando más de 2.000 documentos al mes.
+- **Core agéntico y APIs M2M (<50 ms de latencia):** Codiseñé la orquestación multiagente, el tool calling y los bucles de ejecución autónomos, con APIs desacopladas y autenticación por tokens.
+- **Pipeline seguro entre VPCs aisladas (+10.000 eventos diarios):** Construí la interconexión entre VPCs de clientes y la plataforma central, con consistencia garantizada y cero endpoints públicos.
+- **SDLC asistido por agentes (de varios días a menos de dos):** Estandaricé flujos de desarrollo con agentes autónomos, reduciendo la refactorización de microservicios de ciclos de varios días a menos de dos días y ampliando la cobertura de pruebas.
+- **99,9% de disponibilidad en AWS y GCP:** Operé servicios distribuidos en contenedores Docker con CI/CD sin downtime y observabilidad en Sentry y CloudWatch.
 
-### Ingeniero de Software & Mobile (Consultor Externo Part-time · Side Project) | Fintech Scale-up (Plataforma Crediticia & Financiera · NDA)
-*Julio 2025 - Julio 2026*
+### Ingeniero de Software & Mobile (Consultor Part-time) | Fintech Scale-up confidencial · Plataforma de Crédito (NDA)
+*Jul 2025 – Jul 2026*
 
-- **Diseñé y construí de punta a punta la arquitectura móvil multiplataforma** (iOS y Android) en React Native y TypeScript para una plataforma de servicios financieros y originación crediticia en fase de escalamiento, implementando 20+ vistas modulares (onboarding biométrico con KYC, dashboard analítico, flujos transaccionales, historial detallado y soporte vía chat en tiempo real).
-- **Estructuré y operé la infraestructura cloud y la arquitectura de datos de la plataforma**, implementando autenticación robusta y control de acceso granular mediante políticas de Row-Level Security (RLS) para proteger historiales crediticios y contratos financieros sensibles.
-- **Optimicé el rendimiento y la resiliencia de la app móvil**, reduciendo el tiempo de carga inicial en un 35% y garantizando la persistencia offline de solicitudes de crédito y transacciones en entornos de baja conectividad.
+- **Arquitectura móvil multiplataforma (iOS y Android):** Construí en React Native y TypeScript más de 20 vistas modulares para una plataforma de originación crediticia: alta con KYC biométrico, panel analítico, transacciones, historial y chat en tiempo real.
+- **Capa de datos cloud con Row-Level Security (RLS):** Diseñé y operé la autenticación y las políticas granulares para proteger historiales crediticios y contratos financieros sensibles.
+- **Carga inicial más rápida y persistencia offline:** Mejoré el rendimiento y la resiliencia de la app para solicitudes de crédito y transacciones en entornos de baja conectividad.
 
-### Fullstack Developer | Interfell - ePayco | Remoto
-*Junio 2021 - Abril 2024*
+<!-- pdf:pagebreak -->
 
-- **Mantuve un 99.9% de disponibilidad en servicios críticos de pasarela de pago** procesando más de 500.000 transacciones mensuales, desarrollando y manteniendo microservicios transaccionales en Node.js (Express) y TypeScript sobre MySQL.
-- **Diseñé mecanismos de resiliencia e idempotencia para transacciones financieras** mediante Circuit Breakers, Rate Limiting y colas AWS SQS con Dead Letter Queues (DLQ), asegurando cero duplicidad de cobros ante caídas de pasarelas bancarias.
-- **Reduje en un 28% la latencia p95 en el procesamiento de transacciones** optimizando consultas complejas en MySQL, desacoplando tareas pesadas de notificación hacia workers asíncronos en AWS SQS y refactorizando endpoints críticos.
-- **Lideré integraciones técnicas de la pasarela para comercios y aliados** sobre interfaces web en React y APIs REST, GraphQL y SOAP, implementando pruebas automatizadas con Jest y monitoreo continuo en Datadog y Sentry.
+### Full Stack Developer | Interfell · ePayco | Remoto
+*Jun 2021 – Abr 2024*
+
+- **99,9% de disponibilidad en una pasarela de pago (500.000+ transacciones/mes):** Mantuve servicios transaccionales críticos en Node.js (Express), TypeScript y MySQL.
+- **Cero duplicidad de cobros:** Diseñé mecanismos de resiliencia e idempotencia con Circuit Breakers, rate limiting y colas AWS SQS con Dead Letter Queues (DLQ).
+- **Latencia p95 reducida:** Optimicé consultas complejas en MySQL, desacoplé notificaciones hacia workers asíncronos en SQS y refactoricé endpoints críticos.
+- **Integraciones multiprotocolo:** Lideré integraciones para comercios y aliados sobre React y APIs REST, GraphQL y SOAP, con pruebas en Jest y monitorización en Datadog y Sentry.
 
 ### Analista de Sistemas / Desarrollador de Software | Intelix Synergy, C.A. | Valencia, Venezuela
-*Marzo 2020 - Junio 2021*
+*Mar 2020 – Jun 2021*
 
-- **Diseñé y desarrollé 3 aplicaciones modulares internas** en JavaScript, Node.js y Python para la gestión de procesos comerciales, utilizadas diariamente en producción.
-- **Aseguré alta disponibilidad continua (cero caídas no planificadas)** administrando servidores Linux de producción con NGINX como reverse proxy, balanceo de carga y políticas SSL/TLS.
-- **Reduje el lead time de onboarding en un ~40%** estandarizando 15+ contratos de APIs y especificaciones de arquitectura bajo OpenAPI/Swagger.
+- **3 aplicaciones modulares en producción:** Diseñé y desarrollé aplicaciones internas en JavaScript, Node.js y Python para la gestión de procesos comerciales.
+- **Cero caídas no planificadas:** Mantuve servidores Linux de producción con NGINX como reverse proxy, balanceo de carga y políticas SSL/TLS.
+- **Incorporación más rápida:** Estandaricé más de 15 contratos de API y arquitecturas con OpenAPI/Swagger.
 
 ---
 
 ## Habilidades Técnicas
 
 - **Lenguajes:** TypeScript, JavaScript, Python
-- **Backend & Arquitectura:** Node.js, Fastify, Express, FastAPI, Microservicios, Sistemas Distribuidos, Event-Driven Architecture (EDA), APIs REST / GraphQL, Idempotencia & Resiliencia
-- **IA Aplicada & Sistemas Agénticos:** Sistemas Agénticos, Orquestación Multi-Agente, Tool Calling & Function Calling, APIs OpenAI & Anthropic, RAG Pipelines, Desarrollo Asistido por Agentes (SDLC), Comunicación M2M
-- **Cloud & Infraestructura:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, Aislamiento VPC
-- **Bases de Datos & Mensajería:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM
+- **Backend & Arquitectura:** Node.js, Fastify, Express, FastAPI, Microservicios, Sistemas Distribuidos, Arquitectura Orientada a Eventos (EDA), APIs REST / GraphQL, Idempotencia & Resiliencia
+- **IA Agéntica:** Sistemas Agénticos, Orquestación Multiagente, Tool Calling & Function Calling, APIs de OpenAI & Anthropic, Pipelines RAG, SDLC Asistido por Agentes, Comunicación M2M
+- **Cloud & Infraestructura:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, Aislamiento de VPC
+- **Datos & Mensajería:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM
 - **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS
 - **Observabilidad & Calidad:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod
 
@@ -63,9 +65,9 @@ Ingeniero de Software con +6 años de experiencia construyendo sistemas distribu
 
 ## Formación Académica
 
-### Grado en Ingeniería de Computación
-**Universidad José Antonio Páez** | Valencia, Venezuela — Graduado en 2020  
-*Formación universitaria oficial orientada a sistemas distribuidos, arquitectura de computadores, bases de datos relacionales y algoritmos avanzados.*
+### Ingeniero en Computación
+**Universidad José Antonio Páez** | Valencia, Venezuela — 2020  
+*Título profesional de cinco años (10 semestres) en Ingeniería en Computación: sistemas distribuidos, arquitectura de computadores, bases de datos relacionales y algoritmos.*
 
 ---
 

@@ -1,0 +1,17 @@
+{
+  "name": "enmanuel-leon-cv",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static CV and portfolio for Enmanuel Leon",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "build:check": "node scripts/build-site.mjs --check",
+    "build:pdf": "python3 scripts/build-pdf.py",
+    "validate": "node scripts/validate.mjs",
+    "check": "node scripts/validate.mjs"
+  }
+}
