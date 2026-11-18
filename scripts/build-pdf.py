@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the ATS-friendly CV/Resume PDFs from the Markdown exports.
+"""Build the CV/Resume PDFs from the Markdown exports.
 
 Contract:
 - Both Markdown files must contain the ``<!-- pdf:pagebreak -->`` marker.
@@ -8,6 +8,7 @@ Contract:
 - When ``pdftotext`` is available, it also asserts the expected roles per page.
 """
 
+import base64
 import os
 import re
 import shutil
@@ -17,17 +18,23 @@ import tempfile
 from pathlib import Path
 
 CSS = """
+@font-face {
+  font-family: 'Geist';
+  src: url(data:font/woff2;base64,__GEIST_FONT__) format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
 @page {
   size: A4;
-  margin: 12mm 14mm 12mm 14mm;
+  margin: 10mm 14mm 10mm 14mm;
 }
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Liberation Sans', Arial, Helvetica, sans-serif;
-  font-size: 8.8pt;
-  line-height: 1.34;
+  font-family: 'Geist', 'Liberation Sans', Arial, Helvetica, sans-serif;
+  font-size: 8.6pt;
+  line-height: 1.30;
   color: #111827;
   margin: 0;
   padding: 0;
@@ -70,7 +77,7 @@ ul {
   padding-left: 14pt;
 }
 li {
-  margin-bottom: 2.2pt;
+  margin-bottom: 2pt;
 }
 em {
   color: #4b5563;
@@ -92,6 +99,10 @@ strong {
   display: none;
 }
 """
+
+FONT_PATH = Path(__file__).resolve().parent.parent / "assets/fonts/geist-latin.woff2"
+GEIST_FONT = base64.b64encode(FONT_PATH.read_bytes()).decode("ascii")
+CSS = CSS.replace("__GEIST_FONT__", GEIST_FONT)
 
 TARGETS = [
     {

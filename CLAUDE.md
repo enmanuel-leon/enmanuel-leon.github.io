@@ -26,7 +26,7 @@ node scripts/validate.mjs
 # Regenerate the static pages
 node scripts/build-site.mjs
 
-# Rebuild the ATS PDFs (strictly 2 pages)
+# Rebuild the PDFs (strictly 2 pages)
 python3 scripts/build-pdf.py
 
 # JavaScript syntax

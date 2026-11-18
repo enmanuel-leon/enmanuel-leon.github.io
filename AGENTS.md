@@ -6,7 +6,7 @@
 
 ## 1. Project Overview & Architecture
 
-This repository is a dependency-free static CV/portfolio hosted on GitHub Pages at `https://enmanuel-leon.com/`. It is pre-rendered at build time; JavaScript only enhances the page.
+This repository is a dependency-free static CV/portfolio deployed as a static site on Cloudflare Workers at `https://enmanuel-leon.com/`. It is pre-rendered at build time; JavaScript only enhances the page.
 
 ### Source of truth
 - `data/cv.es.json` and `data/cv.en.json`: the content model. Every user-visible fact, label, date, link, and metric lives here. The two files must stay in deep key/array parity.
@@ -16,7 +16,7 @@ This repository is a dependency-free static CV/portfolio hosted on GitHub Pages 
 - `assets/js/app.js`: progressive enhancement only (theme, mobile menu, native dialog, copy email, scroll affordances). It must not fetch CV data or render content.
 - `assets/css/styles.css`: layered, token-based CSS. No terminal, particles, accent themes, or retired card system.
 - `assets/fonts/`: self-hosted Geist Latin subsets plus `OFL.txt`. Do not reintroduce Google Fonts.
-- `scripts/build-pdf.py`: converts the Markdown exports to ATS PDFs with headless Chrome and fails if either PDF is not 2 pages.
+- `scripts/build-pdf.py`: converts the Markdown exports to PDFs with headless Chrome and fails if either PDF is not 2 pages.
 - `scripts/validate.mjs`: the repository gate (content parity, generated HTML, links, assets, Markdown/PDF parity, PDF budget).
 - `.github/workflows/verify.yml`: CI for the HTML/data gate and the PDF gate.
 - `tmp/`: private workspace. It is gitignored; never stage or commit files from it.
@@ -93,7 +93,7 @@ node scripts/build-site.mjs
 # 2. Full repository gate (parity, links, assets, Markdown/PDF parity, PDF budget)
 node scripts/validate.mjs
 
-# 3. Compile the ATS PDFs (strict 2-page budget + per-page content assertions)
+# 3. Compile the PDFs (strict 2-page budget + per-page content assertions)
 python3 scripts/build-pdf.py
 
 # 4. JavaScript syntax
