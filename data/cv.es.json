@@ -69,33 +69,35 @@
   "hero": {
     "statement": "Construyo los sistemas distribuidos y los motores asíncronos detrás del movimiento de dinero, las herramientas de IA y las plataformas de alta disponibilidad.",
     "paragraphs": [
-      "Soy ingeniero de software con más de 6 años diseñando y operando sistemas en producción para fintech, IA aplicada y plataformas empresariales. Especializado en TypeScript/Node.js, Python y arquitecturas orientadas a eventos sobre AWS/GCP: desde pasarelas de pago con más de 500.000 transacciones mensuales hasta orquestación multiagente con latencia M2M inferior a 50 ms.",
+      "Soy ingeniero de software con más de 6 años diseñando y operando sistemas en producción para fintech, IA aplicada y plataformas empresariales. Especializado en TypeScript/Node.js, Python y arquitecturas orientadas a eventos sobre AWS/GCP: desde pasarelas de pago de alto volumen hasta orquestación multiagente entre VPCs aisladas.",
       "Me importan los límites claros, la observabilidad y los resultados que llegan a producción. Ciudadano italiano (UE), autorizado para trabajar en la Unión Europea sin patrocinio; remoto en horarios CET y EST."
-    ]
+    ],
+    "competenciesLabel": "Competencias clave",
+    "competencies": "Sistemas distribuidos · Arquitectura orientada a eventos · Procesamiento asíncrono · Idempotencia y resiliencia · Orquestación de IA agéntica · Operación cloud-native"
   },
   "impact": {
-    "title": "Resultados, no adjetivos",
-    "subtitle": "Algunos resultados de los últimos seis años.",
+    "title": "Foco de ingeniería",
+    "subtitle": "Patrones de arquitectura que he llevado a producción.",
     "items": [
       {
-        "value": "65%",
-        "label": "menos tiempo de generación",
-        "detail": "Más de 2.000 documentos normativos al mes"
+        "eyebrow": "Async",
+        "title": "Motores de reportes normativos",
+        "detail": "Generación por colas con BullMQ, Redis, workers idempotentes y procesamiento observable."
       },
       {
-        "value": "<50ms",
-        "label": "latencia M2M",
-        "detail": "Llamadas autenticadas por tokens entre VPCs aisladas"
+        "eyebrow": "M2M",
+        "title": "Llamadas seguras entre servicios",
+        "detail": "APIs autenticadas por tokens entre VPCs aisladas para distribución de herramientas agénticas."
       },
       {
-        "value": "500k+",
-        "label": "transacciones mensuales",
-        "detail": "99,9% de uptime en una pasarela de pago"
+        "eyebrow": "Pagos",
+        "title": "Resiliencia por diseño",
+        "detail": "Claves de idempotencia, circuit breakers, rate limiting y colas SQS con DLQ."
       },
       {
-        "value": "10k+",
-        "label": "eventos diarios procesados",
-        "detail": "Más de 10.000 eventos diarios entre VPCs aisladas"
+        "eyebrow": "Eventos",
+        "title": "Pipelines continuos",
+        "detail": "Workers distribuidos con garantías de consistencia, observabilidad y sin endpoints públicos."
       }
     ]
   },
@@ -110,11 +112,11 @@
         "role": "Full Stack Developer (AI & Core Systems)",
         "company": "Entropy Systems",
         "bullets": [
-          "Diseñé y puse en producción un motor distribuido de generación asíncrona de reportes normativos en Fastify y Python, con colas BullMQ y Redis, reduciendo el tiempo de procesamiento un 65% y gestionando más de 2.000 documentos al mes.",
-          "Codiseñé el core agéntico de distribución de herramientas de IA —orquestación multiagente, tool calling y bucles de ejecución autónomos— con APIs M2M desacopladas y autenticación por tokens, por debajo de 50 ms de latencia.",
-          "Construí un pipeline seguro de eventos entre VPCs aisladas de clientes y la plataforma central, procesando más de 10.000 eventos diarios con consistencia garantizada y cero endpoints públicos.",
-          "Estandaricé flujos de SDLC asistidos por agentes, reduciendo la refactorización de microservicios de ciclos de varios días a menos de dos días y ampliando la cobertura de pruebas automatizadas.",
-          "Operé servicios distribuidos en AWS y GCP con un 99,9% de disponibilidad, empaquetados en contenedores Docker y desplegados con CI/CD sin downtime, con observabilidad en Sentry y CloudWatch."
+          "Diseñé y puse en producción un motor distribuido de generación asíncrona de reportes normativos en Fastify y Python, sacando la generación del camino de la petición con BullMQ y Redis, workers idempotentes y procesamiento observable.",
+          "Codiseñé el core agéntico de distribución de herramientas de IA —orquestación multiagente, tool calling y bucles de ejecución autónomos— con APIs M2M autenticadas por tokens entre VPCs aisladas.",
+          "Construí un pipeline seguro de eventos entre VPCs aisladas de clientes y la plataforma central, con workers distribuidos, garantías de consistencia y sin endpoints públicos.",
+          "Estandaricé flujos de SDLC asistidos por agentes, acortando los ciclos de refactorización de microservicios y ampliando la cobertura de pruebas automatizadas.",
+          "Operé servicios distribuidos en AWS y GCP, empaquetados en contenedores Docker y desplegados con CI/CD sin downtime, con observabilidad en Sentry y CloudWatch."
         ],
         "tags": [
           "IA Agéntica",
@@ -154,8 +156,8 @@
         "role": "Full Stack Developer",
         "company": "Interfell · ePayco",
         "bullets": [
-          "Mantuve un 99,9% de disponibilidad en servicios críticos de pasarela de pago procesando más de 500.000 transacciones mensuales en Node.js (Express), TypeScript y MySQL.",
-          "Diseñé mecanismos de resiliencia e idempotencia con Circuit Breakers, rate limiting y colas AWS SQS con Dead Letter Queues (DLQ), garantizando cero duplicidad de cobros ante caídas de pasarelas bancarias.",
+          "Mantuve alta disponibilidad en servicios críticos de pasarela de pago con volúmenes altos de transacciones en Node.js (Express), TypeScript y MySQL.",
+          "Diseñé mecanismos de resiliencia e idempotencia con circuit breakers, rate limiting y colas AWS SQS con dead-letter queues (DLQ), evitando cobros duplicados durante caídas de pasarelas bancarias.",
           "Reduje la latencia p95 optimizando consultas complejas en MySQL, desacoplando notificaciones hacia workers asíncronos en SQS y refactorizando endpoints críticos.",
           "Lideré integraciones de la pasarela para comercios y aliados sobre interfaces React y APIs REST, GraphQL y SOAP, con pruebas automatizadas en Jest y monitorización en Datadog y Sentry."
         ],
@@ -177,7 +179,7 @@
         "company": "Intelix Synergy, C.A.",
         "bullets": [
           "Diseñé y desarrollé 3 aplicaciones modulares internas en JavaScript, Node.js y Python para la gestión de procesos comerciales, utilizadas a diario en producción.",
-          "Mantuve disponibilidad continua sin caídas no planificadas en servidores Linux de producción con NGINX como reverse proxy, balanceo de carga y políticas SSL/TLS.",
+          "Mantuve alta disponibilidad en servidores Linux de producción con NGINX como reverse proxy, balanceo de carga y políticas SSL/TLS.",
           "Reduje el tiempo de incorporación de desarrolladores estandarizando más de 15 contratos de API y arquitecturas con OpenAPI/Swagger."
         ],
         "tags": [
@@ -214,7 +216,12 @@
           "Sistemas Distribuidos",
           "Arquitectura Orientada a Eventos (EDA)",
           "APIs REST / GraphQL",
-          "Idempotencia & Resiliencia"
+          "Idempotencia & Resiliencia",
+          "Ingeniería de Plataforma",
+          "Ingeniería Backend",
+          "Infraestructura de IA",
+          "Circuit Breakers",
+          "Rate Limiting"
         ]
       },
       {
@@ -239,7 +246,8 @@
           "CI/CD (GitHub Actions)",
           "Linux",
           "NGINX",
-          "Aislamiento de VPC"
+          "Aislamiento de VPC",
+          "Despliegue Sin Downtime"
         ]
       },
       {
@@ -252,7 +260,8 @@
           "BullMQ",
           "AWS SQS",
           "Row-Level Security (RLS)",
-          "Prisma ORM"
+          "Prisma ORM",
+          "Dead-Letter Queues (DLQ)"
         ]
       },
       {
@@ -275,7 +284,8 @@
           "Jest",
           "TDD",
           "Git / GitHub",
-          "Zod"
+          "Zod",
+          "Observabilidad"
         ]
       }
     ]
@@ -315,5 +325,39 @@
       }
     ]
   },
-  "footer": "© {year} Enmanuel Leon · enmanuel-leon.com"
+  "footer": "© {year} Enmanuel Leon · enmanuel-leon.com",
+  "seo": {
+    "roleAliases": [
+      "Ingeniero de Software",
+      "Ingeniero Backend",
+      "Ingeniero de Plataforma",
+      "Ingeniero de Sistemas Distribuidos",
+      "Ingeniero de Infraestructura de IA"
+    ],
+    "keywords": [
+      "Sistemas Distribuidos",
+      "Arquitectura Orientada a Eventos",
+      "Procesamiento Asíncrono",
+      "Fan-Out por Colas",
+      "Idempotencia",
+      "Circuit Breakers",
+      "Rate Limiting",
+      "Dead-Letter Queues",
+      "Microservicios",
+      "Alta Disponibilidad",
+      "Tolerancia a Fallos",
+      "Observabilidad",
+      "Despliegue Sin Downtime",
+      "Sistemas Agénticos",
+      "Orquestación Multiagente",
+      "Tool Calling",
+      "Comunicación M2M",
+      "Aislamiento de VPC",
+      "Row-Level Security",
+      "AWS",
+      "GCP",
+      "TypeScript",
+      "Python"
+    ]
+  }
 }

@@ -6,7 +6,7 @@
  *   data/cv.es.json, data/cv.en.json, src/template.html
  *
  * Generated (committed):
- *   index.html, en/index.html, sitemap.xml, llms.txt, site.webmanifest
+ *   index.html, es/index.html, sitemap.xml, llms.txt, llms-full.txt, site.webmanifest
  *
  * Usage:
  *   node scripts/build-site.mjs          # write generated files
@@ -81,6 +81,7 @@ function head(data, lang) {
         url: canonical,
         name: data.meta.title,
         description: data.meta.description,
+        dateModified: data.meta.lastUpdated,
         inLanguage: lang,
         isPartOf: { "@id": `${SITE}/#website` },
         mainEntity: { "@id": `${SITE}/#person` },
@@ -111,9 +112,30 @@ function head(data, lang) {
           { "@type": "Language", name: "Spanish" },
           { "@type": "Language", name: "English" },
         ],
-        knowsAbout: data.skills.categories.flatMap((category) =>
-          category.items.map(itemName),
-        ),
+        knowsAbout: [
+          ...new Set([
+            ...data.skills.categories.flatMap((category) =>
+              category.items.map(itemName),
+            ),
+            ...data.seo.roleAliases,
+            ...data.seo.keywords,
+          ]),
+        ],
+        hasOccupation: {
+          "@type": "Occupation",
+          name: data.profile.role,
+          occupationalCategory: "Software Engineering",
+          skills: data.seo.keywords.join(", "),
+        },
+        hasCredential: {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "degree",
+          name: data.education.items[0].degree,
+          recognizedBy: {
+            "@type": "CollegeOrUniversity",
+            name: "Universidad José Antonio Páez",
+          },
+        },
         worksFor: {
           "@type": "Organization",
           name: data.experience.items[0].company,
@@ -289,6 +311,7 @@ function intro(data) {
   return `<div class="intro">
         <p class="statement">${esc(data.hero.statement)}</p>
         ${data.hero.paragraphs.map((p) => `<p class="summary">${esc(p)}</p>`).join("")}
+        <p class="competencies"><span class="competencies-label">${esc(data.hero.competenciesLabel)}</span> ${esc(data.hero.competencies)}</p>
       </div>`;
 }
 
@@ -302,8 +325,8 @@ function impact(data) {
           ${data.impact.items
             .map(
               (item) => `<li class="impact-item">
-            <span class="impact-value">${esc(item.value)}</span>
-            <span class="impact-label">${esc(item.label)}</span>
+            <span class="impact-kicker">${esc(item.eyebrow)}</span>
+            <span class="impact-title">${esc(item.title)}</span>
             <span class="impact-detail">${esc(item.detail)}</span>
           </li>`,
             )
@@ -583,10 +606,22 @@ function llms(data) {
   lines.push(`- Languages: ${data.profile.languages}`);
   data.contact.items.forEach((item) => lines.push(`- ${item.label}: ${item.value}`));
   lines.push("");
-  lines.push("## Selected impact");
+  lines.push("## Engineering focus");
   data.impact.items.forEach((item) => {
-    lines.push(`- ${item.value} ${item.label} — ${item.detail}`);
+    lines.push(`- **${item.eyebrow} — ${item.title}:** ${item.detail}`);
   });
+  lines.push("");
+  lines.push("## Keywords");
+  lines.push(`- Roles: ${data.seo.roleAliases.join(", ")}`);
+  lines.push(`- Architecture: ${data.seo.keywords.join(", ")}`);
+  lines.push("");
+  lines.push("## Preferred citation");
+  lines.push(`- ${data.profile.name} — ${data.profile.role} · ${data.profile.specialty}`);
+  lines.push(`- Canonical: ${SITE}/`);
+  lines.push(`- Summary: ${data.meta.description}`);
+  lines.push("");
+  lines.push("## Full text");
+  lines.push(`- ${SITE}/llms-full.txt`);
   lines.push("");
   lines.push("## Stack");
   data.skills.categories.forEach((category) => {
@@ -608,6 +643,25 @@ function llms(data) {
   lines.push("");
   lines.push(`Last updated: ${lastModified(data)}`);
   return `${lines.join("\n")}\n`;
+}
+
+function llmsFull(data, markdown) {
+  const body = markdown
+    .replace("<!-- pdf:pagebreak -->", "")
+    .replace(/^#\s+Enmanuel Leon\s*\n+/, "")
+    .replace(/[ \t]+$/gm, "")
+    .trim();
+  return `# ${data.profile.name} — ${data.profile.role}
+
+> Canonical: ${SITE}/
+> Spanish: ${SITE}/es/
+> PDFs: ${SITE}/export/Enmanuel_Leon_Resume_EN.pdf · ${SITE}/export/Enmanuel_Leon_CV_ES.pdf
+> Markdown: ${SITE}/export/Enmanuel_Leon_Resume_EN.md · ${SITE}/export/Enmanuel_Leon_CV_ES.md
+
+${body}
+
+Last updated: ${lastModified(data)}
+`;
 }
 
 function manifest(data) {
@@ -688,8 +742,13 @@ async function build() {
     });
     outputs.set(lang === "en" ? "index.html" : "es/index.html", page.replace(/[ \t]+$/gm, ""));
   }
+  const resumeMarkdown = await readFile(
+    path.join(ROOT, "export/Enmanuel_Leon_Resume_EN.md"),
+    "utf8",
+  );
   outputs.set("sitemap.xml", sitemap(data.en));
   outputs.set("llms.txt", llms(data.en));
+  outputs.set("llms-full.txt", llmsFull(data.en, resumeMarkdown));
   outputs.set("site.webmanifest", manifest(data.en));
 
   const stale = [];

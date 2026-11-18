@@ -10,7 +10,9 @@ Languages: Spanish (Native), English (Professional Working Proficiency)
 
 ## Professional Summary
 
-Software Engineer with 6+ years of experience building distributed systems, AI-powered platforms, and mission-critical fintech services. Specialized in TypeScript/Node.js, Python, event-driven architectures, and AWS/GCP, with hands-on experience in multi-agent orchestration, tool calling, asynchronous processing, secure M2M communication, and high-availability transactional systems.
+Software Engineer with 6+ years of experience building distributed systems, AI-powered platforms, and mission-critical fintech services. Specialized in backend and platform engineering with TypeScript/Node.js, Python, event-driven architectures, and AWS/GCP, with hands-on experience in multi-agent orchestration, tool calling, asynchronous processing, secure M2M communication, and high-availability transactional systems.
+
+**Core competencies:** Distributed systems, event-driven architecture, asynchronous processing, idempotency and resilience, agentic AI orchestration, and cloud-native operations.
 
 ---
 
@@ -19,11 +21,11 @@ Software Engineer with 6+ years of experience building distributed systems, AI-p
 ### Full Stack Developer (AI & Core Systems) | Entropy Systems | Barcelona, Spain (Remote)
 *Apr 2024 – Present*
 
-- **Distributed regulatory report engine (-65% processing time):** Designed and shipped an asynchronous engine in Fastify and Python with BullMQ and Redis, handling 2,000+ documents per month.
-- **Agentic core and M2M APIs (<50ms latency):** Co-designed multi-agent orchestration, tool calling, and autonomous execution loops with decoupled, token-authenticated APIs.
-- **Secure pipeline across isolated VPCs (10,000+ daily events):** Built the interconnection between customer VPCs and the central platform with guaranteed consistency and zero public endpoints.
-- **Agent-assisted SDLC (multi-day to under two days):** Standardized autonomous agent workflows, cutting microservice refactoring from multi-day cycles to under two days and expanding automated test coverage.
-- **99.9% availability on AWS and GCP:** Operated distributed services in Docker with zero-downtime CI/CD and Sentry/CloudWatch observability.
+- **Distributed regulatory report engine:** Designed and shipped an asynchronous engine in Fastify and Python with BullMQ and Redis, moving generation off the request path with idempotent workers and observable job processing.
+- **Agentic core and M2M APIs:** Co-designed multi-agent orchestration, tool calling, and autonomous execution loops with decoupled, token-authenticated APIs between isolated VPCs.
+- **Secure pipeline across isolated VPCs:** Built the interconnection between customer VPCs and the central platform with distributed workers, consistency guarantees, and zero public endpoints.
+- **Agent-assisted SDLC:** Standardized autonomous agent workflows, shortening microservice refactoring cycles and expanding automated test coverage.
+- **Cloud-native operations:** Operated distributed services in Docker across AWS and GCP with zero-downtime CI/CD and Sentry/CloudWatch observability.
 
 ### Software & Mobile Engineer (Part-time Consultant) | Confidential Fintech Scale-up · Credit Platform (NDA)
 *Jul 2025 – Jul 2026*
@@ -37,8 +39,8 @@ Software Engineer with 6+ years of experience building distributed systems, AI-p
 ### Full Stack Developer | Interfell · ePayco | Remote
 *Jun 2021 – Apr 2024*
 
-- **99.9% availability on a payment gateway (500,000+ monthly transactions):** Maintained mission-critical transactional services in Node.js (Express), TypeScript, and MySQL.
-- **Zero duplicate charges:** Engineered resilience and idempotency with Circuit Breakers, rate limiting, and AWS SQS queues with Dead Letter Queues (DLQ).
+- **High-availability payment gateway:** Maintained mission-critical transactional services in Node.js (Express), TypeScript, and MySQL for high-volume payment traffic.
+- **Zero duplicate charges:** Engineered resilience and idempotency with circuit breakers, rate limiting, and AWS SQS queues with dead-letter queues (DLQ).
 - **Reduced p95 latency:** Optimized complex MySQL queries, offloaded notifications to asynchronous SQS workers, and refactored critical endpoints.
 - **Multi-protocol integrations:** Led merchant and partner integrations across React and REST, GraphQL, and SOAP APIs, with Jest tests and Datadog/Sentry monitoring.
 
@@ -46,7 +48,7 @@ Software Engineer with 6+ years of experience building distributed systems, AI-p
 *Mar 2020 – Jun 2021*
 
 - **3 modular production applications:** Designed and developed internal applications in JavaScript, Node.js, and Python for commercial operations.
-- **Zero unplanned downtime:** Maintained production Linux servers with NGINX reverse proxies, load balancing, and SSL/TLS policies.
+- **High availability on Linux:** Maintained production Linux servers with NGINX reverse proxies, load balancing, and SSL/TLS policies.
 - **Faster developer onboarding:** Standardized 15+ API contracts and system blueprints with OpenAPI/Swagger.
 
 ---
@@ -54,12 +56,12 @@ Software Engineer with 6+ years of experience building distributed systems, AI-p
 ## Technical Skills
 
 - **Languages:** TypeScript, JavaScript, Python
-- **Backend & Architecture:** Node.js, Fastify, Express, FastAPI, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience
+- **Backend & Architecture:** Node.js, Fastify, Express, FastAPI, Microservices, Distributed Systems, Event-Driven Architecture (EDA), REST / GraphQL APIs, Idempotency & Resilience, Platform Engineering, Backend Engineering, AI Infrastructure, Circuit Breakers, Rate Limiting
 - **Agentic AI:** Agentic Systems, Multi-Agent Orchestration, Tool Calling & Function Calling, OpenAI & Anthropic APIs, RAG Pipelines, Agent-Assisted SDLC, M2M Communication
-- **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation
-- **Data & Messaging:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM
+- **Cloud & Infrastructure:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, VPC Isolation, Zero-Downtime Deployment
+- **Data & Messaging:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM, Dead-Letter Queues (DLQ)
 - **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS
-- **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod
+- **Observability & Quality:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod, Observability
 
 ---
 
@@ -73,5 +75,5 @@ Software Engineer with 6+ years of experience building distributed systems, AI-p
 
 ## Additional Information
 
-- **Areas of Specialization:** Distributed Systems Architecture, Agentic AI Systems, Multi-Cloud (AWS · GCP), Payment Gateways & Resilient Infrastructure.
+- **Areas of Specialization:** Backend & Platform Engineering, Distributed Systems Architecture, Agentic AI Systems, Multi-Cloud (AWS · GCP), Payment Gateways & Resilient Infrastructure.
 - **Portfolio & Code:** [enmanuel-leon.com](https://enmanuel-leon.com) | [github.com/enmanuel-leon](https://github.com/enmanuel-leon)

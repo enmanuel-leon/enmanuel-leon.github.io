@@ -10,7 +10,9 @@ Idiomas: Español (nativo), Inglés (profesional)
 
 ## Resumen Profesional
 
-Más de 6 años diseñando y operando sistemas en producción para fintech, IA aplicada y plataformas empresariales. Especializado en TypeScript/Node.js, Python y arquitecturas orientadas a eventos sobre AWS/GCP: desde pasarelas de pago con más de 500.000 transacciones mensuales hasta orquestación multiagente con latencia M2M inferior a 50 ms.
+Más de 6 años diseñando y operando sistemas en producción para fintech, IA aplicada y plataformas empresariales. Especializado en ingeniería backend y de plataforma con TypeScript/Node.js, Python, arquitecturas orientadas a eventos y AWS/GCP, con experiencia en orquestación multiagente, tool calling, procesamiento asíncrono, comunicación M2M segura y sistemas transaccionales de alta disponibilidad.
+
+**Competencias clave:** sistemas distribuidos, arquitectura orientada a eventos, procesamiento asíncrono, idempotencia y resiliencia, orquestación de IA agéntica y operación cloud-native.
 
 ---
 
@@ -19,11 +21,11 @@ Más de 6 años diseñando y operando sistemas en producción para fintech, IA a
 ### Full Stack Developer (AI & Core Systems) | Entropy Systems | Barcelona, España (Remoto)
 *Abr 2024 – Presente*
 
-- **Motor distribuido de reportes normativos (-65% tiempo de procesamiento):** Diseñé y puse en producción un motor de generación asíncrona en Fastify y Python con colas BullMQ y Redis, gestionando más de 2.000 documentos al mes.
-- **Core agéntico y APIs M2M (<50 ms de latencia):** Codiseñé la orquestación multiagente, el tool calling y los bucles de ejecución autónomos, con APIs desacopladas y autenticación por tokens.
-- **Pipeline seguro entre VPCs aisladas (+10.000 eventos diarios):** Construí la interconexión entre VPCs de clientes y la plataforma central, con consistencia garantizada y cero endpoints públicos.
-- **SDLC asistido por agentes (de varios días a menos de dos):** Estandaricé flujos de desarrollo con agentes autónomos, reduciendo la refactorización de microservicios de ciclos de varios días a menos de dos días y ampliando la cobertura de pruebas.
-- **99,9% de disponibilidad en AWS y GCP:** Operé servicios distribuidos en contenedores Docker con CI/CD sin downtime y observabilidad en Sentry y CloudWatch.
+- **Motor distribuido de reportes normativos:** Diseñé y puse en producción un motor de generación asíncrona en Fastify y Python con colas BullMQ y Redis, sacando la generación del camino de la petición con workers idempotentes y procesamiento observable.
+- **Core agéntico y APIs M2M:** Codiseñé la orquestación multiagente, el tool calling y los bucles de ejecución autónomos, con APIs desacopladas y autenticación por tokens entre VPCs aisladas.
+- **Pipeline seguro entre VPCs aisladas:** Construí la interconexión entre VPCs de clientes y la plataforma central con workers distribuidos, consistencia garantizada y cero endpoints públicos.
+- **SDLC asistido por agentes:** Estandaricé flujos de desarrollo con agentes autónomos, acortando los ciclos de refactorización de microservicios y ampliando la cobertura de pruebas.
+- **Operación cloud-native:** Operé servicios distribuidos en contenedores Docker sobre AWS y GCP con CI/CD sin downtime y observabilidad en Sentry y CloudWatch.
 
 ### Ingeniero de Software & Mobile (Consultor Part-time) | Fintech Scale-up confidencial · Plataforma de Crédito (NDA)
 *Jul 2025 – Jul 2026*
@@ -37,8 +39,8 @@ Más de 6 años diseñando y operando sistemas en producción para fintech, IA a
 ### Full Stack Developer | Interfell · ePayco | Remoto
 *Jun 2021 – Abr 2024*
 
-- **99,9% de disponibilidad en una pasarela de pago (500.000+ transacciones/mes):** Mantuve servicios transaccionales críticos en Node.js (Express), TypeScript y MySQL.
-- **Cero duplicidad de cobros:** Diseñé mecanismos de resiliencia e idempotencia con Circuit Breakers, rate limiting y colas AWS SQS con Dead Letter Queues (DLQ).
+- **Pasarela de pago de alta disponibilidad:** Mantuve servicios transaccionales críticos en Node.js (Express), TypeScript y MySQL para tráfico de pagos de alto volumen.
+- **Cero duplicidad de cobros:** Diseñé mecanismos de resiliencia e idempotencia con circuit breakers, rate limiting y colas AWS SQS con dead-letter queues (DLQ).
 - **Latencia p95 reducida:** Optimicé consultas complejas en MySQL, desacoplé notificaciones hacia workers asíncronos en SQS y refactoricé endpoints críticos.
 - **Integraciones multiprotocolo:** Lideré integraciones para comercios y aliados sobre React y APIs REST, GraphQL y SOAP, con pruebas en Jest y monitorización en Datadog y Sentry.
 
@@ -46,7 +48,7 @@ Más de 6 años diseñando y operando sistemas en producción para fintech, IA a
 *Mar 2020 – Jun 2021*
 
 - **3 aplicaciones modulares en producción:** Diseñé y desarrollé aplicaciones internas en JavaScript, Node.js y Python para la gestión de procesos comerciales.
-- **Cero caídas no planificadas:** Mantuve servidores Linux de producción con NGINX como reverse proxy, balanceo de carga y políticas SSL/TLS.
+- **Alta disponibilidad en Linux:** Mantuve servidores Linux de producción con NGINX como reverse proxy, balanceo de carga y políticas SSL/TLS.
 - **Incorporación más rápida:** Estandaricé más de 15 contratos de API y arquitecturas con OpenAPI/Swagger.
 
 ---
@@ -54,12 +56,12 @@ Más de 6 años diseñando y operando sistemas en producción para fintech, IA a
 ## Habilidades Técnicas
 
 - **Lenguajes:** TypeScript, JavaScript, Python
-- **Backend & Arquitectura:** Node.js, Fastify, Express, FastAPI, Microservicios, Sistemas Distribuidos, Arquitectura Orientada a Eventos (EDA), APIs REST / GraphQL, Idempotencia & Resiliencia
+- **Backend & Arquitectura:** Node.js, Fastify, Express, FastAPI, Microservicios, Sistemas Distribuidos, Arquitectura Orientada a Eventos (EDA), APIs REST / GraphQL, Idempotencia & Resiliencia, Ingeniería de Plataforma, Ingeniería Backend, Infraestructura de IA, Circuit Breakers, Rate Limiting
 - **IA Agéntica:** Sistemas Agénticos, Orquestación Multiagente, Tool Calling & Function Calling, APIs de OpenAI & Anthropic, Pipelines RAG, SDLC Asistido por Agentes, Comunicación M2M
-- **Cloud & Infraestructura:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, Aislamiento de VPC
-- **Datos & Mensajería:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM
+- **Cloud & Infraestructura:** AWS (ECS, Lambda, SQS, S3, RDS), GCP (Cloud Run), Docker, Docker Compose, CI/CD (GitHub Actions), Linux, NGINX, Aislamiento de VPC, Despliegue Sin Downtime
+- **Datos & Mensajería:** PostgreSQL, MySQL, MongoDB, Redis, BullMQ, AWS SQS, Row-Level Security (RLS), Prisma ORM, Dead-Letter Queues (DLQ)
 - **Frontend & Mobile:** React, Next.js, React Native (iOS/Android), Vite, Tailwind CSS
-- **Observabilidad & Calidad:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod
+- **Observabilidad & Calidad:** Datadog, Sentry, CloudWatch, Vitest, Jest, TDD, Git / GitHub, Zod, Observabilidad
 
 ---
 
@@ -73,5 +75,5 @@ Más de 6 años diseñando y operando sistemas en producción para fintech, IA a
 
 ## Información Adicional
 
-- **Áreas de Especialización:** Arquitectura de Sistemas Distribuidos, Sistemas Agénticos (IA), Multi-Cloud (AWS · GCP), Pasarelas de Pago e Infraestructura Resiliente.
+- **Áreas de Especialización:** Ingeniería Backend y de Plataforma, Arquitectura de Sistemas Distribuidos, Sistemas Agénticos (IA), Multi-Cloud (AWS · GCP), Pasarelas de Pago e Infraestructura Resiliente.
 - **Portfolio & Código:** [enmanuel-leon.com](https://enmanuel-leon.com) | [github.com/enmanuel-leon](https://github.com/enmanuel-leon)
