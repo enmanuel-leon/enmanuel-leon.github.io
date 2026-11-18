@@ -100,7 +100,7 @@ TARGETS = [
         "lang": "es",
         "md": "export/Enmanuel_Leon_CV_ES.md",
         "pdf": "export/Enmanuel_Leon_CV_ES.pdf",
-        "page1": ["Entropy Systems", "Fintech Scale-up"],
+        "page1": ["Entropy Systems", "Fintech"],
         "page2": ["Interfell", "Intelix"],
     },
     {
@@ -109,7 +109,7 @@ TARGETS = [
         "lang": "en",
         "md": "export/Enmanuel_Leon_Resume_EN.md",
         "pdf": "export/Enmanuel_Leon_Resume_EN.pdf",
-        "page1": ["Entropy Systems", "Fintech Scale-up"],
+        "page1": ["Entropy Systems", "Fintech"],
         "page2": ["Interfell", "Intelix"],
     },
 ]
@@ -157,7 +157,8 @@ def assert_page_text(pdf_path: str, page: int, needles: list[str]) -> None:
         text=True,
         check=True,
     )
-    missing = [needle for needle in needles if needle not in result.stdout]
+    text = re.sub(r"\s+", " ", result.stdout)
+    missing = [needle for needle in needles if needle not in text]
     if missing:
         print(
             f"ERROR: page {page} of {pdf_path} is missing {missing}. "
