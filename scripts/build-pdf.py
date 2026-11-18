@@ -1,8 +1,20 @@
 #!/usr/bin/env python3
+"""Build the ATS-friendly CV/Resume PDFs from the Markdown exports.
+
+Contract:
+- Both Markdown files must contain the ``<!-- pdf:pagebreak -->`` marker.
+- Pandoc renders a standalone HTML file; headless Chrome prints it to A4 PDF.
+- The build fails if either PDF is not exactly 2 pages.
+- When ``pdftotext`` is available, it also asserts the expected roles per page.
+"""
+
 import os
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
+from pathlib import Path
 
 CSS = """
 @page {
@@ -82,53 +94,170 @@ strong {
 """
 
 TARGETS = [
-    ("ES", "Enmanuel_Leon_CV_ES", "export/Enmanuel_Leon_CV_ES.md", "export/Enmanuel_Leon_CV_ES.pdf"),
-    ("EN", "Enmanuel_Leon_Resume_EN", "export/Enmanuel_Leon_Resume_EN.md", "export/Enmanuel_Leon_Resume_EN.pdf"),
+    {
+        "name": "Enmanuel_Leon_CV_ES",
+        "title": "Enmanuel Leon — CV (ES)",
+        "lang": "es",
+        "md": "export/Enmanuel_Leon_CV_ES.md",
+        "pdf": "export/Enmanuel_Leon_CV_ES.pdf",
+        "page1": ["Entropy Systems", "Fintech"],
+        "page2": ["Interfell", "Intelix"],
+    },
+    {
+        "name": "Enmanuel_Leon_Resume_EN",
+        "title": "Enmanuel Leon — Resume (EN)",
+        "lang": "en",
+        "md": "export/Enmanuel_Leon_Resume_EN.md",
+        "pdf": "export/Enmanuel_Leon_Resume_EN.pdf",
+        "page1": ["Entropy Systems", "Fintech"],
+        "page2": ["Interfell", "Intelix"],
+    },
 ]
 
-def build():
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    root_dir = os.path.dirname(script_dir)
-    os.chdir(root_dir)
+PAGE_BREAK_MARKER = "<!-- pdf:pagebreak -->"
+PAGE_BREAK_HTML = '<div class="page-break"></div>'
 
-    for lang, title, md_rel, pdf_rel in TARGETS:
-        html_tmp = f"/tmp/{title}.html"
-        pdf_out = os.path.join(root_dir, pdf_rel)
 
-        print(f"Generating {pdf_rel} from {md_rel}...")
-        subprocess.run(["pandoc", md_rel, "-s", "--metadata", f"title={title}", "-o", html_tmp], check=True)
+def require_tool(name: str, hint: str) -> None:
+    if shutil.which(name) is None:
+        print(f"ERROR: '{name}' is required but was not found in PATH. {hint}", file=sys.stderr)
+        sys.exit(1)
 
-        with open(html_tmp, "r", encoding="utf-8") as f:
-            html = f.read()
 
-        html = html.replace("</head>", f"<style>{CSS}</style></head>")
-
-        match = re.search(r"(<h3 id=\"(?:interfell|fullstack-developer-interfell)[^\"]*\">)", html, re.IGNORECASE)
+def pdf_page_count(pdf_path: str) -> int:
+    """Prefer pdfinfo; fall back to the PDF object regex when unavailable."""
+    if shutil.which("pdfinfo"):
+        result = subprocess.run(
+            ["pdfinfo", pdf_path], capture_output=True, text=True, check=True
+        )
+        match = re.search(r"^Pages:\s+(\d+)", result.stdout, re.MULTILINE)
         if match:
-            html = html.replace(match.group(1), f"<div class=\"page-break\"></div>\n{match.group(1)}")
-        else:
-            print(f"Warning: page-break target not found for {lang}")
+            return int(match.group(1))
 
-        with open(html_tmp, "w", encoding="utf-8") as f:
-            f.write(html)
+    pdf_bytes = Path(pdf_path).read_bytes()
+    return len(re.findall(rb"/Type\s*/Page[^s]", pdf_bytes))
 
-        chrome_cmd = [
-            "google-chrome",
-            "--headless",
-            "--disable-gpu",
-            "--no-pdf-header-footer",
-            f"--print-to-pdf={pdf_out}",
-            html_tmp,
-        ]
-        subprocess.run(chrome_cmd, check=True)
 
-        with open(pdf_out, "rb") as f:
-            pdf_bytes = f.read()
-        pages = len(re.findall(rb"/Type\s*/Page[^s]", pdf_bytes))
-        print(f"✓ {pdf_rel}: {pages} pages, {len(pdf_bytes)} bytes")
+def pdf_title(pdf_path: str) -> str | None:
+    if shutil.which("pdfinfo") is None:
+        return None
+    result = subprocess.run(
+        ["pdfinfo", pdf_path], capture_output=True, text=True, check=True
+    )
+    match = re.search(r"^Title:\s+(.+)$", result.stdout, re.MULTILINE)
+    return match.group(1).strip() if match else None
+
+
+def assert_page_text(pdf_path: str, page: int, needles: list[str]) -> None:
+    if shutil.which("pdftotext") is None:
+        return
+    result = subprocess.run(
+        ["pdftotext", "-f", str(page), "-l", str(page), "-layout", pdf_path, "-"],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    text = re.sub(r"\s+", " ", result.stdout)
+    missing = [needle for needle in needles if needle not in text]
+    if missing:
+        print(
+            f"ERROR: page {page} of {pdf_path} is missing {missing}. "
+            "The PDF content split regressed.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+
+def build() -> None:
+    require_tool("pandoc", "Install pandoc: https://pandoc.org/installing.html")
+    chrome = (
+        os.environ.get("CHROME_PATH")
+        or shutil.which("google-chrome")
+        or shutil.which("chromium")
+        or shutil.which("chromium-browser")
+    )
+    if not chrome:
+        print(
+            "ERROR: Chrome/Chromium was not found. Set CHROME_PATH or install "
+            "'google-chrome'.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    root = Path(__file__).resolve().parent.parent
+    os.chdir(root)
+
+    for target in TARGETS:
+        md_path = Path(target["md"])
+        pdf_path = Path(target["pdf"])
+        source = md_path.read_text(encoding="utf-8")
+
+        if PAGE_BREAK_MARKER not in source:
+            print(
+                f"ERROR: {md_path} is missing {PAGE_BREAK_MARKER}. "
+                "The 2-page PDF split cannot be guaranteed.",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+
+        print(f"Generating {pdf_path} from {md_path}...")
+
+        with tempfile.TemporaryDirectory(prefix="cv-pdf-") as temp_dir:
+            temp = Path(temp_dir)
+            prepared_md = temp / f"{target['name']}.md"
+            prepared_md.write_text(
+                source.replace(PAGE_BREAK_MARKER, PAGE_BREAK_HTML),
+                encoding="utf-8",
+            )
+            html_tmp = temp / f"{target['name']}.html"
+
+            subprocess.run(
+                [
+                    "pandoc",
+                    str(prepared_md),
+                    "-s",
+                    "--metadata",
+                    f"title={target['title']}",
+                    "--metadata",
+                    "author=Enmanuel Leon",
+                    "--metadata",
+                    f"lang={target['lang']}",
+                    "-o",
+                    str(html_tmp),
+                ],
+                check=True,
+            )
+
+            html = html_tmp.read_text(encoding="utf-8")
+            html = html.replace("</head>", f"<style>{CSS}</style></head>")
+            html_tmp.write_text(html, encoding="utf-8")
+
+            subprocess.run(
+                [
+                    chrome,
+                    "--headless",
+                    "--disable-gpu",
+                    "--no-sandbox",
+                    "--no-pdf-header-footer",
+                    "--run-all-compositor-stages-before-draw",
+                    f"--print-to-pdf={pdf_path}",
+                    str(html_tmp),
+                ],
+                check=True,
+            )
+
+        pages = pdf_page_count(str(pdf_path))
+        size = pdf_path.stat().st_size
+        title = pdf_title(str(pdf_path))
+        print(f"✓ {pdf_path}: {pages} pages, {size} bytes, title={title!r}")
+
         if pages != 2:
             print(f"ERROR: Expected 2 pages, got {pages}!", file=sys.stderr)
             sys.exit(1)
+
+        assert_page_text(str(pdf_path), 1, target["page1"])
+        assert_page_text(str(pdf_path), 2, target["page2"])
+
 
 if __name__ == "__main__":
     build()

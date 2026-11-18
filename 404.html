@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Enmanuel Leon</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0b1018" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4f6f9" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let stored = null;
+      try {
+        stored = localStorage.getItem("theme");
+      } catch {
+        stored = null;
+      }
+      const system = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      const theme = stored === "light" || stored === "dark" ? stored : system;
+      root.dataset.theme = theme;
+      root.style.colorScheme = theme;
+      document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+        meta.content = theme === "dark" ? "#0b1018" : "#f4f6f9";
+      });
+    })();
+  </script>
+  <link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="expect" href="#main" blocking="render">
+</head>
+<body id="top">
+  <main class="not-found" id="main">
+    <p class="nf-code">404 · Enmanuel Leon</p>
+    <h1>This page doesn’t exist.</h1>
+    <p>The address may have changed, or the link may be broken. Start from the home page, or download the CV directly.</p>
+    <div class="nf-actions">
+      <a class="btn btn-primary" href="/">Home · English</a>
+      <a class="btn btn-secondary" href="/es/">Home · Español</a>
+      <a class="btn btn-secondary" href="/export/Enmanuel_Leon_Resume_EN.pdf" download>Resume · PDF</a>
+      <a class="btn btn-secondary" href="/export/Enmanuel_Leon_CV_ES.pdf" download>CV · PDF</a>
+    </div>
+    <p class="nf-note">Still lost? Email <a href="mailto:contact@enmanuel-leon.com">contact@enmanuel-leon.com</a>.</p>
+  </main>
+</body>
+</html>

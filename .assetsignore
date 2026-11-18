@@ -1,0 +1,19 @@
+# Files that are source-only or private. Everything else in the repository root
+# is published as a static asset by the Cloudflare Worker.
+/tmp/
+/data/
+/scripts/
+/src/
+/.github/
+/.vscode/
+/.idea/
+/.wrangler/
+/AGENTS.md
+/CLAUDE.md
+/README.md
+/wrangler.jsonc
+/.assetsignore
+/.editorconfig
+/.gitignore
+/img/Profile-pic.jpeg
+*.log

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- Source for img/og-banner.png. Render at 1200x630 from the repo root (fonts and portrait use absolute paths). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: "Geist";
+    src: url("/assets/fonts/geist-latin.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: block;
+  }
+  @font-face {
+    font-family: "Geist Mono";
+    src: url("/assets/fonts/geist-mono-latin.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: block;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #0b1018;
+    color: #e8edf5;
+    font-family: "Geist", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 630px;
+    padding: 54px 60px;
+    background-image:
+      radial-gradient(ellipse at 50% -10%, rgba(122, 162, 255, 0.1), transparent 62%),
+      linear-gradient(180deg, #0b1018 0%, #0e1522 100%);
+    background-size: 100% 100%, 100% 100%;
+  }
+  .top {
+    position: relative;
+    display: grid;
+    grid-template-columns: 214px minmax(0, 1fr);
+    gap: 34px;
+    align-items: center;
+  }
+  .portrait {
+    width: 214px;
+    height: 214px;
+    padding: 6px;
+    border: 1px solid #243044;
+    border-radius: 14px;
+    background: #111827;
+  }
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+  .brandline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: #ff8a5c;
+    font-family: "Geist Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .brandline::before {
+    content: "";
+    width: 54px;
+    height: 2px;
+    background: #ff8a5c;
+  }
+  h1 {
+    margin: 0;
+    font-size: 64px;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    font-weight: 750;
+  }
+  .role {
+    margin: 12px 0 0;
+    color: #e8edf5;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .specialty {
+    margin: 4px 0 0;
+    color: #7aa2ff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .stack {
+    margin: 12px 0 0;
+    color: #7f8ca0;
+    font-family: "Geist Mono", monospace;
+    font-size: 14px;
+  }
+  .meta {
+    margin: 8px 0 0;
+    color: #a9b4c4;
+    font-size: 14px;
+  }
+  .impact {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 42px;
+    border-top: 1px solid #243044;
+    border-bottom: 1px solid #243044;
+    background: #243044;
+    gap: 1px;
+  }
+  .metric {
+    padding: 20px 20px 18px 0;
+    background: #0b1018;
+  }
+  .metric + .metric {
+    padding-left: 20px;
+  }
+  .value {
+    display: block;
+    color: #ff8a5c;
+    font-size: 34px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .label {
+    display: block;
+    margin-top: 8px;
+    color: #e8edf5;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .detail {
+    display: block;
+    margin-top: 4px;
+    color: #7f8ca0;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 26px;
+    color: #7f8ca0;
+    font-family: "Geist Mono", monospace;
+    font-size: 13px;
+  }
+  .footer strong { color: #e8edf5; font-weight: 500; }
+  .dot { color: #ff8a5c; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="top">
+      <div class="portrait"><img src="/img/profile-800.jpg" alt=""></div>
+      <div>
+        <div class="brandline">SOFTWARE ENGINEER</div>
+        <h1>Enmanuel Leon</h1>
+        <p class="role">Distributed &amp; Agentic Systems</p>
+        <p class="specialty">TypeScript · Python · AWS/GCP</p>
+        <p class="stack">EU citizen (Italian) · Remote CET/EST</p>
+        <p class="meta">Valencia, Venezuela</p>
+      </div>
+    </div>
+
+    <div class="impact">
+      <div class="metric">
+        <span class="value">65%</span>
+        <span class="label">faster report generation</span>
+        <span class="detail">2,000+ regulatory documents/month</span>
+      </div>
+      <div class="metric">
+        <span class="value">&lt;50ms</span>
+        <span class="label">M2M latency</span>
+        <span class="detail">Token-authenticated calls between isolated VPCs</span>
+      </div>
+      <div class="metric">
+        <span class="value">500k+</span>
+        <span class="label">monthly transactions</span>
+        <span class="detail">99.9% uptime on a payment gateway</span>
+      </div>
+      <div class="metric">
+        <span class="value">10k+</span>
+        <span class="label">daily events processed</span>
+        <span class="detail">10,000+ events/day across isolated VPCs</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span><strong>enmanuel-leon.com</strong> <span class="dot">·</span> github.com/enmanuel-leon</span>
+      <span>CV · RESUME</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,16 +1,59 @@
 {
-  "name": "Enmanuel Leon — Senior Software Engineer | Sistemas Distribuidos & Agénticos | TypeScript · Python · AWS/GCP",
+  "id": "/",
+  "name": "Enmanuel Leon — Software Engineer",
   "short_name": "Enmanuel Leon",
-  "description": "Portafolio y CV de Enmanuel Leon, Senior Software Engineer especializado en sistemas distribuidos, motores asíncronos y arquitecturas agénticas.",
+  "description": "Software Engineer building distributed systems, async engines, agentic AI platforms with TypeScript, Python, and AWS/GCP. EU citizen · Remote CET/EST.",
+  "lang": "en",
+  "dir": "ltr",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#09090b",
-  "theme_color": "#6366f1",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#0b1018",
+  "theme_color": "#0b1018",
+  "categories": [
+    "business",
+    "portfolio",
+    "productivity"
+  ],
   "icons": [
     {
-      "src": "img/Profile-pic.jpeg",
-      "sizes": "192x192 512x512",
-      "type": "image/jpeg"
+      "src": "/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Download CV (ES)",
+      "short_name": "CV ES",
+      "url": "/export/Enmanuel_Leon_CV_ES.pdf"
+    },
+    {
+      "name": "Download Resume (EN)",
+      "short_name": "Resume EN",
+      "url": "/export/Enmanuel_Leon_Resume_EN.pdf"
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "url": "/#contact"
     }
   ]
 }

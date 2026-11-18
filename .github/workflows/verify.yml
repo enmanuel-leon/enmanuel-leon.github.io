@@ -1,0 +1,58 @@
+name: Verify
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate content and generated pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generated files are current
+        run: node scripts/build-site.mjs --check
+
+      - name: Validate repository
+        run: node scripts/validate.mjs
+
+      - name: Validate HTML
+        run: npx --yes html-validate@11.21.1 index.html es/index.html 404.html
+
+      - name: Check JavaScript syntax
+        run: node --check assets/js/app.js
+
+  pdf:
+    name: Build and verify 2-page PDFs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PDF toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc poppler-utils
+
+      - uses: browser-actions/setup-chrome@v1
+        id: chrome
+        with:
+          chrome-version: stable
+
+      - name: Build and verify PDFs
+        env:
+          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
+        run: python3 scripts/build-pdf.py

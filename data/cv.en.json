@@ -1,26 +1,23 @@
 {
+  "meta": {
+    "title": "Enmanuel Leon — Software Engineer · Distributed & Agentic Systems",
+    "description": "Software Engineer building distributed systems, async engines, agentic AI platforms with TypeScript, Python, and AWS/GCP. EU citizen · Remote CET/EST.",
+    "lastUpdated": "2026-11-17"
+  },
   "nav": {
     "brand": "EL",
     "items": [
       {
-        "id": "hero",
-        "label": "Home"
-      },
-      {
-        "id": "about",
-        "label": "Profile"
+        "id": "impact",
+        "label": "Impact"
       },
       {
         "id": "experience",
         "label": "Experience"
       },
       {
-        "id": "skills",
+        "id": "stack",
         "label": "Stack"
-      },
-      {
-        "id": "education",
-        "label": "Education"
       },
       {
         "id": "contact",
@@ -29,95 +26,98 @@
     ]
   },
   "ui": {
-    "themeToggle": "Change theme",
-    "langSelect": "Change language",
-    "hamburger": "Menu",
+    "skipToContent": "Skip to content",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "themeLight": "Switch to light theme",
+    "themeDark": "Switch to dark theme",
+    "language": "Language",
+    "primaryNav": "Primary",
+    "mobileNav": "Mobile",
+    "profileAndContact": "Profile and contact",
     "backToTop": "Back to top",
-    "terminalTrigger": "Open developer terminal",
-    "terminalInput": "Command line",
-    "downloadCv": "Download Resume",
-    "modalTitle": "Download Resume",
-    "modalClose": "Close modal",
-    "modalLightweight": "Lightweight text format",
-    "modalPrintReady": "Print-ready format",
+    "downloadCv": "Download CV",
+    "downloadTitle": "Download CV",
+    "downloadDesc": "Two pages, ATS-friendly, updated November 2026.",
+    "downloadClose": "Close",
     "contactMe": "Contact me",
-    "viewSkills": "View stack",
     "copyEmail": "Copy email",
-    "copied": "Copied!"
+    "copied": "Copied",
+    "copyFailed": "Copy failed",
+    "themeToggle": "Toggle theme",
+    "location": "Location",
+    "citizenship": "Citizenship",
+    "languagesLabel": "Languages",
+    "downloadPdfMeta": "2 pages · ATS-friendly",
+    "downloadMdMeta": "Plain text · Markdown",
+    "downloadNote": "Both PDFs are ATS-friendly and text-selectable.",
+    "noscriptTitle": "JavaScript is disabled",
+    "noscriptText": "The full CV is rendered below. You can also download the PDF or Markdown directly.",
+    "availability": "Availability"
   },
   "profile": {
     "name": "Enmanuel Leon",
-    "role": "Senior Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP",
-    "photo": "img/Profile-pic.jpeg"
+    "role": "Software Engineer",
+    "specialty": "Distributed & Agentic Systems",
+    "stackLine": "TypeScript · Python · AWS/GCP",
+    "location": "Valencia, Venezuela",
+    "availability": "EU citizen (Italian) · Remote CET/EST",
+    "languages": "Spanish (native) · English (professional)",
+    "citizenship": "EU citizen (Italian)",
+    "workMode": "Remote CET/EST"
   },
   "hero": {
-    "badge": "EU Citizen (Italian) · Remote CET / EST · Valencia, VE",
-    "summary": "Software Engineer with 6+ years of experience building distributed systems, AI-powered platforms, and mission-critical fintech services. Specialized in TypeScript/Node.js, Python, event-driven architectures, and AWS/GCP, with hands-on experience in multi-agent orchestration, tool calling, asynchronous processing, secure M2M communication, and high-availability transactional systems.",
-    "typingLine": "I engineer distributed architectures, processing engines, and cloud platforms;",
-    "actions": [
-      {
-        "label": "Contact",
-        "href": "#contact"
-      },
-      {
-        "label": "View stack",
-        "href": "#skills"
-      }
-    ],
-    "typingPhrases": [
-      "Architecting distributed systems and agentic AI architectures.",
-      "Optimizing asynchronous engines and queue processing.",
-      "Building high-availability cloud platforms (AWS/GCP).",
-      "Orchestrating autonomous agents and secure M2M workflows."
+    "statement": "I build the distributed systems and async engines behind money movement, AI tooling, and high-availability platforms.",
+    "paragraphs": [
+      "I'm a software engineer with 6+ years designing and operating production systems for fintech, applied AI, and enterprise platforms. I specialize in TypeScript/Node.js, Python, and event-driven architecture on AWS/GCP — from payment gateways processing 500k+ monthly transactions to multi-agent orchestration with sub-50ms M2M latency.",
+      "I care about clean boundaries, observable systems, and shipping outcomes. Italian (EU) citizen, authorized to work in the EU without sponsorship; remote across CET and EST."
     ]
   },
-  "about": {
-    "label": "About me",
-    "title": "Engineering distributed systems, agentic architectures, and resilient cloud platforms",
-    "paragraphs": [
-      "I have 6+ years of experience engineering and operating mission-critical production software across fintech, applied AI, and high-throughput enterprise platforms.",
-      "Specialized in TypeScript (Node.js/Fastify), Python, and event-driven architectures on AWS/GCP. My technical focus connects architectural resilience with business delivery: scalable asynchronous processing engines, core service platforms with M2M communication across isolated customer VPCs, multi-agent orchestration, and high-concurrency cloud services.",
-      "Dual Italian (EU) and Venezuelan citizenship with full authorization to work across the European Union. Operating 100% remotely with full schedule alignment for CET (Europe) and EST (Americas) working hours."
-    ],
-    "stats": [
+  "impact": {
+    "title": "Proof, not adjectives",
+    "subtitle": "A few outcomes from the last six years.",
+    "items": [
       {
-        "value": "6+",
-        "label": "Years of experience"
+        "value": "65%",
+        "label": "faster report generation",
+        "detail": "2,000+ regulatory documents per month"
       },
       {
         "value": "<50ms",
-        "label": "M2M Latency"
+        "label": "M2M latency",
+        "detail": "Token-authenticated calls between isolated VPCs"
       },
       {
-        "value": "99.9%",
-        "label": "Production uptime"
+        "value": "500k+",
+        "label": "monthly transactions",
+        "detail": "99.9% uptime on a payment gateway"
       },
       {
-        "value": "CET/EST",
-        "label": "Working timezones"
+        "value": "10k+",
+        "label": "daily events processed",
+        "detail": "10,000+ events/day across isolated VPCs"
       }
     ]
   },
   "experience": {
-    "label": "Experience",
-    "title": "Professional journey",
-    "subtitle": "Roles across distributed systems, transactional microservices, cloud infrastructure, and applied AI.",
+    "title": "Where I've shipped",
+    "subtitle": "Production systems across fintech, applied AI, and cloud infrastructure.",
     "items": [
       {
         "id": "entropy",
-        "period": "Apr 2024 - Present",
+        "period": "Apr 2024 – Present",
         "location": "Barcelona, Spain · Remote",
-        "role": "Fullstack Developer (AI & Core Systems)",
+        "role": "Full Stack Developer (AI & Core Systems)",
         "company": "Entropy Systems",
         "bullets": [
-          "Architected and deployed a distributed asynchronous regulatory document and artifact generation engine using Fastify and Python orchestrated with BullMQ and Redis, reducing processing times by 65% while handling 2,000+ monthly documents.",
-          "Co-designed the agentic system architecture and engineered the core AI tooling backend (multi-agent orchestration, tool calling, and autonomous execution loops), achieving secure M2M communication with <50ms latency via decoupled APIs and token authentication.",
-          "Engineered a secure event pipeline connecting isolated client VPCs to the central platform, orchestrating distributed workers to process 10,000+ daily events with guaranteed data consistency and zero public endpoint exposure.",
-          "Standardized agent-assisted engineering workflows (SDLC) using autonomous coding agents, reducing microservice refactoring lead times from 4 days to 1.5 days (-62%) while expanding automated test coverage.",
-          "Operated distributed microservices across AWS and GCP with 99.9% availability, containerizing workloads in Docker and automating CI/CD pipelines for zero-downtime deployments backed by distributed observability via Sentry and CloudWatch."
+          "Designed and shipped a distributed asynchronous engine for regulatory reports in Fastify and Python, using BullMQ and Redis to cut processing time by 65% while handling 2,000+ documents per month.",
+          "Co-designed the agentic core for AI tool distribution — multi-agent orchestration, tool calling, and autonomous execution loops — with token-authenticated M2M APIs at sub-50ms latency.",
+          "Built a secure event pipeline between isolated customer VPCs and the central platform, processing 10,000+ daily events with guaranteed consistency and zero public endpoints.",
+          "Standardized agent-assisted SDLC workflows, cutting microservice refactoring from multi-day cycles to under two days and expanding automated test coverage.",
+          "Operated distributed services across AWS and GCP at 99.9% availability, containerized with Docker and delivered through zero-downtime CI/CD with Sentry and CloudWatch observability."
         ],
         "tags": [
-          "Agentic Architecture",
+          "Agentic AI",
           "TypeScript",
           "Fastify",
           "Python",
@@ -129,14 +129,14 @@
       },
       {
         "id": "fintech_mobile",
-        "period": "Jul 2025 - Jul 2026",
+        "period": "Jul 2025 – Jul 2026",
         "location": "Remote",
-        "role": "Software & Mobile Engineer (Part-time Consultant · Side Project)",
-        "company": "Fintech Scale-up (Credit & Financial Platform · NDA)",
+        "role": "Software & Mobile Engineer (Part-time Consultant)",
+        "company": "Confidential Fintech Scale-up · Credit Platform (NDA)",
         "bullets": [
-          "Engineered the end-to-end cross-platform mobile architecture (iOS and Android) using React Native and TypeScript for a credit origination platform during its scaling phase, delivering 20+ modular views (biometric KYC onboarding, analytics dashboard, transactional flows, detailed history, and real-time chat support).",
-          "Architected and maintained the cloud data infrastructure and backend services, implementing robust authentication and granular Row-Level Security (RLS) policies to safeguard sensitive credit records and financial contracts.",
-          "Optimized mobile application performance and network resilience, reducing cold-start load times by 35% and securing reliable offline persistence for credit applications and transactions in low-connectivity conditions."
+          "Built the end-to-end cross-platform mobile architecture (iOS and Android) in React Native and TypeScript for a credit origination platform, delivering 20+ modular views: biometric KYC onboarding, analytics, transactions, history, and real-time chat.",
+          "Designed and operated the cloud data layer, implementing authentication and granular Row-Level Security (RLS) policies to protect sensitive credit histories and financial contracts.",
+          "Improved cold-start load time and added offline persistence for loan applications and transactions in low-connectivity environments."
         ],
         "tags": [
           "React Native",
@@ -149,15 +149,15 @@
       },
       {
         "id": "epayco",
-        "period": "Jun 2021 - Apr 2024",
+        "period": "Jun 2021 – Apr 2024",
         "location": "Remote",
-        "role": "Fullstack Developer",
-        "company": "Interfell - ePayco",
+        "role": "Full Stack Developer",
+        "company": "Interfell · ePayco",
         "bullets": [
-          "Maintained 99.9% availability across mission-critical payment gateway services processing 500,000+ monthly transactions, developing and maintaining transactional microservices in Node.js (Express) and TypeScript on MySQL.",
-          "Engineered financial transaction resilience and idempotency using Circuit Breakers, Rate Limiting, and AWS SQS queues with Dead Letter Queues (DLQ), guaranteeing zero duplicate charges during banking gateway outages.",
-          "Reduced p95 transaction latency by 28% by optimizing complex MySQL queries, offloading asynchronous background notifications via AWS SQS, and refactoring critical payment endpoints.",
-          "Led payment gateway integrations for merchants and partners across React web apps, REST, GraphQL, and legacy SOAP services, enforcing automated testing suites with Jest and continuous monitoring in Datadog and Sentry."
+          "Maintained 99.9% availability across mission-critical payment gateway services processing 500,000+ monthly transactions in Node.js (Express), TypeScript, and MySQL.",
+          "Engineered financial resilience and idempotency with Circuit Breakers, rate limiting, and AWS SQS queues with Dead Letter Queues (DLQ), guaranteeing zero duplicate charges during banking gateway outages.",
+          "Reduced p95 transaction latency by optimizing complex MySQL queries, offloading notifications to asynchronous SQS workers, and refactoring critical endpoints.",
+          "Led payment gateway integrations for merchants and partners across React web apps and REST, GraphQL, and SOAP APIs, backed by Jest test suites and Datadog/Sentry monitoring."
         ],
         "tags": [
           "Node.js",
@@ -171,14 +171,14 @@
       },
       {
         "id": "intelix",
-        "period": "Mar 2020 - Jun 2021",
+        "period": "Mar 2020 – Jun 2021",
         "location": "Valencia, Venezuela",
         "role": "Systems Analyst / Software Developer",
         "company": "Intelix Synergy, C.A.",
         "bullets": [
-          "Designed and developed 3 modular internal management applications in JavaScript, Node.js, and Python for commercial operations, used daily in production.",
-          "Ensured continuous high availability (zero unplanned downtime) administering production Linux servers configured with NGINX reverse proxies, load balancing, and SSL/TLS policies.",
-          "Reduced developer onboarding lead time by ~40% by standardizing 15+ API contracts and system blueprints using OpenAPI/Swagger specifications."
+          "Designed and developed 3 modular internal applications in JavaScript, Node.js, and Python for commercial operations, used daily in production.",
+          "Maintained continuous availability with zero unplanned downtime on production Linux servers using NGINX reverse proxies, load balancing, and SSL/TLS policies.",
+          "Reduced developer onboarding time by standardizing 15+ API contracts and system blueprints with OpenAPI/Swagger."
         ],
         "tags": [
           "JavaScript",
@@ -192,13 +192,11 @@
     ]
   },
   "skills": {
-    "label": "Tech Stack",
-    "title": "Patterns, technologies, and tools",
-    "desc": "Architecture patterns, backend engines, cloud infra, and applied AI tools I leverage in production",
+    "title": "Tools I reach for",
+    "desc": "The stack I use to design, ship, and operate production systems.",
     "categories": [
       {
         "title": "Languages",
-        "icon": "languages",
         "items": [
           "TypeScript",
           "JavaScript",
@@ -207,7 +205,6 @@
       },
       {
         "title": "Backend & Architecture",
-        "icon": "backend",
         "items": [
           "Node.js",
           "Fastify",
@@ -216,13 +213,12 @@
           "Microservices",
           "Distributed Systems",
           "Event-Driven Architecture (EDA)",
-          "APIs REST / GraphQL",
+          "REST / GraphQL APIs",
           "Idempotency & Resilience"
         ]
       },
       {
-        "title": "Applied AI & Agentic Systems",
-        "icon": "ai",
+        "title": "Agentic AI",
         "items": [
           "Agentic Systems",
           "Multi-Agent Orchestration",
@@ -235,7 +231,6 @@
       },
       {
         "title": "Cloud & Infrastructure",
-        "icon": "cloud",
         "items": [
           "AWS (ECS, Lambda, SQS, S3, RDS)",
           "GCP (Cloud Run)",
@@ -248,8 +243,7 @@
         ]
       },
       {
-        "title": "Databases & Messaging",
-        "icon": "data",
+        "title": "Data & Messaging",
         "items": [
           "PostgreSQL",
           "MySQL",
@@ -263,7 +257,6 @@
       },
       {
         "title": "Frontend & Mobile",
-        "icon": "frontend",
         "items": [
           "React",
           "Next.js",
@@ -274,7 +267,6 @@
       },
       {
         "title": "Observability & Quality",
-        "icon": "devops",
         "items": [
           "Datadog",
           "Sentry",
@@ -289,75 +281,19 @@
     ]
   },
   "education": {
-    "label": "Education",
-    "title": "Academic background",
+    "title": "Foundation",
     "items": [
       {
         "period": "2020",
-        "degree": "Bachelor of Science in Computer Engineering",
+        "degree": "Computer Engineering (Ingeniero en Computación)",
         "school": "Universidad José Antonio Páez — Valencia, Venezuela",
-        "description": "Accredited university degree specializing in distributed systems, computer architecture, relational databases, software engineering, and advanced algorithms."
-      }
-    ]
-  },
-  "projects": {
-    "label": "// Featured projects",
-    "title": "Selected work",
-    "subtitle": "Systems, processing engines, and platforms I have designed and delivered.",
-    "items": [
-      {
-        "title": "Artifact Generation Engine",
-        "type": "Distributed Systems / Fastify & Python",
-        "description": "Distributed document generation engine that cut generation times by 65%, processing over 2,000 monthly audit reports via BullMQ and Redis.",
-        "tech": [
-          "Fastify",
-          "Python",
-          "Redis",
-          "BullMQ",
-          "Docker",
-          "AWS S3"
-        ],
-        "icon": "📄",
-        "demo": "#",
-        "github": "#"
-      },
-      {
-        "title": "Core AI Tooling Platform",
-        "type": "Agentic Architecture & M2M / TypeScript & Node.js",
-        "description": "Multi-instance platform for agentic architecture and tooling distribution featuring low-latency (<50ms) M2M communication, agent orchestration, and periodic asynchronous sync with isolated customer VPCs.",
-        "tech": [
-          "Agentic Architecture",
-          "TypeScript",
-          "Node.js",
-          "Fastify",
-          "VPC Networking",
-          "Redis / Workers"
-        ],
-        "icon": "🤖",
-        "demo": "#",
-        "github": "#"
-      },
-      {
-        "title": "Fintech Cross-Platform Mobile Suite",
-        "type": "FinTech Mobile / React Native & Cloud",
-        "description": "End-to-end cross-platform mobile financial application built with scalable cloud architecture, offline resilience, and strict Row-Level Security (RLS) policies.",
-        "tech": [
-          "React Native",
-          "TypeScript",
-          "Cloud Infra",
-          "RLS",
-          "Auth"
-        ],
-        "icon": "💳",
-        "demo": "#",
-        "github": "#"
+        "description": "Five-year professional degree (10 semesters) leading to the title Ingeniero en Computación: distributed systems, computer architecture, relational databases, and algorithms."
       }
     ]
   },
   "contact": {
-    "label": "Contact",
-    "title": "Let's connect",
-    "subtitle": "Open to opportunities where systems engineering, technical robustness, and business impact advance together.",
+    "title": "Let's talk",
+    "subtitle": "For consulting, technical conversations, or a quick hello, email is the fastest path.",
     "items": [
       {
         "label": "Email",
@@ -379,5 +315,5 @@
       }
     ]
   },
-  "footer": "Enmanuel Leon — Senior Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP · {year}"
+  "footer": "© {year} Enmanuel Leon · enmanuel-leon.com"
 }

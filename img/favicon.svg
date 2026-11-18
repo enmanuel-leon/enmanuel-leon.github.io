@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Enmanuel Leon monogram">
+  <rect width="512" height="512" rx="92" fill="#0b1018"/>
+  <rect x="10" y="10" width="492" height="492" rx="82" fill="none" stroke="#243044" stroke-width="4"/>
+  <text x="256" y="276" font-family="Geist, system-ui, sans-serif" font-size="224" font-weight="700" fill="#e8edf5" text-anchor="middle" letter-spacing="-8">EL</text>
+  <rect x="166" y="318" width="180" height="6" rx="3" fill="#ff8a5c"/>
+</svg>
