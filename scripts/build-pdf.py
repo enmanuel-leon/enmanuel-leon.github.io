@@ -26,15 +26,15 @@ CSS = """
 }
 @page {
   size: A4;
-  margin: 12mm 14mm 12mm 14mm;
+  margin: 10mm 14mm 10mm 14mm;
 }
 * {
   box-sizing: border-box;
 }
 body {
   font-family: 'Geist', 'Liberation Sans', Arial, Helvetica, sans-serif;
-  font-size: 8.8pt;
-  line-height: 1.34;
+  font-size: 8.6pt;
+  line-height: 1.30;
   color: #111827;
   margin: 0;
   padding: 0;
@@ -77,7 +77,7 @@ ul {
   padding-left: 14pt;
 }
 li {
-  margin-bottom: 2.2pt;
+  margin-bottom: 2pt;
 }
 em {
   color: #4b5563;
