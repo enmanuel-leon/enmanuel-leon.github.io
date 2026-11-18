@@ -1,6 +1,6 @@
 # enmanuel-leon.com
 
-Static, pre-rendered CV and portfolio for **Enmanuel Leon**, Software Engineer (distributed systems and agentic AI). Hosted on GitHub Pages at [enmanuel-leon.com](https://enmanuel-leon.com/).
+Static, pre-rendered CV and portfolio for **Enmanuel Leon**, Software Engineer (distributed systems and agentic AI). Deployed as a static site on Cloudflare Workers at [enmanuel-leon.com](https://enmanuel-leon.com/).
 
 The site has **no runtime dependencies**: no framework, no bundler, no analytics, no third-party requests. JavaScript is progressive enhancement only.
 
@@ -8,7 +8,7 @@ The site has **no runtime dependencies**: no framework, no bundler, no analytics
 
 - **Content:** `data/cv.es.json` and `data/cv.en.json`
 - **Templates:** `src/template.html`
-- **Static build:** `scripts/build-site.mjs` → `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, `site.webmanifest`
+- **Static build:** `scripts/build-site.mjs` → `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, `site.webmanifest`
 - **Runtime:** vanilla JavaScript (`assets/js/app.js`) + layered CSS (`assets/css/styles.css`)
 - **Fonts:** self-hosted Geist Latin subsets (`assets/fonts/`)
 - **Exports:** Markdown → ATS PDFs via `scripts/build-pdf.py`
@@ -41,7 +41,9 @@ python3 -m http.server 8099
 5. Run `python3 scripts/build-pdf.py` and `node scripts/validate.mjs`.
 6. Commit the JSON, generated pages, Markdown, and PDFs together.
 
-Do not edit `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, or `site.webmanifest` by hand: they are generated.
+Do not edit `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, or `site.webmanifest` by hand: they are generated.
+
+Public copy avoids unverified performance and availability metrics. The impact section uses four architecture cards (Async, M2M, Payments, Events), while defensible scope counts (for example `20+ screens`, `15+ API contracts`, `3 applications`) can stay. JSON-LD adds `dateModified`, `hasOccupation`, and `hasCredential`; `llms.txt` carries role aliases, architecture keywords, and a preferred citation.
 
 ## Structure
 
@@ -57,6 +59,8 @@ img/                  portrait variants, icons, OG banner
 export/               Markdown + ATS PDFs
 es/                   generated Spanish page
 404.html              static not-found page
+llms.txt              LLM-oriented summary + keywords + citation
+llms-full.txt         generated full English resume for LLMs
 ```
 
 ## Notes

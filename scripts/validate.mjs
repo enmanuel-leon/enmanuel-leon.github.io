@@ -183,8 +183,20 @@ async function checkData() {
     }
 
     check(
-      Array.isArray(data.impact.items) && data.impact.items.length === 4,
-      `${lang}: 4 impact metrics`,
+      Array.isArray(data.impact.items) &&
+        data.impact.items.length === 4 &&
+        data.impact.items.every(
+          (item) => item.eyebrow && item.title && item.detail,
+        ),
+      `${lang}: 4 engineering focus items`,
+    );
+    check(
+      Array.isArray(data.seo.roleAliases) && data.seo.roleAliases.length >= 3,
+      `${lang}: role aliases present`,
+    );
+    check(
+      Array.isArray(data.seo.keywords) && data.seo.keywords.length >= 10,
+      `${lang}: SEO keywords present`,
     );
     check(
       Array.isArray(data.experience.items) && data.experience.items.length >= 4,
@@ -247,6 +259,11 @@ async function checkGeneratedPage(relative, lang) {
     /application\/ld\+json/.test(html) && html.includes('"@type":"Person"'),
     `${relative}: Person JSON-LD`,
   );
+  check(
+    /"hasOccupation"\s*:/.test(html) && /"hasCredential"\s*:/.test(html),
+    `${relative}: occupation and credential JSON-LD`,
+  );
+  check(/"dateModified"\s*:/.test(html), `${relative}: ProfilePage dateModified`);
   check(
     !/name="keywords"|rel="author"|rel="sitemap"/.test(html),
     `${relative}: obsolete head hints removed`,
@@ -458,6 +475,19 @@ async function checkAssetsAndMarkdown() {
   check(
     llms.includes(`Last updated: ${enData.meta.lastUpdated}`),
     "llms.txt last-updated date matches meta.lastUpdated",
+  );
+  check(llms.includes("## Keywords"), "llms.txt has a Keywords section");
+  check(
+    llms.includes("## Preferred citation"),
+    "llms.txt has a Preferred citation section",
+  );
+  check(llms.includes(`${SITE}/llms-full.txt`), "llms.txt links llms-full.txt");
+
+  const llmsFull = await readText("llms-full.txt");
+  check(llmsFull.includes("Enmanuel Leon"), "llms-full.txt names the owner");
+  check(
+    llmsFull.includes(`Canonical: ${SITE}/`),
+    "llms-full.txt links the canonical site",
   );
 
   for (const lang of LANGS) {

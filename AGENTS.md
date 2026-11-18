@@ -24,7 +24,7 @@ This repository is a dependency-free static CV/portfolio hosted on GitHub Pages 
 ### Generated artifacts (do not edit by hand)
 - `index.html` (English, `/`)
 - `es/index.html` (Spanish, `/es/`)
-- `sitemap.xml`, `llms.txt`, `site.webmanifest`
+- `sitemap.xml`, `llms.txt`, `llms-full.txt`, `site.webmanifest`
 
 Regenerate them with:
 ```bash
@@ -52,11 +52,11 @@ The Markdown files are the PDF sources. They must contain the `<!-- pdf:pagebrea
    - Run `node scripts/validate.mjs`.
    - Commit the generated HTML/XML/llms/manifest, the Markdown, and the PDFs together.
 
-2. **Never edit generated files directly.** If `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, or `site.webmanifest` need a change, change the JSON or `src/template.html` and rebuild.
+2. **Never edit generated files directly.** If `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, or `site.webmanifest` need a change, change the JSON, `src/template.html`, or the build script and rebuild.
 
 3. **Official role title:** `Software Engineer | Distributed & Agentic Systems | TypeScript · Python · AWS/GCP` (EN) / `Software Engineer | Sistemas Distribuidos y Agénticos | TypeScript · Python · AWS/GCP` (ES). The employer title in the experience entry stays factual; do not silently promote it.
 
-4. **Experience bullets follow the Google XYZ formula:** accomplished [X] measured by [Y] by doing [Z]. Never use passive phrasing (`responsible for`, `worked on`, `helped`). Keep metrics concrete.
+4. **Experience bullets follow a problem → architecture → outcome shape.** Lead with what was built, name the architecture and tradeoffs, and close with a directional outcome. Never use passive phrasing (`responsible for`, `worked on`, `helped`). Prefer concrete scope and architecture terms over unverified performance metrics.
 
 5. **Skills are categorized chips, not percentage bars.** Do not reintroduce progress bars or arbitrary proficiency scores.
 
@@ -64,7 +64,8 @@ The Markdown files are the PDF sources. They must contain the `<!-- pdf:pagebrea
 
 7. **Language routes:** English lives at `/`, Spanish at `/es/`. Both pages need reciprocal `hreflang` (`es`, `en`, `x-default`), a self-referencing canonical, and a link-based language switch. Do not reintroduce client-side language state or a JSON fetch.
 
-8. **Claims need a basis.** Before changing a metric, confirm its scope (median vs. peak, p50 vs. p95, measured vs. estimated). If a claim cannot be defended, qualify it or drop it.
+8. **Claims need a basis.** Before changing a metric, confirm its scope (median vs. peak, p50 vs. p95, measured vs. estimated). Performance and availability claims (`65%`, `<50ms`, `99.9%`) require a reproducible method; if it cannot be defended publicly, do not publish the number. Scope counts (`20+ screens`, `15+ API contracts`, `3 applications`) are acceptable when they are defensible.
+9. **The impact section is architecture, not a metrics strip.** Keep the four engineering-focus cards (Async, M2M, Payments, Events) and the `seo.roleAliases`/`seo.keywords` fields used by JSON-LD and `llms.txt`. Do not reintroduce unverified performance numbers, percentage bars, or a numeric impact band.
 
 ---
 
@@ -125,7 +126,7 @@ The validator checks, among other things:
 ## 5. Open Owner Decisions
 
 Do not silently resolve these; flag them in the PR/plan:
-- The basis for each quantified claim that remains (65%, <50 ms, 10k+, 99.9%, 500k+). The 28% p95 and 35% cold-start figures were removed because they were not measured reliably; the public copy now says "reduced p95 latency" and "improved cold-start". The precise −62% and ~40% estimates were also removed.
+- The performance and availability figures (`65%`, `<50ms`, `99.9%`, `28% p95`, `35% cold-start`, `−62%`, `~40%`) are not public. Do not reintroduce them without a reproducible method; keep the private interview framing in `tmp/claims-notes.md`. Defensible scope counts (`20+ screens`, `15+ API contracts`, `3 applications`) may remain.
 - Whether a formal credential evaluation (CIMEA/ENIC-NARIC) exists for the UJAP degree. The public wording uses the official title, **Ingeniero en Computación** (program: Ingeniería en Computación), and does not claim automatic B.Sc. equivalence.
 - The NDA client cannot be named; the role stays anonymized as a confidential fintech scale-up. Do not add identifying details.
 
