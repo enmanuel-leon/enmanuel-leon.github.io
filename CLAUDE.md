@@ -21,13 +21,13 @@ See the full internal standards, content model, design rules, and verification w
 
 ```bash
 # Full gate: content parity, generated HTML, links, assets, Markdown/PDF parity, PDF budget
-npm run check
+node scripts/validate.mjs
 
 # Regenerate the static pages
-npm run build
+node scripts/build-site.mjs
 
 # Rebuild the ATS PDFs (strictly 2 pages)
-npm run build:pdf
+node scripts/build-site.mjs:pdf
 
 # JavaScript syntax
 node --check assets/js/app.js

@@ -18,7 +18,6 @@ This repository is a dependency-free static CV/portfolio hosted on GitHub Pages 
 - `assets/fonts/`: self-hosted Geist Latin subsets plus `OFL.txt`. Do not reintroduce Google Fonts.
 - `scripts/build-pdf.py`: converts the Markdown exports to ATS PDFs with headless Chrome and fails if either PDF is not 2 pages.
 - `scripts/validate.mjs`: the repository gate (content parity, generated HTML, links, assets, Markdown/PDF parity, PDF budget).
-- `package.json`: build/validation entry points. No runtime dependencies.
 - `.github/workflows/verify.yml`: CI for the HTML/data gate and the PDF gate.
 - `tmp/`: private workspace. It is gitignored; never stage or commit files from it.
 
@@ -106,7 +105,7 @@ npx --yes html-validate@11.21.1 index.html es/index.html 404.html
 git status
 ```
 
-`npm run check` runs the repository gate. `npm run build` regenerates the site. `npm run build:pdf` rebuilds the PDFs.
+`node scripts/validate.mjs` runs the repository gate. `node scripts/build-site.mjs` regenerates the site. `python3 scripts/build-pdf.py` rebuilds the PDFs.
 
 The validator checks, among other things:
 - deep ES/EN key and array parity;

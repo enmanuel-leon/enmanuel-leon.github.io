@@ -706,7 +706,7 @@ async function build() {
   }
 
   if (CHECK && stale.length > 0) {
-    console.error(`Out of date: ${stale.join(", ")}. Run: npm run build`);
+    console.error(`Out of date: ${stale.join(", ")}. Run: node scripts/build-site.mjs`);
     process.exitCode = 1;
     return;
   }

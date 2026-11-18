@@ -18,10 +18,10 @@ The site has **no runtime dependencies**: no framework, no bundler, no analytics
 ## Commands
 
 ```bash
-npm run build        # regenerate the static pages and machine-readable files
-npm run build:pdf    # rebuild the two ATS PDFs (strict 2-page budget)
-npm run check        # full repository gate
-npm run build:check  # verify generated files are committed and current
+node scripts/build-site.mjs          # regenerate the static pages and machine-readable files
+python3 scripts/build-pdf.py         # rebuild the two ATS PDFs (strict 2-page budget)
+node scripts/validate.mjs            # full repository gate
+node scripts/build-site.mjs --check  # verify generated files are committed and current
 ```
 
 Local preview:
@@ -36,9 +36,9 @@ python3 -m http.server 8099
 
 1. Edit both language files in `data/`. They must keep deep key/array parity.
 2. Update `meta.lastUpdated` (YYYY-MM-DD) in both files; it drives the sitemap and `llms.txt` date.
-3. Run `npm run build`.
+3. Run `node scripts/build-site.mjs`.
 4. Update the matching Markdown exports in `export/`, keeping the `<!-- pdf:pagebreak -->` marker.
-5. Run `npm run build:pdf` and `npm run check`.
+5. Run `python3 scripts/build-pdf.py` and `node scripts/validate.mjs`.
 6. Commit the JSON, generated pages, Markdown, and PDFs together.
 
 Do not edit `index.html`, `es/index.html`, `sitemap.xml`, `llms.txt`, or `site.webmanifest` by hand: they are generated.

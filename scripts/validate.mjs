@@ -511,7 +511,7 @@ function checkBuildIsCurrent() {
   if (result.status === 0) {
     ok("generated HTML, sitemap, llms.txt and manifest are current");
   } else {
-    fail("generated files are stale — run: npm run build");
+    fail("generated files are stale — run: node scripts/build-site.mjs");
     if (result.stderr) console.error(result.stderr.trim());
   }
 }
